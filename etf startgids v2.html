@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETF Startgids — StartToETF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:       #0F1923;
+  --ink-2:     #2C3E50;
+  --ink-3:     #5A6A7A;
+  --ink-4:     #9AAABB;
+  --rule:      #E0E7EF;
+  --surface:   #F5F7FA;
+  --white:     #FFFFFF;
+  --blue:      #1A56DB;
+  --blue-deep: #1040B0;
+  --blue-tint: #EBF1FD;
+  --green:     #0B7A5E;
+  --green-tint:#E8F5F1;
+  --amber:     #8A5A00;
+  --amber-tint:#FFF8E7;
+  --red:       #B91C1C;
+  --red-tint:  #FEF2F2;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── LAYOUT ── */
+.page-wrap{max-width:900px;margin:0 auto;padding:0 32px}
+.page-wrap-full{max-width:900px;margin:0 auto}
+
+/* ── COVER ── */
+.cover{
+  background:var(--ink);
+  color:white;
+  padding:64px 48px 56px;
+  position:relative;
+  overflow:hidden;
+}
+.cover-brand{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,0.4);margin-bottom:40px}
+.cover-title{font-size:2.8rem;font-weight:800;line-height:1.1;letter-spacing:-0.025em;margin-bottom:16px}
+.cover-title span{color:var(--white)}
+.cover-sub{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;max-width:520px;margin-bottom:48px}
+.cover-meta{display:flex;gap:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1)}
+.cover-meta-item{}
+.cmi-val{font-size:1.3rem;font-weight:800;line-height:1;margin-bottom:3px}
+.cmi-label{font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:500}
+.cover-warning{
+  margin-top:40px;background:rgba(255,255,255,0.05);border-left:3px solid rgba(255,255,255,0.2);
+  padding:12px 16px;font-size:0.75rem;color:rgba(255,255,255,0.4);line-height:1.6;border-radius:0 4px 4px 0;
+}
+
+/* ── SECTION HEADERS ── */
+.chapter{
+  background:var(--ink);color:white;
+  padding:20px 32px;
+  font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+  display:flex;align-items:center;gap:12px;
+  margin:0 -32px 32px;
+}
+.chapter-num{
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.72rem;font-weight:800;
+}
+
+.sec-title{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px}
+.sec-intro{font-size:0.9rem;color:var(--ink-3);line-height:1.75;max-width:660px;margin-bottom:28px}
+
+/* ── TOC ── */
+.toc{background:var(--surface);border-radius:8px;padding:24px 28px;margin:32px 0}
+.toc-title{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);margin-bottom:16px}
+.toc-list{display:flex;flex-direction:column;gap:8px}
+.toc-item{display:flex;justify-content:space-between;align-items:center;font-size:0.875rem}
+.toc-item a{color:var(--ink-2);text-decoration:none;font-weight:500}
+.toc-item a:hover{color:var(--blue)}
+.toc-item-num{font-size:0.75rem;color:var(--ink-4)}
+.toc-divider{border:none;border-top:1px solid var(--rule);margin:4px 0}
+
+/* ── CALLOUT BOXES ── */
+.callout{border-left:3px solid var(--blue);padding:14px 18px;background:var(--blue-tint);border-radius:0 6px 6px 0;font-size:0.875rem;color:var(--ink-2);line-height:1.7;margin:20px 0}
+.callout strong{font-weight:700;color:var(--ink)}
+.callout-green{border-left-color:var(--green);background:var(--green-tint);color:#065F46}
+.callout-amber{border-left-color:#D97706;background:var(--amber-tint);color:#78350F}
+.callout-red{border-left-color:var(--red);background:var(--red-tint);color:#991B1B}
+
+/* ── HOW TO USE ISIN ── */
+.isin-demo{
+  background:var(--ink);color:white;border-radius:8px;
+  padding:20px 24px;margin:20px 0;
+  font-family:monospace;font-size:0.95rem;
+}
+.isin-parts{display:flex;gap:0;flex-wrap:wrap}
+.isin-part{padding:8px 12px;border:1px solid rgba(255,255,255,0.15)}
+.isin-part.country{background:rgba(26,86,219,0.4);border-color:rgba(26,86,219,0.6)}
+.isin-part.nsin{background:rgba(255,255,255,0.08)}
+.isin-part.check{background:rgba(16,185,129,0.3);border-color:rgba(16,185,129,0.5)}
+.isin-part-label{font-size:0.6rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,0.4);margin-top:4px;font-family:'Inter',sans-serif}
+
+/* ── MASTER OVERVIEW TABLE ── */
+.master-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:24px 0}
+.master-table th{
+  background:var(--ink);color:rgba(255,255,255,0.5);
+  padding:10px 14px;text-align:left;font-size:0.65rem;
+  font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  white-space:nowrap;
+}
+.master-table td{
+  padding:11px 14px;border-bottom:1px solid var(--rule);
+  vertical-align:middle;
+}
+.master-table tr:hover td{background:var(--surface)}
+.master-table tr:last-child td{border-bottom:none}
+.etf-ticker{font-weight:800;font-size:0.9rem;color:var(--ink);letter-spacing:-0.01em}
+.etf-full-name{font-size:0.72rem;color:var(--ink-3);margin-top:1px}
+.isin-code{font-family:monospace;font-size:0.78rem;color:var(--blue);background:var(--blue-tint);padding:2px 6px;border-radius:3px;letter-spacing:.02em}
+.ter-badge{font-weight:700;font-size:0.82rem}
+.ter-low{color:var(--green)}
+.ter-mid{color:var(--amber)}
+.cat-badge{
+  display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:.04em;
+  padding:2px 8px;border-radius:3px;text-transform:uppercase;
+}
+.cat-world{background:#EEF2FF;color:#3730A3}
+.cat-em{background:#FEF9E7;color:#92400E}
+.cat-us{background:#F0FDF4;color:#065F46}
+.cat-europe{background:#EFF6FF;color:#1E40AF}
+.cat-bond{background:#F1F5F9;color:#475569}
+.stars{color:#F59E0B;font-size:0.8rem}
+.rec-badge{
+  display:inline-block;background:var(--green);color:white;
+  border-radius:3px;padding:1px 6px;font-size:0.6rem;font-weight:700;
+  letter-spacing:.03em;
+}
+
+/* ── ETF PROFILE CARDS ── */
+.etf-section{margin-bottom:40px;}
+.etf-header{
+  background:var(--ink);color:white;
+  padding:18px 24px;border-radius:8px 8px 0 0;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+}
+.etf-header-left{}
+.etf-ticker-large{font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:2px}
+.etf-name-sub{font-size:0.78rem;color:rgba(255,255,255,0.5);font-weight:400}
+.etf-header-right{text-align:right;flex-shrink:0}
+.etf-ter-large{font-size:1.4rem;font-weight:800;color:#4ADE80;line-height:1}
+.etf-ter-label{font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:.06em}
+.etf-body{
+  border:1px solid var(--rule);border-top:none;
+  border-radius:0 0 8px 8px;overflow:hidden;
+}
+.etf-grid-4{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-bottom:1px solid var(--rule);
+}
+.etf-grid-3{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid var(--rule);
+}
+.etf-stat{
+  padding:14px 18px;border-right:1px solid var(--rule);
+}
+.etf-stat:last-child{border-right:none}
+.es-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);margin-bottom:4px}
+.es-val{font-size:0.95rem;font-weight:700;color:var(--ink)}
+.es-val-sm{font-size:0.8rem;font-weight:600;color:var(--ink-2)}
+.etf-tickers-row{
+  padding:14px 18px;border-bottom:1px solid var(--rule);
+  background:var(--surface);
+  display:flex;gap:32px;align-items:center;flex-wrap:wrap;
+}
+.etr-group{display:flex;flex-direction:column;gap:3px}
+.etr-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4)}
+.etr-val{font-family:monospace;font-size:0.85rem;font-weight:600;color:var(--ink)}
+.etf-desc{padding:16px 18px;font-size:0.84rem;color:var(--ink-2);line-height:1.75;border-bottom:1px solid var(--rule)}
+.etf-pros-cons{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}
+.etf-pros{padding:14px 18px;border-right:1px solid var(--rule)}
+.etf-cons{padding:14px 18px}
+.pc-title{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+.pc-title.pos{color:var(--green)}
+.pc-title.neg{color:var(--amber)}
+.pc-list{display:flex;flex-direction:column;gap:5px}
+.pc-item{font-size:0.8rem;color:var(--ink-2);display:flex;gap:7px;line-height:1.5}
+.pc-item.pro::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.pc-item.con::before{content:'!';color:var(--amber);font-weight:700;flex-shrink:0}
+.etf-footer{padding:12px 18px;background:var(--surface);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.ef-tag{font-size:0.7rem;font-weight:600;padding:3px 8px;border-radius:3px;border:1px solid var(--rule);color:var(--ink-3)}
+
+/* ── PORTFOLIO SECTION ── */
+.portfolio-card{
+  border:1px solid var(--rule);border-radius:8px;
+  overflow:hidden;margin-bottom:20px;
+}
+.portfolio-header{
+  padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.portfolio-header.p1{background:#EFF6FF;border-bottom:1px solid #BFDBFE}
+.portfolio-header.p2{background:#F0FDF4;border-bottom:1px solid #A7F3D0}
+.portfolio-header.p3{background:#FDF4FF;border-bottom:1px solid #E9D5FF}
+.ph-left{}
+.ph-badge{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:3px;margin-bottom:6px;display:inline-block}
+.ph-badge.p1{background:#1E40AF;color:white}
+.ph-badge.p2{background:var(--green);color:white}
+.ph-badge.p3{background:#7C3AED;color:white}
+.ph-name{font-size:1rem;font-weight:800;color:var(--ink)}
+.ph-sub{font-size:0.78rem;color:var(--ink-3);margin-top:2px}
+.ph-right{text-align:right;flex-shrink:0}
+.ph-ter{font-size:1.1rem;font-weight:800;color:var(--green)}
+.ph-ter-label{font-size:0.65rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em}
+.portfolio-body{padding:0}
+.port-alloc{
+  display:flex;gap:0;border-bottom:1px solid var(--rule);
+}
+.pa-item{flex:1;padding:14px 16px;border-right:1px solid var(--rule);text-align:center}
+.pa-item:last-child{border-right:none}
+.pa-pct{font-size:1.4rem;font-weight:800;color:var(--blue);line-height:1;margin-bottom:3px}
+.pa-ticker{font-size:0.8rem;font-weight:700;color:var(--ink)}
+.pa-index{font-size:0.7rem;color:var(--ink-3);margin-top:2px}
+.port-bar{height:6px;display:flex}
+.port-bar div{height:100%}
+.port-details{padding:14px 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;border-bottom:1px solid var(--rule)}
+.pd-item{text-align:center}
+.pd-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-bottom:3px}
+.pd-val{font-size:0.85rem;font-weight:700;color:var(--ink)}
+.port-desc{padding:14px 16px;font-size:0.82rem;color:var(--ink-2);line-height:1.7;border-bottom:1px solid var(--rule)}
+.port-brokers{padding:10px 16px;display:flex;gap:8px;align-items:center;background:var(--surface);flex-wrap:wrap}
+.pb-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);flex-shrink:0}
+.pb-tag{font-size:0.72rem;font-weight:600;padding:2px 8px;border-radius:3px;background:var(--rule);color:var(--ink-2)}
+
+/* ── COMPARISON TABLE ── */
+.comp-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:20px 0}
+.comp-table th{background:var(--ink);color:rgba(255,255,255,0.5);padding:10px 14px;text-align:left;font-size:0.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.comp-table th:first-child{text-align:left}
+.comp-table td{padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:middle;text-align:center}
+.comp-table td:first-child{text-align:left;font-weight:600}
+.comp-table tr:hover td{background:var(--surface)}
+.comp-table tr:last-child td{border-bottom:none}
+.check-g{color:var(--green);font-weight:700}
+.check-y{color:var(--amber);font-weight:700}
+.check-r{color:var(--red);font-weight:700}
+.rank-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;border-radius:50%;
+  font-size:0.65rem;font-weight:800;
+}
+.rank-1{background:var(--green);color:white}
+.rank-2{background:#64748B;color:white}
+.rank-3{background:#94A3B8;color:white}
+
+/* ── TAX SECTION ── */
+.tax-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:20px 0}
+.tax-card{background:white;padding:20px}
+.tc-icon{font-size:1.2rem;margin-bottom:10px}
+.tc-title{font-size:0.85rem;font-weight:700;margin-bottom:6px}
+.tc-rate{font-size:1.4rem;font-weight:800;color:var(--blue);margin-bottom:6px;line-height:1}
+.tc-body{font-size:0.78rem;color:var(--ink-3);line-height:1.65}
+.tc-highlight{font-size:0.75rem;font-weight:600;color:var(--green);margin-top:6px}
+
+/* ── PLATFORM TICKERS ── */
+.platform-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:16px 0}
+.platform-table th{background:var(--ink);color:rgba(255,255,255,0.4);padding:9px 14px;text-align:left;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.platform-table td{padding:10px 14px;border-bottom:1px solid var(--rule);font-family:monospace;font-size:0.82rem;vertical-align:middle}
+.platform-table tr:hover td{background:var(--surface)}
+.platform-table tr:last-child td{border-bottom:none}
+.platform-table td:first-child{font-family:'Inter',sans-serif;font-weight:700;font-size:0.84rem;color:var(--ink)}
+.ticker-cell{background:var(--surface);border-radius:3px;padding:2px 6px;font-weight:600;color:var(--ink-2);display:inline-block}
+.ticker-note{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--ink-4);margin-top:2px}
+
+/* ── GLOSSARY ── */
+.glossary-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:16px 0}
+.gl-item{background:white;padding:14px 16px}
+.gl-term{font-size:0.82rem;font-weight:700;color:var(--blue);margin-bottom:4px}
+.gl-def{font-size:0.78rem;color:var(--ink-3);line-height:1.6}
+
+/* ── CHECKLIST ── */
+.checklist{display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:16px 0}
+.cl-item{display:flex;gap:14px;align-items:flex-start;padding:13px 16px;border-bottom:1px solid var(--rule);cursor:pointer;transition:background 0.2s}
+.cl-item:hover{background:var(--surface)}
+.cl-item:last-child{border-bottom:none}
+.cl-checkbox{width:18px;height:18px;flex-shrink:0;margin-top:2px;cursor:pointer;accent-color:var(--blue)}
+.cl-text{font-size:0.84rem;color:var(--ink-2);line-height:1.5}
+.cl-text strong{font-weight:700;color:var(--ink)}
+
+/* ── FOOTER BAR ── */
+.doc-footer{
+  background:var(--surface);border-top:1px solid var(--rule);
+  padding:16px 32px;display:flex;justify-content:space-between;align-items:center;
+  font-size:0.72rem;color:var(--ink-4);margin-top:24px;
+}
+
+/* ── INLINE HELPERS ── */
+section{padding:36px 0}
+section+section{padding-top:0}
+.spacer{height:24px}
+.divider{border:none;border-top:1px solid var(--rule);margin:32px 0}
+p{font-size:0.875rem;color:var(--ink-2);line-height:1.75;margin-bottom:12px}
+p:last-child{margin-bottom:0}
+ul{padding-left:20px;display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+ul li{font-size:0.875rem;color:var(--ink-2);line-height:1.65}
+strong{font-weight:700;color:var(--ink)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .page-wrap{padding:0 16px}
+  .cover{padding:40px 20px 36px}
+  .cover-title{font-size:1.9rem}
+  .chapter{margin:0 -16px 24px;padding:14px 20px}
+  .etf-grid-4{grid-template-columns:1fr 1fr}
+  .etf-grid-3{grid-template-columns:1fr 1fr}
+  .portfolio-header{flex-direction:column;gap:8px}
+  .port-alloc{flex-direction:column}
+  .pa-item{border-right:none;border-bottom:1px solid var(--rule)}
+  .pa-item:last-child{border-bottom:none}
+  .port-details{grid-template-columns:1fr 1fr}
+  .tax-grid{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .cover-meta{flex-wrap:wrap;gap:16px}
+}
+
+/* ── PRINT (PDF OPTIMALISATIE) ── */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+  html {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body {
+    font-size: 10pt; /* Optimale grootte voor leesbaarheid op papier/pdf */
+    background: white;
+  }
+  .page-wrap {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .cover {
+    margin: -1.5cm -1.5cm 24px -1.5cm; /* Compenseer @page margin om de cover randloos te maken, geen harde break meer */
+    padding: 1.5cm 2cm;
+    box-sizing: border-box;
+  }
+  /* Groepeer de Korte Opfrisser en Inhoudstabel samen op één pagina */
+  .intro-section {
+    padding-top: 0 !important;
+  }
+  /* Elk hoofdstuk begint verplicht op een nieuwe pagina */
+  .chapter-section {
+    page-break-before: always;
+    break-before: page;
+    padding-top: 0 !important;
+  }
+  /* Portfolio secties op een nieuwe pagina starten */
+  .portfolio-group-title:not(.first) {
+    page-break-before: always;
+    break-before: page;
+    padding-top: 0 !important;
+  }
+  /* Zorg dat de zwarte balk niet buiten de marges valt tijdens printen */
+  .chapter {
+    margin: 0 0 20px 0 !important;
+    border-radius: 6px;
+  }
+  
+  /* Compactere ETF profielen om witruimte te besparen */
+  .etf-section { margin-bottom: 20px; page-break-inside: avoid; break-inside: avoid; }
+  .etf-header { padding: 10px 16px; }
+  .etf-stat { padding: 8px 14px; }
+  .etf-desc { padding: 10px 14px; font-size: 0.8rem; line-height: 1.5; }
+  .etf-tickers-row { padding: 8px 14px; }
+  .etf-pros, .etf-cons { padding: 10px 14px; }
+  .etf-footer { padding: 8px 14px; }
+  .pc-item { font-size: 0.78rem; line-height: 1.4; }
+  .es-val { font-size: 0.85rem; }
+
+  /* Voorkom dat kaarten, rijen of tabellen halverwege de pagina afbreken */
+  .portfolio-card, .tax-card, .checklist, 
+  .master-table tr, .comp-table tr, .platform-table tr,
+  .etf-grid-4, .etf-grid-3, .port-alloc, .port-details {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Glossary specifiek native laten breken */
+  .glossary-grid {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  .gl-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Verberg onnodige UI elementen in PDF */
+  nav, .no-print { display: none; }
+  a { text-decoration: none !important; color: inherit; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── COVER ── -->
+<div class="cover">
+  <div class="page-wrap" style="padding:0">
+    <div class="cover-brand">Start To ETF · Premium Document · 2026</div>
+    <h1 class="cover-title">ETF <span>Startgids</span></h1>
+    <p class="cover-sub">Alles wat je nodig hebt om morgen al te beginnen beleggen in ETF's. 11 geselecteerde fondsen, concrete portfoliocombinaties en fiscale uitleg voor Belgische beleggers, gebaseerd op de nieuwste inzichten.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><div class="cmi-val">11</div><div class="cmi-label">ETF-profielen</div></div>
+      <div class="cover-meta-item"><div class="cmi-val">8</div><div class="cmi-label">Portfoliocombinaties</div></div>
+      <div class="cover-meta-item"><div class="cmi-val">België</div><div class="cmi-label">Fiscale uitleg</div></div>
+      <div class="cover-meta-item"><div class="cmi-val">2026</div><div class="cmi-label">Versie / editie</div></div>
+    </div>
+    <div class="cover-warning">
+      Dit document is uitsluitend bedoeld voor educatieve doeleinden en vormt geen financieel advies. Beleggen brengt risico's met zich mee, waaronder het mogelijke verlies van je inleg. Rendementen uit het verleden bieden geen garantie voor de toekomst.
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- ── INTRODUCTIEPAGINA (Korte opfrisser & Inhoudstabel samen) ── -->
+  <section class="intro-section">
+    <div class="callout callout-green" style="margin-top: 0; font-size: 0.95rem;">
+      <strong>Korte opfrisser: de fruitmand-analogie</strong><br>
+      Voor we beginnen, onthoud dit: een los aandeel kopen (bv. Apple) is als het kopen van één stuk fruit. Als dat ene stuk fruit rot is, ben je je geld kwijt. Een ETF (Exchange Traded Fund) is een <strong>voorgemixte fruitmand</strong> met duizenden stukken fruit erin. Als er één appel rot is, merk je daar nauwelijks iets van, want de rest van de mand is nog goed. Je koopt dus in één muisklik een stukje van duizenden bedrijven tegelijk.
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">Inhoudsopgave</div>
+      <div class="toc-list">
+        <div class="toc-item"><a href="#overzicht">1. De 11 geselecteerde ETF's</a><span class="toc-item-num">Kern</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#profielen">2. ETF-profielen (gedetailleerd)</a><span class="toc-item-num">Kern</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#portfolios">3. Portfoliocombinaties</a><span class="toc-item-num">Actieplan</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#isin">4. Hoe gebruik je ISIN-codes?</a><span class="toc-item-num">Praktisch</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#platforms">5. Tickers per platform</a><span class="toc-item-num">Praktisch</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#autoinvest">6. Hangmatbeleggen met Saxo AutoInvest</a><span class="toc-item-num">Automatisatie</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#belastingen">7. Fiscale uitleg voor België</a><span class="toc-item-num">Fiscaal</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#checklist">8. Starterschecklist</a><span class="toc-item-num">Actieplan</span></div>
+        <hr class="toc-divider">
+        <div class="toc-item"><a href="#glossary">9. Woordenlijst</a><span class="toc-item-num">Referentie</span></div>
+      </div>
+    </div>
+  </section>
+
+<!-- ── 1. OVERZICHT (Nieuwe pagina) ── -->
+  <section id="overzicht" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">1</div>De 11 geselecteerde ETF's</div>
+    <h2 class="sec-title">De beste fondsen op een rij</h2>
+    <p class="sec-intro">Hieronder vind je een overzicht van alle 11 ETF's in dit document. Gesorteerd op categorie en aanbevelingen van experts. Gebruik de ISIN-code om het fonds te vinden op jouw broker.</p>
+
+    <div style="background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:24px; margin-bottom: 32px; page-break-inside: avoid;">
+      <h3 style="font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:12px">Waarom precies deze selectie?</h3>
+      <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.6">Deze selectie is niet zomaar tot stand gekomen. Elk van deze ETF’s is streng gefilterd op basis van <strong>7 objectieve selectiecriteria</strong>: lage totale kosten, grote fondsomvang, fysieke replicatie, voldoende liquiditeit, brede geografische spreiding, hoge interne spreiding en fiscale efficiëntie voor Belgische beleggers. Deze criteria zijn steeds gericht op 3 absolute kernwaarden voor de startende belegger:</p>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
+        <div style="background:white;padding:16px;border-radius:6px;border:1px solid var(--rule)">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:4px">1. Lange termijn</div>
+          <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.5">Zodat je portefeuille één keer op staat en dan jarenlang passief mee kan zonder kopzorgen.</div>
+        </div>
+        <div style="background:white;padding:16px;border-radius:6px;border:1px solid var(--rule)">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:4px">2. Kostenoptimalisatie</div>
+          <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.5">Want elke euro die je níét aan beheerkosten of beurstaks betaalt, werkt verder voor jou.</div>
+        </div>
+        <div style="background:white;padding:16px;border-radius:6px;border:1px solid var(--rule)">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:4px">3. Maximale spreiding</div>
+          <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.5">Omdat een zo breed mogelijke spreiding (duizenden bedrijven tegelijk) het risico aanzienlijk verlaagt.</div>
+        </div>
+      </div>
+    </div>
+
+    <table class="master-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Ticker / Fonds</th>
+          <th>ISIN</th>
+          <th>Index</th>
+          <th>TER</th>
+          <th>Categorie</th>
+          <th>Acc/Dist</th>
+          <th>Beste voor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">01</td>
+          <td><div class="etf-ticker">VWCE</div><div class="etf-full-name">Vanguard FTSE All-World Acc</div></td>
+          <td><span class="isin-code">IE00BK5BQT80</span></td>
+          <td style="font-size:0.78rem">FTSE All-World</td>
+          <td><span class="ter-badge ter-mid">0,22%</span></td>
+          <td><span class="cat-badge cat-world">Wereld</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">De 1-ETF klassieker</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">02</td>
+          <td><div class="etf-ticker">IMIE <span class="rec-badge">Alles-in-1</span></div><div class="etf-full-name">SPDR MSCI ACWI IMI Acc</div></td>
+          <td><span class="isin-code">IE00B3YLTY66</span></td>
+          <td style="font-size:0.78rem">MSCI ACWI IMI</td>
+          <td><span class="ter-badge ter-low">0,17%</span></td>
+          <td><span class="cat-badge cat-world">Wereld</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Breedste optie (incl. small-caps)</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">03</td>
+          <td><div class="etf-ticker">IWDA</div><div class="etf-full-name">iShares Core MSCI World Acc</div></td>
+          <td><span class="isin-code">IE00B4L5Y983</span></td>
+          <td style="font-size:0.78rem">MSCI World</td>
+          <td><span class="ter-badge ter-mid">0,20%</span></td>
+          <td><span class="cat-badge cat-world">Wereld</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Grote, liquide wereld-ETF</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">04</td>
+          <td><div class="etf-ticker">SWRD <span class="rec-badge">Goedkoopst World</span></div><div class="etf-full-name">SPDR MSCI World Acc</div></td>
+          <td><span class="isin-code">IE00BFY0GT14</span></td>
+          <td style="font-size:0.78rem">MSCI World</td>
+          <td><span class="ter-badge ter-low">0,12%</span></td>
+          <td><span class="cat-badge cat-world">Wereld</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Kostenefficiënte basis</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">05</td>
+          <td><div class="etf-ticker">EMIM</div><div class="etf-full-name">iShares Core MSCI EM IMI Acc</div></td>
+          <td><span class="isin-code">IE00BKM4GZ66</span></td>
+          <td style="font-size:0.78rem">MSCI EM IMI</td>
+          <td><span class="ter-badge ter-low">0,18%</span></td>
+          <td><span class="cat-badge cat-em">Opkomend</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Aanvulling op MSCI World</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">06</td>
+          <td><div class="etf-ticker">SPYL <span class="rec-badge">Laagste TER</span></div><div class="etf-full-name">SPDR S&amp;P 500 Acc</div></td>
+          <td><span class="isin-code">IE000XZSV718</span></td>
+          <td style="font-size:0.78rem">S&amp;P 500</td>
+          <td><span class="ter-badge ter-low">0,03%</span></td>
+          <td><span class="cat-badge cat-us">VS</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Amerikaanse focus</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">07</td>
+          <td><div class="etf-ticker">IMEU</div><div class="etf-full-name">iShares Core MSCI Europe Acc</div></td>
+          <td><span class="isin-code">IE00B4K48X80</span></td>
+          <td style="font-size:0.78rem">MSCI Europe</td>
+          <td><span class="ter-badge ter-low">0,12%</span></td>
+          <td><span class="cat-badge cat-europe">Europa</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Europese thuismarkt</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">08</td>
+          <td><div class="etf-ticker">XMAW</div><div class="etf-full-name">Xtrackers MSCI AC World ESG Acc</div></td>
+          <td><span class="isin-code">IE00BGHQ0G80</span></td>
+          <td style="font-size:0.78rem">ACWI ESG Screened</td>
+          <td><span class="ter-badge ter-mid">0,25%</span></td>
+          <td><span class="cat-badge cat-world">ESG</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Duurzaam / ESG focus</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">09</td>
+          <td><div class="etf-ticker">XGOV</div><div class="etf-full-name">Xtrackers II Eurozone Gov Bond Acc</div></td>
+          <td><span class="isin-code" style="color:var(--amber)">LU0643975591</span></td>
+          <td style="font-size:0.78rem">iBoxx Euro Sovereigns</td>
+          <td><span class="ter-badge ter-low">0,15%</span></td>
+          <td><span class="cat-badge cat-bond">Obligaties</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Overheid (Eurozone)</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">10</td>
+          <td><div class="etf-ticker">SYSC</div><div class="etf-full-name">SPDR Bloomberg Euro Corp Bond Acc</div></td>
+          <td><span class="isin-code">IE00B3T9LM79</span></td>
+          <td style="font-size:0.78rem">Euro Corporate Bond</td>
+          <td><span class="ter-badge ter-low">0,12%</span></td>
+          <td><span class="cat-badge cat-bond">Obligaties</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Bedrijfsobligaties</td>
+        </tr>
+        <tr>
+          <td style="color:var(--ink-4);font-size:0.75rem">11</td>
+          <td><div class="etf-ticker">IS3R <span class="rec-badge">Satelliet</span></div><div class="etf-full-name">iShares Edge MSCI World Momentum Acc</div></td>
+          <td><span class="isin-code">IE00BP3QZ825</span></td>
+          <td style="font-size:0.78rem">MSCI World Momentum</td>
+          <td><span class="ter-badge ter-mid">0,30%</span></td>
+          <td><span class="cat-badge cat-factor" style="background:#FFF1F2;color:#9F1239">Factor</span></td>
+          <td style="font-size:0.82rem;color:var(--green);font-weight:600">Acc</td>
+          <td style="font-size:0.76rem;color:var(--ink-3)">Rendements-boost</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-amber">
+      <strong>Let op bij het zoeken:</strong> Gebruik altijd de ISIN-code om het juiste fonds te vinden. Tickers kunnen per beurs en per broker verschillen.
+    </div>
+  </section>
+
+<!-- ── 2. PROFIELEN (Nieuwe pagina) ── -->
+  <section id="profielen" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">2</div>ETF-profielen (gedetailleerd)</div>
+    <h2 class="sec-title">De 11 ETF's in detail</h2>
+    <p class="sec-intro">Elk fonds wordt hieronder volledig besproken: wat het is, welke index het volgt, hoe duur het is, waar het te kopen is, en voor wie het geschikt is.</p>
+
+    <!-- ETF 1 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">VWCE</div>
+          <div class="etf-name-sub">Vanguard FTSE All-World UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large">0,22%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00BK5BQT80</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">FTSE All-World</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~3.700</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">Vanguard</div></div>
+          <div class="etf-stat"><div class="es-label">Oprichtingsjaar</div><div class="es-val">2019</div></div>
+      </div>
+      <div class="etf-desc">VWCE is de populairste klassieke keuze voor Belgische beginners. Het fonds volgt de FTSE All-World index, die zowel ontwikkelde markten (VS, Europa, Japan, ...) als opkomende markten (China, India, Brazilië, ...) omvat. Met ongeveer 3.700 aandelen ben je in één product wereldwijd gespreid. Dividenden worden automatisch herbelegd (accumulating), wat fiscaal voordelig is voor Belgische beleggers. Ideaal als enige ETF in een eenvoudig maandelijks plan.</div>
+      <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Wereldwijde spreiding in één product</div>
+              <div class="pc-item pro">Inclusief opkomende markten (~10%)</div>
+              <div class="pc-item pro">Accumulating: geen dividendbelasting</div>
+              <div class="pc-item pro">Iers domicilie: TOB slechts 0,12%</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">TER van 0,22% — niet de goedkoopste optie meer</div>
+              <div class="pc-item con">Zwaar gewogen naar VS (~60%)</div>
+              <div class="pc-item con">Geen small caps (large + mid cap enkel)</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Beginnersvriendelijk</span>
+          <span class="ef-tag">1-ETF strategie</span>
+          <span class="ef-tag">Maandelijks plan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 2 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">IMIE</div>
+          <div class="etf-name-sub">SPDR MSCI ACWI IMI UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#4ADE80">0,17%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00B3YLTY66</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">MSCI ACWI IMI</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~3.700</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">State Street (SPDR)</div></div>
+          <div class="etf-stat"><div class="es-label">Markten</div><div class="es-val">Ontwikkeld + EM + Small Cap</div></div>
+        </div>
+        <div class="etf-tickers-row">
+          <div class="etr-group"><div class="etr-label">Euronext Parijs</div><div class="etr-val">IMIE</div></div>
+          <div class="etr-group"><div class="etr-label">Xetra (Frankfurt)</div><div class="etr-val">SPYI</div></div>
+          <div class="etr-group"><div class="etr-label">Saxo Bank</div><div class="etr-val">IMIE / SPYI</div></div>
+          <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IMIE / SPYI</div></div>
+        </div>
+        <div class="etf-desc">IMIE is volgens experts één van de absoluut beste 'alles-in-één' ETF's op de markt. Het volgt de zeer brede MSCI ACWI IMI index. Dit betekent dat je belegt in ontwikkelde markten, opkomende markten én small-caps (kleine bedrijven). Waar VWCE stopt bij de grotere bedrijven, neemt IMIE ook de kleinere spelers mee. Met een TER van 0,17% is het bovendien goedkoper. Op Xetra noteert dit fonds vaak als SPYI.</div>
+        <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Ultieme spreiding: inclusief small-caps</div>
+              <div class="pc-item pro">Goedkoper dan VWCE en IWDA (0,17%)</div>
+              <div class="pc-item pro">Accumulating en Iers domicilie (TOB 0,12%)</div>
+              <div class="pc-item pro">Eén fonds is echt voldoende</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Tickers IMIE en SPYI worden door brokers door elkaar gebruikt</div>
+              <div class="pc-item con">Iets minder verhandeld (lager volume / iets bredere spread) dan VWCE</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Expert Favoriet</span>
+          <span class="ef-tag">Superieure 1-ETF strategie</span>
+          <span class="ef-tag">Inclusief Small Caps</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 3 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">IWDA</div>
+          <div class="etf-name-sub">iShares Core MSCI World UCITS ETF USD (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large">0,20%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00B4L5Y983</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">MSCI World</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~1.400</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">BlackRock (iShares)</div></div>
+          <div class="etf-stat"><div class="es-label">Oprichtingsjaar</div><div class="es-val">2009</div></div>
+        </div>
+        <div class="etf-tickers-row">
+          <div class="etr-group"><div class="etr-label">Euronext Amsterdam</div><div class="etr-val">IWDA</div></div>
+          <div class="etr-group"><div class="etr-label">Xetra (Frankfurt)</div><div class="etr-val">EUNL</div></div>
+          <div class="etr-group"><div class="etr-label">Saxo Bank</div><div class="etr-val">IWDA / EUNL</div></div>
+          <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IWDA</div></div>
+        </div>
+        <div class="etf-desc">IWDA is het meest verhandelde ETF in Europa. Het volgt de MSCI World index (geen opkomende markten, geen small-caps). Het is een uitstekende, zeer liquide bouwsteen. Op Xetra heet het EUNL.</div>
+        <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Zeer liquide wereldfonds (strakke spread)</div>
+              <div class="pc-item pro">Iers domicilie (TOB 0,12%)</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Geen opkomende markten (apart bijkopen via EMIM)</div>
+              <div class="pc-item con">Duurder dan het vergelijkbare SWRD (0,20% vs 0,12%)</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">2-ETF strategie (met EMIM)</span>
+          <span class="ef-tag">Zeer Liquide</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 4 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">SWRD</div>
+          <div class="etf-name-sub">SPDR MSCI World UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#4ADE80">0,12%</div>
+          <div class="etf-ter-label">TER per jaar — Goedkoopste World!</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00BFY0GT14</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">MSCI World</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~1.600</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">State Street (SPDR)</div></div>
+          <div class="etf-stat"><div class="es-label">TER-voordeel vs IWDA</div><div class="es-val" style="color:var(--green)">-0,08%/jaar</div></div>
+      </div>
+      <div class="etf-desc">SWRD is een absolute favoriet voor kostenbewuste beleggers. Met een TER van 0,12% is SWRD aanzienlijk goedkoper dan IWDA (0,20%), terwijl het exact dezelfde index volgt. SWRD is dé absolute topkeuze als basis voor een 2-ETF portfolio (samen met EMIM).</div>
+      <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Laagste TER van alle MSCI World ETF's (0,12%)</div>
+              <div class="pc-item pro">Zelfde index als IWDA, maar substantieel goedkoper</div>
+              <div class="pc-item pro">Accumulating, Iers domicilie</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Iets bredere spread dan IWDA door lager volume</div>
+              <div class="pc-item con">Geen EM (net als IWDA, dus best combineren)</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Goedkoopste MSCI World</span>
+          <span class="ef-tag">2-ETF strategie (met EMIM)</span>
+          <span class="ef-tag">Kostenefficiënt</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 5 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">EMIM</div>
+          <div class="etf-name-sub">iShares Core MSCI Emerging Markets IMI UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large">0,18%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00BKM4GZ66</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">MSCI EM IMI</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~3.000</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">BlackRock (iShares)</div></div>
+          <div class="etf-stat"><div class="es-label">Markten</div><div class="es-val">China, India, ...</div></div>
+        </div>
+        <div class="etf-tickers-row">
+          <div class="etr-group"><div class="etr-label">Euronext Amsterdam</div><div class="etr-val">EMIM</div></div>
+          <div class="etr-group"><div class="etr-label">Xetra (Frankfurt)</div><div class="etr-val">IS3N</div></div>
+          <div class="etr-group"><div class="etr-label">Saxo Bank</div><div class="etr-val">EMIM / IS3N</div></div>
+          <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IS3N of EMIM</div></div>
+        </div>
+        <div class="etf-desc">EMIM is dé to-go ETF voor opkomende markten bij Belgische beleggers. Het dekt China, India, Taiwan, Brazilië en tientallen andere opkomende economieën, inclusief de small-caps van deze regio's. Ideaal als vaste partner voor SWRD of IWDA.</div>
+        <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Dekt álle opkomende markten (large + mid + small)</div>
+              <div class="pc-item pro">Lage TER voor een EM fonds (0,18%)</div>
+              <div class="pc-item pro">Accumulating, Iers domicilie</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Politiek en valutarisico in EM-landen</div>
+              <div class="pc-item con">Grote weging richting China (~25%)</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Aanvulling op MSCI World</span>
+          <span class="ef-tag">2-ETF strategie</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 6 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">SPYL</div>
+          <div class="etf-name-sub">SPDR S&amp;P 500 UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#4ADE80">0,03%</div>
+          <div class="etf-ter-label">TER per jaar — Allerlaagste!</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE000XZSV718</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">S&amp;P 500</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">500</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">State Street (SPDR)</div></div>
+          <div class="etf-stat"><div class="es-label">Markt</div><div class="es-val">VS enkel</div></div>
+      </div>
+      <div class="etf-desc">SPYL is de absolute prijzenbreker voor de Amerikaanse markt met een TER van amper 0,03% per jaar. Het volgt de beroemde S&P 500, de index van de 500 grootste Amerikaanse bedrijven. De Amerikaanse beurs heeft historisch zeer sterk gepresteerd. Een prachtig goedkoop fonds, maar let op: je hebt hiermee letterlijk 0% geografische spreiding buiten de Verenigde Staten.</div>
+      <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Extreem lage TER (0,03%)</div>
+              <div class="pc-item pro">Sterk historisch trackrecord van de VS</div>
+              <div class="pc-item pro">Accumulating, Iers domicilie</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Nul geografische spreiding buiten Amerika</div>
+              <div class="pc-item con">Hoog concentratierisico (tech giganten wegen zwaar door)</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Goedkoopste TER</span>
+          <span class="ef-tag">Puur S&P 500 focus</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 7 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">IMEU</div>
+          <div class="etf-name-sub">iShares Core MSCI Europe UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#4ADE80">0,12%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00B4K48X80</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">MSCI Europe</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~430</div></div>
+        <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+      </div>
+      <div class="etf-desc">IMEU volgt de MSCI Europe index: ~430 grote en middelgrote Europese bedrijven uit 15 landen. Bedrijven zoals ASML, Nestlé, LVMH en Novo Nordisk. Voor wie een hogere weging naar Europa wil dan wat in een wereldfonds zit (Europa is wereldwijd slechts ~15%). Lage TER van 0,12%. Ideaal om valutarisico (USD) te beperken.</div>
+      <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Lage TER (0,12%)</div>
+              <div class="pc-item pro">Minder USD-afhankelijkheid in je portfolio</div>
+              <div class="pc-item pro">Europese marktleiders over de hele linie</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Europa presteerde historisch trager dan de VS</div>
+              <div class="pc-item con">Meestal slechts een satelliet-ETF, geen basis</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Europese tilt</span>
+          <span class="ef-tag">Lage TER</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 8 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">XMAW</div>
+          <div class="etf-name-sub">Xtrackers MSCI AC World ESG Screened UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large">0,25%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00BGHQ0G80</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">ACWI ESG Screened</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~2.800</div></div>
+        <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+      </div>
+      <div class="etf-desc">Voor beleggers die duurzaamheid belangrijk vinden is XMAW een uitstekende All-in-One keuze. Het volgt de All Country World index (inclusief opkomende markten), maar filtert bedrijven uit die betrokken zijn bij controversiële wapens, tabak, of die ernstige milieuovertredingen begaan. Je krijgt nog steeds een brede, wereldwijde spreiding.</div>
+      <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Duurzamer beleggen zonder te veel diversificatie te verliezen</div>
+              <div class="pc-item pro">Brede ACWI dekking (inclusief EM)</div>
+              <div class="pc-item pro">Iers domicilie (gunstige TOB)</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Hogere TER (0,25%) dan standaard World ETF's</div>
+              <div class="pc-item con">Uitsluitingen (bv. wapens/olie) kunnen zorgen voor lichte rendementsafwijkingen</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Duurzaam / ESG</span>
+          <span class="ef-tag">Wereldwijd</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 9 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">XGOV</div>
+          <div class="etf-name-sub">Xtrackers II Eurozone Government Bond UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#4ADE80">0,15%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem;color:var(--amber)">LU0643975591</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">Eurozone Gov Bonds</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~300+</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val" style="color:var(--amber)">Luxemburg</div></div>
+        </div>
+        <div class="etf-tickers-row">
+          <div class="etr-group"><div class="etr-label">Xetra (Frankfurt)</div><div class="etr-val">DBXN / XGOV</div></div>
+          <div class="etr-group"><div class="etr-label">Saxo Bank</div><div class="etr-val">XGOV</div></div>
+        </div>
+        <div class="etf-desc">Een defensief fonds dat belegt in staatsobligaties van de zwaarste landen uit de Eurozone (Duitsland, Frankrijk, België...). Obligaties dempen de klappen als de aandelenmarkt crasht. <br><br><strong>Waarschuwing voor Belgen:</strong> Omdat dit fonds geregistreerd is in Luxemburg (LU...) en het dividenden herbelegt (Accumulating), valt het onder de hoge Belgische TOB van 1,32% bij aankoop en verkoop. Beperk transacties in LU-fondsen of kies een Iers (IE) alternatief (zoals SYSC hieronder) indien mogelijk!</div>
+        <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Zeer veilig profiel (overheidsgarantie Eurozone)</div>
+              <div class="pc-item pro">Euro genoteerd (geen wisselkoersrisico)</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Fiscaal nadelig voor Belgen (1,32% TOB per transactie)</div>
+              <div class="pc-item con">Historisch laag (en soms negatief) rendement</div>
+              <div class="pc-item con">Obligatiefondsen zijn onderhevig aan meerwaardebelasting</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Staatsobligaties</span>
+          <span class="ef-tag" style="background:var(--red-tint);color:var(--red);border-color:var(--red)">Hoge TOB (1,32%)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 10 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">SYSC</div>
+          <div class="etf-name-sub">SPDR Bloomberg Euro Corporate Bond UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#4ADE80">0,12%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00B3T9LM79</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">Euro Corporate Bond</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~3.500</div></div>
+        <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+      </div>
+      <div class="etf-desc">SYSC belegt in bedrijfsobligaties (schulden van grote bedrijven) in euro met een hoge kredietwaardigheid (investment grade). Het biedt een iets hoger verwacht rendement dan overheidsobligaties. En cruciaal voor Belgische beleggers: omdat dit fonds een Ierse domicilie (IE...) heeft, valt het onder het lage TOB-tarief van 0,12%. Dat maakt dit een veel slimmere defensieve keuze dan de Luxemburgse XGOV-variant.</div>
+      <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Fiscaal aantrekkelijk voor Belgen (TOB 0,12%)</div>
+              <div class="pc-item pro">Iets meer rendement dan staatsbons</div>
+              <div class="pc-item pro">Euro genoteerd (geen wisselkoersrisico)</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Bedrijfsobligaties bieden iets minder crash-buffer dan staatsbons</div>
+              <div class="pc-item con">Obligatiefondsen zijn onderhevig aan meerwaardebelasting</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Bedrijfsobligaties</span>
+          <span class="ef-tag">Defensieve bouwsteen</span>
+          <span class="ef-tag">TOB 0,12%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETF 11 -->
+    <div class="etf-section">
+      <div class="etf-header">
+        <div class="etf-header-left">
+          <div class="etf-ticker-large">IS3R / IWMO</div>
+          <div class="etf-name-sub">iShares Edge MSCI World Momentum Factor UCITS ETF (Accumulating)</div>
+        </div>
+        <div class="etf-header-right">
+          <div class="etf-ter-large" style="color:#F59E0B">0,30%</div>
+          <div class="etf-ter-label">TER per jaar</div>
+        </div>
+      </div>
+      <div class="etf-body">
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">ISIN</div><div class="es-val-sm"><span class="isin-code" style="font-size:0.8rem">IE00BP3QZ825</span></div></div>
+          <div class="etf-stat"><div class="es-label">Index</div><div class="es-val">MSCI World Momentum</div></div>
+          <div class="etf-stat"><div class="es-label">Holdings</div><div class="es-val">~350</div></div>
+          <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
+        </div>
+        <div class="etf-grid-4">
+          <div class="etf-stat"><div class="es-label">Type</div><div class="es-val">Accumulating</div></div>
+          <div class="etf-stat"><div class="es-label">Valuta</div><div class="es-val">USD</div></div>
+          <div class="etf-stat"><div class="es-label">Beheerder</div><div class="es-val">BlackRock (iShares)</div></div>
+          <div class="etf-stat"><div class="es-label">Strategie</div><div class="es-val">Factor (Trendvolgend)</div></div>
+        </div>
+        <div class="etf-tickers-row">
+          <div class="etr-group"><div class="etr-label">Xetra (Frankfurt)</div><div class="etr-val">IS3R</div></div>
+          <div class="etr-group"><div class="etr-label">Euronext Amsterdam</div><div class="etr-val">IWMO</div></div>
+          <div class="etr-group"><div class="etr-label">Saxo Bank</div><div class="etr-val">IS3R / IWMO</div></div>
+          <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IWMO</div></div>
+        </div>
+        <div class="etf-desc">IS3R is de perfecte <strong>'satelliet'-ETF</strong>. Waar brede wereld-ETF's gewoon de grootste bedrijven kopen, selecteert IS3R aandelen op basis van <em>momentum</em>: het koopt specifiek de ~350 bedrijven die de afgelopen 6 tot 12 maanden het sterkst gestegen zijn. Het surft dus mee op de opwaartse trends. Historisch gezien levert de momentum-factor een hoger rendement op dan de brede markt, al gaat dit gepaard met hevigere koersschommelingen (volatiliteit). Ideaal om voor 5% tot 15% toe te voegen aan een bestaande basis (zoals SWRD of VWCE) als rendements-boost.</div>
+        <div class="etf-pros-cons">
+          <div class="etf-pros">
+            <div class="pc-title pos">Voordelen</div>
+            <div class="pc-list">
+              <div class="pc-item pro">Historisch gezien een hoger rendement (outperformance)</div>
+              <div class="pc-item pro">Perfecte satelliet om je portefeuille te "kruiden"</div>
+              <div class="pc-item pro">Automatische trend-volger: gooit verliezers eruit</div>
+              <div class="pc-item pro">Fiscaal voordelig voor Belgen (TOB 0,12%)</div>
+            </div>
+          </div>
+          <div class="etf-cons">
+            <div class="pc-title neg">Aandachtspunten</div>
+            <div class="pc-list">
+              <div class="pc-item con">Hogere kosten (0,30% TER) dan een gewone Wereld-ETF</div>
+              <div class="pc-item con">Hogere volatiliteit: daalt vaak net iets harder bij een beurscrash</div>
+              <div class="pc-item con">Sterk geconcentreerd (slechts ~350 bedrijven)</div>
+            </div>
+          </div>
+        </div>
+        <div class="etf-footer">
+          <span class="ef-tag">Satelliet-ETF</span>
+          <span class="ef-tag">Extra Rendement</span>
+          <span class="ef-tag">Factor Beleggen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ── 3. PORTFOLIO COMBINATIES (Nieuwe pagina) ── -->
+  <section id="portfolios" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">3</div>Portfoliocombinaties</div>
+    <h2 class="sec-title">Van simpel naar volledig</h2>
+    <p class="sec-intro">Je hoeft geen 11 ETF's te kopen. Minder is vaak beter. Hieronder vind je concrete combinaties, geüpdatet met de laatste inzichten van experts. Per combinatie: de ETF's, verdeling, verwacht profiel en blended TER.</p>
+
+    <div class="callout">
+      <strong>Hoe kies je?</strong> Begin met je beleggingsdoel en tijdshorizon. Lang beleggen (10+ jaar) voor pensioen of vermogen? Dan kan je meer risico nemen. Een 1-ETF portfolio is voor 95% van de beginners de beste en veiligste start.
+    </div>
+
+    <h3 class="portfolio-group-title first" style="font-size:1rem;font-weight:800;color:var(--ink);margin:28px 0 16px;padding-top:8px;border-top:2px solid var(--blue)">1-ETF Portfolio's — Het kan echt zo simpel</h3>
+
+    <!-- P1-A -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p1">
+        <div class="ph-left">
+          <div><span class="ph-badge p1">1-ETF · Populaire Basis</span></div>
+          <div class="ph-name">Ontwikkelde Wereld (IWDA)</div>
+          <div class="ph-sub">Eenvoudig, 100% gericht op ontwikkelde markten, perfect voor Saxo AutoInvest</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,20%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">100%</div><div class="pa-ticker">IWDA</div><div class="pa-index">MSCI World</div></div>
+      </div>
+      <div class="port-bar"><div style="width:100%;background:#3B82F6"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Ontwikkeld (Geen EM)</div></div>
+        <div class="pd-item"><div class="pd-label">Holdings</div><div class="pd-val">~1.400</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
+        <div class="pd-item"><div class="pd-label">Horizon</div><div class="pd-val">10+ jaar</div></div>
+      </div>
+      <div class="port-desc">IWDA is de populairste ETF voor beleggers die er bewust voor kiezen zich puur op de ontwikkelde wereld (zoals VS, Europa en Japan) te richten. Het is enorm liquide, eenvoudig op te zetten in een maandelijks spaarplan via Saxo AutoInvest en je hebt er verder geen omkijken meer naar, zolang je accepteert dat opkomende markten ontbreken.</div>
+    </div>
+
+    <!-- P1-B -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p1">
+        <div class="ph-left">
+          <div><span class="ph-badge p1">1-ETF · Expert Favoriet</span></div>
+          <div class="ph-name">De Ultieme All-in-One: IMIE</div>
+          <div class="ph-sub">Ontwikkelde markten, EM én small-caps verpakt in één goedkoper fonds</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,17%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">100%</div><div class="pa-ticker">IMIE</div><div class="pa-index">MSCI ACWI IMI</div></div>
+      </div>
+      <div class="port-bar"><div style="width:100%;background:#8B5CF6"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Wereld + EM</div></div>
+        <div class="pd-item"><div class="pd-label">Holdings</div><div class="pd-val">~3.700 (Incl Small Caps)</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
+        <div class="pd-item"><div class="pd-label">Horizon</div><div class="pd-val">10+ jaar</div></div>
+      </div>
+      <div class="port-desc">IMIE wordt aangeraden als het modernere en goedkopere broertje van VWCE. Je krijgt niet enkel de giganten, maar ook pure blootstelling aan small-caps in 47 landen. Met 0,17% TER is dit een uiterst efficiënte oplossing.</div>
+    </div>
+
+    <!-- P1-C -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p1">
+        <div class="ph-left">
+          <div><span class="ph-badge p1" style="background:#059669">1-ETF · ESG Filter</span></div>
+          <div class="ph-name">De Duurzame Keuze: XMAW</div>
+          <div class="ph-sub">100% All-World exposure met een strenge ESG uitsluiting</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,25%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">100%</div><div class="pa-ticker">XMAW</div><div class="pa-index">ACWI ESG Screened</div></div>
+      </div>
+      <div class="port-bar"><div style="width:100%;background:#10B981"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Wereld + EM</div></div>
+        <div class="pd-item"><div class="pd-label">Filter</div><div class="pd-val">ESG Screened</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
+        <div class="pd-item"><div class="pd-label">Horizon</div><div class="pd-val">10+ jaar</div></div>
+      </div>
+      <div class="port-desc">Wil je niet investeren in controversiële wapens, tabak of thermische steenkool? Dan is XMAW het makkelijkste alles-in-één antwoord. Je behoudt wereldwijde dekking maar op een schonere manier. Het is wel fractie duurder dan IMIE.</div>
+    </div>
+
+    <h3 class="portfolio-group-title" style="font-size:1rem;font-weight:800;color:var(--ink);margin:28px 0 16px;padding-top:8px;border-top:2px solid var(--green)">2-ETF Portfolio's — Werelddekking met maatwerk</h3>
+
+    <!-- P2-A -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p2">
+        <div class="ph-left">
+          <div><span class="ph-badge p2">2-ETF · Top-Keuze</span></div>
+          <div class="ph-name">SWRD + EMIM Combo</div>
+          <div class="ph-sub">SWRD (goedkoopste World) + EMIM (beste EM-dekking)</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,13%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">88%</div><div class="pa-ticker">SWRD</div><div class="pa-index">MSCI World</div></div>
+        <div class="pa-item"><div class="pa-pct">12%</div><div class="pa-ticker">EMIM</div><div class="pa-index">MSCI EM IMI</div></div>
+      </div>
+      <div class="port-bar"><div style="width:88%;background:var(--blue)"></div><div style="width:12%;background:#F59E0B"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Wereld + EM</div></div>
+        <div class="pd-item"><div class="pd-label">Holdings</div><div class="pd-val">~4.600</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
+        <div class="pd-item"><div class="pd-label">Blended TER</div><div class="pd-val" style="color:var(--green)">0,13%</div></div>
+      </div>
+      <div class="port-desc">SWRD is de favoriet als goedkoopste MSCI World ETF (0,12%). Aangevuld met EMIM (0,18%) dek je de volledige wereld voor gemiddeld slechts ~0,13% per jaar — merkbaar goedkoper dan VWCE alleen. Herbalanceer simpelweg eenmaal per jaar.</div>
+    </div>
+
+    <!-- NEW IS3R COMBO -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p2">
+        <div class="ph-left">
+          <div><span class="ph-badge p2" style="background:#EC4899">2-ETF · De Eenvoudige Booster</span></div>
+          <div class="ph-name">VWCE + IS3R (Momentum Satelliet)</div>
+          <div class="ph-sub">De ultieme balans tussen eenvoud en een rendements-boost</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,23%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">90%</div><div class="pa-ticker">VWCE</div><div class="pa-index">All-World (Core)</div></div>
+        <div class="pa-item"><div class="pa-pct">10%</div><div class="pa-ticker">IS3R</div><div class="pa-index">Momentum (Satelliet)</div></div>
+      </div>
+      <div class="port-bar"><div style="width:90%;background:var(--blue)"></div><div style="width:10%;background:#EC4899"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Wereldwijd</div></div>
+        <div class="pd-item"><div class="pd-label">Satelliet</div><div class="pd-val">10% Trend-volgend</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief +</div></div>
+        <div class="pd-item"><div class="pd-label">Blended TER</div><div class="pd-val" style="color:var(--green)">0,23%</div></div>
+      </div>
+      <div class="port-desc">Dit is de toegankelijkste manier om de beroemde 'Core-Satellite' strategie toe te passen. Je basis is ijzersterk en simpel: 90% in VWCE. De resterende 10% beleg je in IS3R, dat momentum aandelen selecteert om net dat beetje extra rendement uit stijgende markten te halen. Ideaal voor de passieve belegger die het rendement wil "kruiden".</div>
+    </div>
+
+    <!-- NEW IMIE + IS3R COMBO -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p2">
+        <div class="ph-left">
+          <div><span class="ph-badge p2" style="background:#EC4899">2-ETF · De Brede Booster</span></div>
+          <div class="ph-name">IMIE + IS3R (All-In-One + Momentum)</div>
+          <div class="ph-sub">De ultieme spreiding (inclusief small caps) met een gerichte rendements-boost</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,18%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">90%</div><div class="pa-ticker">IMIE</div><div class="pa-index">ACWI IMI (Core)</div></div>
+        <div class="pa-item"><div class="pa-pct">10%</div><div class="pa-ticker">IS3R</div><div class="pa-index">Momentum (Satelliet)</div></div>
+      </div>
+      <div class="port-bar"><div style="width:90%;background:#8B5CF6"></div><div style="width:10%;background:#EC4899"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Wereldwijd</div></div>
+        <div class="pd-item"><div class="pd-label">Satelliet</div><div class="pd-val">10% Trend-volgend</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief +</div></div>
+        <div class="pd-item"><div class="pd-label">Blended TER</div><div class="pd-val" style="color:var(--green)">0,18%</div></div>
+      </div>
+      <div class="port-desc">Deze combinatie brengt het beste van twee werelden samen: via de "core" (IMIE) heb je een waanzinnig brede blootstelling aan grote, middelgrote én kleine bedrijven uit zowel de ontwikkelde als de opkomende wereld. Daaraan voeg je 10% "satelliet" toe (IS3R) die de best presterende momentum aandelen opspoort. De perfecte, geavanceerde combo in slechts twee fondsen!</div>
+    </div>
+
+    <!-- P2-C -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p2">
+        <div class="ph-left">
+          <div><span class="ph-badge p2">2-ETF · Defensiever profiel</span></div>
+          <div class="ph-name">Groei + Stabilisator (Aandelen + Obligaties)</div>
+          <div class="ph-sub">IMIE (groei) + SYSC (buffer obligaties, Iers domicilie!)</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,16%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">80%</div><div class="pa-ticker">IMIE</div><div class="pa-index">Globale Aandelen</div></div>
+        <div class="pa-item"><div class="pa-pct">20%</div><div class="pa-ticker">SYSC</div><div class="pa-index">Euro Corporate Bond</div></div>
+      </div>
+      <div class="port-bar"><div style="width:80%;background:#8B5CF6"></div><div style="width:20%;background:#64748B"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Gematigd</div></div>
+        <div class="pd-item"><div class="pd-label">Crashbuffer</div><div class="pd-val">Ja (obligaties)</div></div>
+        <div class="pd-item"><div class="pd-label">Horizon</div><div class="pd-val">7–15 jaar</div></div>
+        <div class="pd-item"><div class="pd-label">Belasting</div><div class="pd-val">Laag (TOB 0,12%)</div></div>
+      </div>
+      <div class="port-desc">Geschikt voor wie minder volatiliteit (schommelingen) wil in zijn portfolio — bijvoorbeeld wanneer je dichter bij je financiële doel komt. De obligaties (SYSC) temperen zware klappen. We raden hier SYSC aan omdat dit een Ierse domicilie (0,12% TOB) heeft, wat voor Belgen véél voordeliger is dan het Luxemburgse XGOV-fonds (1,32% TOB).</div>
+    </div>
+
+    <h3 class="portfolio-group-title" style="font-size:1rem;font-weight:800;color:var(--ink);margin:28px 0 16px;padding-top:8px;border-top:2px solid #7C3AED">3-ETF Portfolio's — Geavanceerd</h3>
+
+    <!-- P3-A -->
+    <div class="portfolio-card">
+      <div class="portfolio-header p3">
+        <div class="ph-left">
+          <div><span class="ph-badge p3">3-ETF · Core-Satellite (Expert)</span></div>
+          <div class="ph-name">De Groei-Booster (Wereld + EM + Momentum)</div>
+          <div class="ph-sub">De goedkoopste basis, gekruid met de IS3R Momentum ETF voor extra rendement</div>
+        </div>
+        <div class="ph-right">
+          <div class="ph-ter">0,15%</div>
+          <div class="ph-ter-label">Blended TER</div>
+        </div>
+      </div>
+      <div class="port-alloc">
+        <div class="pa-item"><div class="pa-pct">78%</div><div class="pa-ticker">SWRD</div><div class="pa-index">MSCI World (Core)</div></div>
+        <div class="pa-item"><div class="pa-pct">12%</div><div class="pa-ticker">EMIM</div><div class="pa-index">MSCI EM IMI (Core)</div></div>
+        <div class="pa-item"><div class="pa-pct">10%</div><div class="pa-ticker">IS3R</div><div class="pa-index">Momentum (Satelliet)</div></div>
+      </div>
+      <div class="port-bar"><div style="width:78%;background:var(--blue)"></div><div style="width:12%;background:#F59E0B"></div><div style="width:10%;background:#EC4899"></div></div>
+      <div class="port-details">
+        <div class="pd-item"><div class="pd-label">Geografie</div><div class="pd-val">Wereldwijd</div></div>
+        <div class="pd-item"><div class="pd-label">Satelliet</div><div class="pd-val">10% Trend-volgend</div></div>
+        <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief +</div></div>
+        <div class="pd-item"><div class="pd-label">Blended TER</div><div class="pd-val" style="color:var(--green)">0,15%</div></div>
+      </div>
+      <div class="port-desc">Dit is de optimalisatie van de Eenvoudige Booster. Je 'core' (de veilige kern van 90%) is zo goedkoop en breed mogelijk gespreid dankzij de SWRD+EMIM combinatie. Aan de randen voeg je een 'satelliet' toe (10% IS3R) in de hoop het marktrendement nét dat beetje te verslaan met aandelen die in de lift zitten. Geschikt voor beleggers die houden van optimalisatie en iets meer volatiliteit aandurven.</div>
+    </div>
+
+    <div class="callout callout-green">
+      <strong>Wanneer herbalanceren?</strong> Als je een strategie met meerdere ETF's kiest, controleer je verdeling dan hoogstens één keer per jaar. Als een ETF meer dan 5 procentpunt afwijkt van de doelverdeling, koop je bij wat achtergebleven is. Verkoop in de opbouwfase zo weinig mogelijk.
+    </div>
+  </section>
+
+<!-- ── 4. ISIN (Nieuwe pagina) ── -->
+  <section id="isin" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">4</div>Hoe gebruik je ISIN-codes?</div>
+    <h2 class="sec-title">Zoek altijd op ISIN, niet op tickernaam</h2>
+    <p class="sec-intro">Een ETF kan op meerdere beurzen genoteerd staan, en op elke beurs een andere ticker hebben. VWCE op Euronext Amsterdam heet VWCE. Op Xetra in Frankfurt heet hetzelfde fonds ook VWCE — maar IWDA op Euronext heet EUNL op Xetra. Als je de tikernaam gebruikt, zoek je mogelijk het verkeerde fonds.</p>
+
+    <p>De ISIN (International Securities Identification Number) is de universele, unieke code van een fonds. Die verandert nooit, ongeacht op welke beurs je koopt. Het is de enige betrouwbare manier om zeker te zijn dat je het juiste fonds koopt.</p>
+
+    <div class="isin-demo">
+      <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.4);margin-bottom:10px">Voorbeeld: ISIN van VWCE (Vanguard FTSE All-World Acc)</div>
+      <div class="isin-parts">
+        <div class="isin-part country">IE<div class="isin-part-label">Land (Ierland)</div></div>
+        <div class="isin-part nsin">00BK5BQT8<div class="isin-part-label">Fonds-ID</div></div>
+        <div class="isin-part check">0<div class="isin-part-label">Controlecijfer</div></div>
+      </div>
+      <div style="font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:10px">Ierse ETF's (IE...) zijn fiscaal het voordeligst voor Belgische beleggers: TOB van 0,12% in plaats van 1,32%.</div>
+    </div>
+
+    <div class="callout">
+      <strong>Hoe zoek je op ISIN?</strong> Open je broker-app, ga naar zoeken/kopen, en typ de ISIN-code volledig in. Elke serieuze broker ondersteunt zoeken op ISIN. Je vindt zo altijd het juiste fonds, ongeacht de beursnaam.
+    </div>
+  </section>
+
+<!-- ── 5. PLATFORMS (Nieuwe pagina) ── -->
+  <section id="platforms" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">5</div>Tickers per platform</div>
+    <h2 class="sec-title">Dezelfde ETF, andere naam per broker</h2>
+    <p class="sec-intro">Dezelfde ETF kan op Saxo, Bolero of Keytrade een andere ticker hebben, afhankelijk van welke beurs de broker standaard toont. Gebruik altijd de ISIN-code om het juiste fonds te zoeken.</p>
+
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>ETF</th>
+          <th>ISIN</th>
+          <th>Saxo Bank</th>
+          <th>Bolero</th>
+          <th>Keytrade / MeDirect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>VWCE</td>
+          <td><span class="isin-code">IE00BK5BQT80</span></td>
+          <td><span class="ticker-cell">VWCE</span></td>
+          <td><span class="ticker-cell">VWCE</span></td>
+          <td><span class="ticker-cell">VWCE</span></td>
+        </tr>
+        <tr>
+          <td>IMIE</td>
+          <td><span class="isin-code">IE00B3YLTY66</span></td>
+          <td><span class="ticker-cell">IMIE</span> / <span class="ticker-cell">SPYI</span></td>
+          <td><span class="ticker-cell">IMIE</span> / <span class="ticker-cell">SPYI</span></td>
+          <td><span class="ticker-cell">IMIE</span></td>
+        </tr>
+        <tr>
+          <td>IWDA</td>
+          <td><span class="isin-code">IE00B4L5Y983</span></td>
+          <td><span class="ticker-cell">IWDA</span> / <span class="ticker-cell">EUNL</span></td>
+          <td><span class="ticker-cell">IWDA</span></td>
+          <td><span class="ticker-cell">IWDA</span></td>
+        </tr>
+        <tr>
+          <td>SWRD</td>
+          <td><span class="isin-code">IE00BFY0GT14</span></td>
+          <td><span class="ticker-cell">SWRD</span></td>
+          <td><span class="ticker-cell">SWRD</span></td>
+          <td><span class="ticker-cell">SWRD</span></td>
+        </tr>
+        <tr>
+          <td>EMIM</td>
+          <td><span class="isin-code">IE00BKM4GZ66</span></td>
+          <td><span class="ticker-cell">EMIM</span> / <span class="ticker-cell">IS3N</span></td>
+          <td><span class="ticker-cell">IS3N</span> of <span class="ticker-cell">EMIM</span></td>
+          <td><span class="ticker-cell">EMIM</span></td>
+        </tr>
+        <tr>
+          <td>SPYL</td>
+          <td><span class="isin-code">IE000XZSV718</span></td>
+          <td><span class="ticker-cell">SPYL</span></td>
+          <td><span class="ticker-cell">SPYL</span></td>
+          <td><span class="ticker-cell">SPYL</span></td>
+        </tr>
+        <tr>
+          <td>IMEU</td>
+          <td><span class="isin-code">IE00B4K48X80</span></td>
+          <td><span class="ticker-cell">IMEU</span></td>
+          <td><span class="ticker-cell">IMEU</span></td>
+          <td><span class="ticker-cell">IMEU</span></td>
+        </tr>
+        <tr>
+          <td>XMAW</td>
+          <td><span class="isin-code">IE00BGHQ0G80</span></td>
+          <td><span class="ticker-cell">XMAW</span></td>
+          <td><span class="ticker-cell">XMAW</span></td>
+          <td><span class="ticker-cell">XMAW</span></td>
+        </tr>
+        <tr>
+          <td>XGOV</td>
+          <td><span class="isin-code" style="color:var(--amber)">LU0643975591</span></td>
+          <td><span class="ticker-cell">XGOV</span></td>
+          <td><span class="ticker-cell">DBXN</span></td>
+          <td><span class="ticker-cell">XGOV</span></td>
+        </tr>
+        <tr>
+          <td>SYSC</td>
+          <td><span class="isin-code">IE00B3T9LM79</span></td>
+          <td><span class="ticker-cell">SYSC</span></td>
+          <td><span class="ticker-cell">SYSC</span></td>
+          <td><span class="ticker-cell">SYSC</span></td>
+        </tr>
+        <tr>
+          <td>IS3R</td>
+          <td><span class="isin-code">IE00BP3QZ825</span></td>
+          <td><span class="ticker-cell">IS3R</span> / <span class="ticker-cell">IWMO</span></td>
+          <td><span class="ticker-cell">IWMO</span></td>
+          <td><span class="ticker-cell">IS3R</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+<!-- ── 6. SAXO AUTOINVEST (Nieuwe pagina) ── -->
+  <section id="autoinvest" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">6</div>Hangmatbeleggen met Saxo AutoInvest</div>
+    <h2 class="sec-title">Automatisch beleggen zonder stress</h2>
+    <p class="sec-intro">De allerbeste beleggers zijn vaak degenen die na hun eerste aankoop helemaal niets meer doen. "Hangmatbeleggen" is de ultieme strategie voor beginners: je stelt één keer een automatisch spaarplan in, en kijkt er jarenlang niet meer naar om. Saxo Bank biedt hier de perfecte tool voor aan.</p>
+
+    <h3 style="font-size:1rem;font-weight:800;color:var(--ink);margin:24px 0 12px">Waarom is AutoInvest de ultieme aanrader?</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:16px;margin-bottom:24px">
+      <div style="background:var(--surface);border-radius:8px;padding:16px;border:1px solid var(--rule)">
+        <div style="font-weight:700;color:var(--blue);margin-bottom:8px">1. Nul Emoties</div>
+        <p style="font-size:0.8rem;margin:0">De beurs zakt? Het systeem koopt goedkoper bij. De beurs stijgt? Het systeem koopt de winnaars. Je hoeft nooit te twijfelen, het nieuws te volgen of te wachten op 'het perfecte moment'.</p>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:16px;border:1px solid var(--rule)">
+        <div style="font-weight:700;color:var(--blue);margin-bottom:8px">2. Tijd besparen</div>
+        <p style="font-size:0.8rem;margin:0">Via een automatische overschrijving vanaf je gewone bankrekening gaat je inleg elke maand automatisch naar je broker en wordt dit de volgende dag automatisch belegd. Je hoeft zelf niet meer in te loggen.</p>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:16px;border:1px solid var(--rule)">
+        <div style="font-weight:700;color:var(--blue);margin-bottom:8px">3. Geen transactiekosten</div>
+        <p style="font-size:0.8rem;margin:0">Saxo rekent momenteel <strong>€0 transactiekosten</strong> aan voor het beleggen via AutoInvest op veel populaire ETF's (zoals VWCE of IMIE). Je betaalt enkel nog de kleine wettelijke Belgische beurstaks (TOB).</p>
+      </div>
+    </div>
+
+    <div class="callout callout-green">
+      <strong>Hoe stel je dit in?</strong> In de Saxo-app of op hun website ga je simpelweg naar het menu <strong>'AutoInvest'</strong>. Je selecteert je favoriete ETF-portefeuille, je stelt in dat je elke maand op een vaste dag een bedrag wil beleggen, en bevestigt. Dat is alles! Je bent nu officieel een hangmatbelegger.
+    </div>
+  </section>
+
+<!-- ── 7. BELASTINGEN (Nieuwe pagina) ── -->
+  <section id="belastingen" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">7</div>Fiscale uitleg voor België</div>
+    <h2 class="sec-title">Welke belastingen betaal je?</h2>
+    <p class="sec-intro">Beleggen in ETF's brengt in België drie belastingen met zich mee. Hieronder vind je een helder overzicht.</p>
+
+    <h3 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:14px">Overzicht voor Belgische beleggers</h3>
+    <div class="tax-grid">
+      <div class="tax-card">
+        <div class="tc-title">Taks op Beursverrichtingen (TOB)</div>
+        <div class="tc-rate">0,12%</div>
+        <div class="tc-body">Bij elke aan- en verkoop van een Iers domiciel ETF. Betaal je automatisch via een Belgische broker.</div>
+        <div class="tc-highlight">Ierse ETF = 0,12% (laagste tarief)</div>
+      </div>
+      <div class="tax-card">
+        <div class="tc-title">Roerende voorheffing</div>
+        <div class="tc-rate">30%</div>
+        <div class="tc-body">Op dividenden uitgekeerd door een ETF. Bij accumulating (Acc) ETF's wordt dividend intern herbelegd — geen uitkering op je account, dus geen dividendbelasting op dat moment.</div>
+        <div class="tc-highlight">Accumulating ETF = fiscaal geoptimaliseerd</div>
+      </div>
+      <div class="tax-card">
+        <div class="tc-title">Meerwaardebelasting (nieuw 2026)</div>
+        <div class="tc-rate">10%</div>
+        <div class="tc-body">Op gerealiseerde winst bij verkoop. Eerste €10.000 winst per jaar is vrijgesteld (opbouwbaar tot €15.000 in latere fase). Winst opgebouwd voor 31/12/2025 blijft in principe belastingvrij.</div>
+        <div class="tc-highlight">Eerste €10.000 winst/jaar gratis</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Jouw broker regelt het voor jou:</strong> Alle aanbevolen Belgische brokers (Bolero, ING Self Invest, Keytrade Bank, MeDirect, Re=Bel en Saxo Bank) houden de TOB en eventuele andere belastingen automatisch correct in bij transacties. Zij doen de doorgifte aan de fiscus. Je hebt hierdoor geen extra administratie of buitenlandse rekeningen aan te geven bij de Nationale Bank.
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin:24px 0 14px">Waarom Ierse ETF's (IE...) het voordeligst zijn</h3>
+    <table class="comp-table">
+      <thead>
+        <tr><th>ETF-domicilie</th><th>TOB bij aankoop</th><th>TOB bij verkoop</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ierland (IE...)</td>
+          <td class="check-g">0,12%</td>
+          <td class="check-g">0,12%</td>
+        </tr>
+        <tr>
+          <td>België (BE...)</td>
+          <td class="check-r">1,32%</td>
+          <td class="check-r">1,32%</td>
+        </tr>
+        <tr>
+          <td>Luxemburg (LU...)</td>
+          <td class="check-y">1,32%</td>
+          <td class="check-y">1,32%</td>
+        </tr>
+        <tr>
+          <td>Overige (FR, DE...)</td>
+          <td class="check-y">Variabel</td>
+          <td class="check-y">Variabel</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+<!-- ── 8. CHECKLIST (Nieuwe pagina) ── -->
+  <section id="checklist" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">8</div>Starterschecklist</div>
+    <h2 class="sec-title">Klaar om te beginnen?</h2>
+    <p class="sec-intro">Doorloop deze checklist stap voor stap. Vink af wanneer je klaar bent.</p>
+
+    <div class="checklist">
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Beleggingsdoel bepaald.</strong> Waarvoor beleg je? Pensioen, huis, financiële vrijheid? Je doel bepaalt je tijdshorizon en risicoprofiel.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Noodfonds aangelegd.</strong> 3–6 maanden levenskosten op een aparte spaarrekening. Pas dan begin je te beleggen.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Tijdshorizon vastgelegd.</strong> Minder dan 5 jaar? Voorzichtig zijn. 10+ jaar? Dan kan je de beurs volatiliteit dragen.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Broker gekozen.</strong> Kies een veilige Belgische speler: Bolero, ING Self Invest, Keytrade Bank, MeDirect, Re=Bel of Saxo Bank. Allemaal regelen ze de administratie voor jou.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Account geopend en goedgekeurd.</strong> Identiteitskaart klaar? Vragenlijst ingevuld? Eerste storting gedaan?</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Portfolio gekozen.</strong> 1-ETF (IMIE of VWCE), of een 2-ETF (SWRD + EMIM)? Kies op basis van je strategie in sectie 3.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>ETF gevonden via ISIN-code.</strong> Gebruik de ISIN uit sectie 1, niet de ticker. Zo vind je altijd het juiste fonds op jouw beurs.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Eerste aankoop gedaan.</strong> Koop je eerste ETF. Bedrag maakt niet uit — het gaat erom de gewoonte te starten.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Automatisch spaarplan ingesteld.</strong> Kies een vast bedrag per maand en een vaste dag. Saxo AutoInvest of handmatig order plannen.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Kalender: 1× per kwartaal checken.</strong> Zet een herinnering in je agenda. Bekijk je portfolio maximaal één keer per kwartaal. Hoe minder, hoe beter.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Jaarlijkse herbalancering gepland.</strong> (Enkel bij 2+ fondsen) Noteer wanneer je checkt of de verhouding nog klopt.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Aankoopbewijzen bewaard.</strong> Sla alle transactiebevestigingen op (per e-mail of downloadbaar in je broker). Belangrijk voor de nieuwe meerwaardebelasting.</div></label>
+    </div>
+  </section>
+
+<!-- ── 9. GLOSSARY (Nieuwe pagina) ── -->
+  <section id="glossary" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">9</div>Woordenlijst</div>
+    <h2 class="sec-title">Begrippen verklaard</h2>
+    <p class="sec-intro">Een beknopte uitleg van alle termen in dit document.</p>
+
+    <div class="glossary-grid">
+      <div class="gl-item"><div class="gl-term">ETF (Exchange Traded Fund)</div><div class="gl-def">Beleggingsfonds dat op de beurs verhandelbaar is. Bundelt aandelen, obligaties of andere activa op automatische (passieve) wijze.</div></div>
+      <div class="gl-item"><div class="gl-term">ISIN</div><div class="gl-def">International Securities Identification Number. Unieke 12-cijferige code van een fonds. Gebruik dit altijd bij de zoekfunctie van je broker om misverstanden te vermijden.</div></div>
+      <div class="gl-item"><div class="gl-term">Ticker</div><div class="gl-def">Korte naam (bijv. VWCE of SWRD) waarmee een ETF op een beurs staat genoteerd. Kan per beurs verschillen (zoals IMIE of SPYI).</div></div>
+      <div class="gl-item"><div class="gl-term">TER (Total Expense Ratio)</div><div class="gl-def">Jaarlijkse beheerkosten van een ETF, uitgedrukt als percentage van je belegd vermogen. Hoe lager, hoe beter (bv. 0,12% voor SWRD).</div></div>
+      <div class="gl-item"><div class="gl-term">Spread (Bied-laat spread)</div><div class="gl-def">Het verschil tussen de biedprijs (wat kopers willen betalen) en de laatprijs (wat verkopers vragen). Een krappe spread betekent dat de ETF veel verhandeld wordt en je goedkoper kunt instappen.</div></div>
+      <div class="gl-item"><div class="gl-term">Accumulating (Acc)</div><div class="gl-def">ETF herbelegt dividenden intern. Je krijgt geen cash uitkering op je account, dus geen directe dividendbelasting. Fiscaal top voor Belgen.</div></div>
+      <div class="gl-item"><div class="gl-term">Distributing (Dist)</div><div class="gl-def">ETF keert dividenden uit als cash. In België betaal je hier 30% roerende voorheffing over. Vermijden in de opbouwfase!</div></div>
+      <div class="gl-item"><div class="gl-term">Index</div><div class="gl-def">Beursgraadmeter die de ETF volgt. Bijv. MSCI World volgt grote/middelgrote bedrijven in de VS/Europa/Japan.</div></div>
+      <div class="gl-item"><div class="gl-term">Domicilie</div><div class="gl-def">Land waar het fonds juridisch gevestigd is. Iers domicilie (IE...) is voor Belgische beleggers fiscaal het voordeligst (TOB 0,12%).</div></div>
+      <div class="gl-item"><div class="gl-term">TOB</div><div class="gl-def">Taks op Beursverrichtingen. Belgische belasting bij aankoop en verkoop van aandelen/ETF's. Voor kapitaliserende Ierse ETF's slechts 0,12%.</div></div>
+      <div class="gl-item"><div class="gl-term">Meerwaardebelasting</div><div class="gl-def">Nieuwe Belgische belasting (vanaf 2026). 10% belasting op je behaalde winst bij verkoop, maar de eerste €10.000 winst per jaar is vrij.</div></div>
+      <div class="gl-item"><div class="gl-term">Developed Markets</div><div class="gl-def">Ontwikkelde markten: VS, Europa, Japan, Australië, Canada. Goed voor ~85% van de globale economische waarde op de beurs.</div></div>
+      <div class="gl-item"><div class="gl-term">Emerging Markets (EM)</div><div class="gl-def">Opkomende markten: China, India, Brazilië, Taiwan, ... Hebben een hoger groeipotentieel maar dragen ook iets meer risico en volatiliteit.</div></div>
+      <div class="gl-item"><div class="gl-term">Large Cap / Small Cap</div><div class="gl-def">Classificatie op marktwaarde. Large = miljardenbedrijven (Apple, ASML). Small = kleinere beursgenoteerde bedrijven met historisch meer premium.</div></div>
+      <div class="gl-item"><div class="gl-term">Core-Satellite</div><div class="gl-def">Een portefeuillestrategie: ~90% zit in een veilige, brede basis (Core), ~10% investeer je specifieker voor extra rendement of focus (Satelliet).</div></div>
+      <div class="gl-item"><div class="gl-term">IMI (Investable Market Index)</div><div class="gl-def">Variant van MSCI-indices die niet alleen de reuzen meeneemt, maar ook de small caps omvat. Zowel IMIE als EMIM zijn IMI ETF's.</div></div>
+      <div class="gl-item"><div class="gl-term">Herbalanceren</div><div class="gl-def">De balans in je 2- of 3-ETF portfolio herstellen door het fonds dat is 'achtergebleven' extra bij te kopen met je nieuwe spaargeld.</div></div>
+      <div class="gl-item"><div class="gl-term">Euro-cost averaging</div><div class="gl-def">Maandelijks exact hetzelfde bedrag investeren (bv. €200), ongeacht de beurskoers. Je koopt automatisch veel stuks bij dips, en minder stuks op pieken.</div></div>
+      <div class="gl-item"><div class="gl-term">Blended TER</div><div class="gl-def">Het rekensommetje: de gemiddelde kosten van je portefeuile. 90% SWRD + 10% EMIM is (0,9 × 0,12%) + (0,1 × 0,18%) ≈ 0,13% TER.</div></div>
+      <div class="gl-item"><div class="gl-term">AutoInvest (Saxo)</div><div class="gl-def">Functie bij Saxo Bank om automatisch elke 5e van de maand via domiciliëring (of cash op je account) een gekozen ETF aan te kopen.</div></div>
+    </div>
+  </section>
+
+  <div class="doc-footer">
+    <div><strong>ETF Startgids</strong> · StartToETF · 2026</div>
+    <div>Dit document is geen beleggingsadvies. Beleggen brengt risico's met zich mee.</div>
+  </div>
+</div>
+
+</body>
+</html>
