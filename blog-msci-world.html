@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wat is de MSCI World index? - StartToETF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --ink:        #0F1923;
+  --ink-2:      #2C3E50;
+  --ink-3:      #5A6A7A;
+  --ink-4:      #9AAABB;
+  --rule:       #E0E7EF;
+  --surface:    #F5F7FA;
+  --white:      #FFFFFF;
+  --blue:       #1A56DB;
+  --blue-deep:  #1040B0;
+  --blue-tint:  #EBF1FD;
+  --green:      #0B7A5E;
+  --green-tint: #E8F5F1;
+  --amber:      #8A5A00;
+  --amber-tint: #FFF8E7;
+  --red:        #B91C1C;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  font-weight:400;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap { max-width:1100px; margin:0 auto; padding:0 40px; }
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  height:56px;
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-inner{
+  height:100%;max-width:1100px;margin:0 auto;padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{font-size:0.9rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-0.01em}
+.nav-logo span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:0.82rem;font-weight:500;color:var(--ink-3);text-decoration:none}
+.nav-links a:hover{color:var(--ink)}
+.nav-links .nav-btn{color:white}
+.nav-links .nav-btn:hover{color:white}
+.nav-btn{
+  background:var(--blue);color:white;border:none;border-radius:6px;
+  padding:8px 20px;font-family:'Inter',sans-serif;font-weight:600;font-size:0.82rem;
+  cursor:pointer;text-decoration:none;transition:background .15s;
+}
+.nav-btn:hover{background:var(--blue-deep)}
+
+/* ── ARTICLE STYLES ── */
+.article-wrap {
+  max-width: 75ch;
+  margin: 120px auto 80px;
+  padding: 0 24px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.back-link:hover {
+  color: var(--blue-deep);
+}
+.tag-box {
+  display:inline-block;
+  font-size:0.6rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  padding:4px 8px;
+  border-radius:4px;
+  background:var(--blue-tint);
+  color:var(--blue);
+  margin-bottom: 16px;
+}
+.article-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.article-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--ink-4);
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 40px;
+}
+.article-content {
+  color: var(--ink-2);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.article-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 40px 0 16px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 32px 0 12px;
+}
+.article-content p {
+  margin-bottom: 20px;
+}
+.article-content ul {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+.article-content li {
+  margin-bottom: 8px;
+}
+.article-content ol {
+  list-style-position: outside;
+  padding-left: 20px;
+}
+.article-content strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.callout {
+  border-left: 3px solid var(--blue);
+  padding: 18px 24px;
+  background: var(--blue-tint);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  line-height: 1.7;
+  margin: 32px 0;
+}
+.callout strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ── FOOTER ── */
+footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0 28px}
+.ft{display:grid;grid-template-columns:180px 1fr;gap:52px;margin-bottom:32px}
+.ft-logo{font-size:0.88rem;font-weight:700;color:var(--ink);margin-bottom:7px}
+.ft-logo span{color:var(--blue)}
+.ft-tag{font-size:0.78rem;color:var(--ink-4);line-height:1.6}
+.ft-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 14px;align-content:start}
+.ft-nav a{font-size:0.78rem;color:var(--ink-4);text-decoration:none;transition:color .15s}
+.ft-nav a:hover{color:var(--ink)}
+.ft-disc{
+  border-top:1px solid var(--rule);
+  padding-top:20px;
+  font-size:0.73rem;
+  color:var(--ink-4);
+  line-height:1.7;
+  width:100%;
+}
+.ft-disc strong{color:var(--ink-3);font-weight:600}
+.ft-copy{border-top:1px solid var(--rule);padding-top:14px;margin-top:14px;font-size:0.71rem;color:var(--ink-4)}
+
+/* Mobile nav hidden on desktop */
+.nav-cta-mobile { display: none; }
+.nav-mobile-group { display: none; }
+.mobile-menu { display: none; }
+
+@media(max-width:940px){
+  .wrap{padding:0 22px}
+  .nav-inner{padding:0 22px}
+  .ft{grid-template-columns:1fr;gap:22px}
+  .ft-nav{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-mobile-group{display:flex; align-items:center; gap:10px;}
+  .nav-cta-mobile{
+    display:block;
+    background:var(--blue);color:white;
+    border:none;border-radius:6px;
+    padding:7px 14px;font-family:'Inter',sans-serif;
+    font-weight:700;font-size:0.78rem;
+    cursor:pointer;text-decoration:none;
+    white-space:nowrap;transition:background .15s;
+  }
+  .nav-hamburger{
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    width:auto;height:40px;background:none;border:none;cursor:pointer;
+    padding:8px 0 8px 8px;
+    flex-shrink:0;
+  }
+  .nav-hamburger span{
+    display:block;width:20px;height:2px;
+    background:var(--ink);border-radius:1px;
+    transition:all .25s ease;transform-origin:center;
+  }
+  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{
+    position:fixed;top:56px;left:0;right:0;z-index:298;
+    background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+    box-shadow:0 8px 32px rgba(15,25,35,0.1);
+  }
+  .mobile-menu.open{display:block;}
+  .mobile-menu-inner{
+    padding:12px 20px 20px;
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .mobile-menu-inner a{
+    display:block;padding:12px 14px;
+    font-size:0.9rem;font-weight:500;color:var(--ink);
+    text-decoration:none;border-radius:6px;
+    transition:background .15s;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><i class="fa-solid fa-arrow-trend-up"></i> StartTo<span>ETF</span></a>
+    <div class="nav-links">
+      <a href="index.html#etf">Wat is een ETF?</a>
+      <a href="index.html#stappenplan">Stappenplan</a>
+      <a href="index.html#brokers">Brokers</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-btn" href="index.html#kickstarter">Aan de slag</a>
+    </div>
+    <div class="nav-mobile-group">
+      <a class="nav-cta-mobile" href="index.html#kickstarter">Aan de slag</a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="index.html#etf">Wat is een ETF?</a>
+    <a href="index.html#stappenplan">Stappenplan</a>
+    <a href="index.html#brokers">Brokers</a>
+    <a href="index.html#pensioen">Pensioen</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<main class="article-wrap">
+  <a href="index.html#blog" class="back-link">&larr; Terug naar Kennisbank</a>
+  
+  <span class="tag-box">Index uitgelegd</span>
+  <h1 class="article-title">Wat is de MSCI World Index?</h1>
+  
+  <div class="article-meta">
+    <span><i class="fa-regular fa-clock"></i> 5 min. lezen</span>
+    <span>Gepubliceerd op 18 april 2026</span>
+  </div>
+
+  <div class="article-content">
+    <p>Als je je begint in te lezen over ETF's, stuit je al snel op de heilige graal van het passief beleggen: de <strong>MSCI World index</strong>. Het wordt vaak de "wereldindex" genoemd, en ETF's die deze index volgen worden wereldwijd aangeraden aan beginners. Maar wat is het nu precies?</p>
+
+    <h2>Een gigantisch digitaal mandje</h2>
+    <p>MSCI staat voor <em>Morgan Stanley Capital International</em>, het bedrijf dat deze index samenstelt. Een "index" is eigenlijk gewoon een meetinstrument of een lijstje. De MSCI World Index is een lijst van <strong>ongeveer 1.500 grote en middelgrote bedrijven</strong> uit de ontwikkelde landen. Denk aan Apple, Microsoft, Nestlé, LVMH en Toyota.</p>
+    
+    <p>Wanneer je een ETF koopt die de MSCI World volgt (zoals bijvoorbeeld de iShares Core MSCI World ETF met ticker IWDA), koop je met één enkele transactie een minuscuul stukje in elk van deze 1.500 bedrijven.</p>
+
+    <div class="callout">
+      <strong>Kleine misvatting:</strong> Ondanks het woord "World" in de naam, dekt de MSCI World Index <em>niet</em> de hele wereld. Het bevat uitsluitend bedrijven uit de 23 "ontwikkelde landen" (waaronder de VS, Japan, Canada, en landen in West-Europa). Opkomende markten zoals China, India of Brazilië zitten hier niet in. Daarvoor bestaat een andere index: de MSCI Emerging Markets.
+    </div>
+
+    <h2>Waarom weegt de VS zo zwaar door?</h2>
+    <p>Een veelgehoorde kritiek of verbazing is dat de Verenigde Staten bijna 70% van de MSCI World uitmaken. Waarom heet het een wereldindex als het voor twee derde Amerikaans is?</p>
+    
+    <p>Dit komt door hoe de index berekend wordt: <strong>marktkapitalisatie-gewogen</strong>. Dat betekent dat bedrijven in de index worden opgenomen naar verhouding van hun beurswaarde (wat ze waard zijn op de beurs). Een bedrijf dat 10x zoveel waard is als een ander, krijgt een 10x groter stukje van de taart in de index.</p>
+
+    <p>De realiteit is simpelweg dat Amerikaanse bedrijven momenteel dominant zijn in de wereldeconomie. Techgiganten zoals Apple, Microsoft, Amazon en Nvidia zijn zoveel miljarden waard, dat ze logischerwijs het zwaarst doorwegen in een index die de waarde van de wereldmarkt weerspiegelt.</p>
+
+    <h2>Waarom is dit zo populair?</h2>
+    <p>Er zijn drie grote redenen waarom de MSCI World de standaard is geworden voor startende (én ervaren) beleggers:</p>
+
+    <ul>
+      <li><strong>Directe spreiding:</strong> Als de Belgische of Europese beurs een slecht jaar heeft, vangt de rest van de wereld dit vaak (deels) op. Je wedt niet op één paard.</li>
+      <li><strong>Automatische schoonmaak:</strong> De index wordt elk kwartaal herbekeken. Bedrijven die krimpen en minder waard worden, zakken in gewicht. Bedrijven die failliet gaan, verdwijnen uit de index. Nieuwe, succesvolle bedrijven komen erin. Jouw ETF kopieert dit automatisch. Je hebt altijd de winnaars van de wereldeconomie in portefeuille.</li>
+      <li><strong>Bewezen trackrecord:</strong> Historisch gezien heeft de MSCI World een gemiddeld rendement van zo'n 7% à 8% per jaar behaald na correctie voor inflatie. Natuurlijk zijn er jaren met mincijfers, maar op de lange termijn (15+ jaar) heeft de brede beurs altijd een opwaartse trend vertoond.</li>
+    </ul>
+
+    <h2>Conclusie</h2>
+    <p>De MSCI World is de perfecte fundering voor een beleggingsportfolio. Door via je broker maandelijks automatisch een stukje MSCI World-ETF aan te kopen, leg je de groei van je vermogen in handen van de 1.500 grootste en meest winstgevende bedrijven op aarde. Je stapt uit het casino van het "kies het juiste aandeel" en investeert simpelweg in de groei van de wereldeconomie in haar geheel.</p>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="ft-logo">StartTo<span>ETF</span></div>
+        <div class="ft-tag">Slim beleggen in ETF's.<br>Speciaal voor Belgen.</div>
+      </div>
+      <div class="ft-nav">
+        <a href="index.html#etf">Wat is een ETF?</a>
+        <a href="index.html#inflatie">Sparen vs inflatie</a>
+        <a href="index.html#stappenplan">Stappenplan</a>
+        <a href="index.html#brokers">Brokers</a>
+        <a href="index.html#pensioen">Pensioen</a>
+        <a href="index.html#vergelijking">Vergelijking</a>
+        <a href="index.html#kickstarter">ETF Startgids</a>
+        <a href="index.html#blog">Kennisbank</a>
+      </div>
+    </div>
+    <div class="ft-disc">
+      <strong>Financiële disclaimer -</strong> De informatie op StartToETF is uitsluitend bedoeld voor educatieve doeleinden en vormt geen financieel, juridisch of fiscaal advies. Beleggen brengt risico's met zich mee, waaronder het mogelijke verlies van je inleg. Rendementen uit het verleden bieden geen garantie voor de toekomst. Grafieken en simulaties zijn illustratief en geen beleggingsadvies. Raadpleeg een erkend financieel adviseur voor persoonlijk advies. StartToETF is niet geregistreerd als beleggingsadviseur bij de FSMA of AFM.
+    </div>
+    <div class="ft-copy">© 2026 StartToETF. Alle rechten voorbehouden.</div>
+  </div>
+</footer>
+
+<script>
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(navToggle) {
+  navToggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    const open = mobileMenu.classList.toggle('open');
+    navToggle.classList.toggle('open', open);
+  });
+  document.addEventListener('click', function(e){
+    if(!navToggle.contains(e.target) && !mobileMenu.contains(e.target)){
+      mobileMenu.classList.remove('open');
+      navToggle.classList.remove('open');
+    }
+  });
+}
+</script>
+</body>
+</html>
