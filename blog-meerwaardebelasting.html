@@ -112,7 +112,7 @@ nav{
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:.08em;
-  padding:4px 8px;
+  padding:2px 8px;
   border-radius:4px;
   background:var(--amber-tint);
   color:var(--amber);
@@ -120,7 +120,7 @@ nav{
 }
 .article-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -208,6 +208,25 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 .ft-disc strong{color:var(--ink-3);font-weight:600}
 .ft-copy{border-top:1px solid var(--rule);padding-top:14px;margin-top:14px;font-size:0.71rem;color:var(--ink-4)}
 
+
+/* ── INTERNAL LINKS ── */
+.article-content a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.5px solid #93C5FD;
+  padding-bottom: 1px;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.article-content a:hover {
+  color: var(--blue-deep);
+  border-bottom-color: var(--blue);
+  background: var(--blue-tint);
+  border-radius: 2px;
+  padding: 1px 3px;
+  margin: 0 -3px;
+}
+
 /* Mobile nav hidden on desktop */
 .nav-cta-mobile { display: none; }
 .nav-mobile-group { display: none; }
@@ -293,17 +312,17 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><i class="fa-solid fa-arrow-trend-up"></i> StartTo<span>ETF</span></a>
+    <a class="nav-logo" href="index.html" aria-label="StartToETF – Home"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> StartTo<span>ETF</span></a>
     <div class="nav-links">
-      <a href="index.html#etf">Wat is een ETF?</a>
-      <a href="index.html#stappenplan">Stappenplan</a>
-      <a href="index.html#brokers">Brokers</a>
-      <a href="index.html#faq">FAQ</a>
-      <a class="nav-btn" href="index.html#kickstarter">Aan de slag</a>
+      <a href="#etf">Wat is een ETF?</a>
+      <a href="#stappenplan">Stappenplan</a>
+      <a href="#brokers">Brokers</a>
+      <a href="#faq">Veelgestelde vragen</a>
+      <a class="nav-btn" href="#kickstarter">Aan de slag <i class="fas fa-chevron-right" style="font-size:0.7em;margin-left:3px"></i></a>
     </div>
     <div class="nav-mobile-group">
-      <a class="nav-cta-mobile" href="index.html#kickstarter">Aan de slag</a>
-      <button class="nav-hamburger" id="navToggle" aria-label="Menu openen">
+      <a class="nav-cta-mobile" href="#kickstarter">Aan de slag <i class="fas fa-chevron-right" style="font-size:0.65em;margin-left:3px"></i></a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -322,7 +341,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 
 <!-- ARTICLE -->
 <main class="article-wrap">
-  <a href="index.html#blog" class="back-link">&larr; Terug naar Kennisbank</a>
+  <a href="index.html#blog" class="back-link"><i class="fas fa-chevron-left" style="font-size:0.8em;"></i> Terug naar Kennisbank</a>
   
   <span class="tag-box">Fiscaal</span>
   <h1 class="article-title">Meerwaardebelasting 2026 in België: 10% op beurswinst uitgelegd</h1>
@@ -359,7 +378,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
     <p>Een eerlijk belastingsysteem snijdt aan twee kanten. Als de beurs keldert en je moet met verlies verkopen (gerealiseerd verlies), dan mag je dat verlies aftrekken van de winsten die je in datzelfde jaar (of de daaropvolgende jaren) maakt. Zo betaal je nooit belasting op je nettoverlies.</p>
 
     <h2>Hoe ga je hier slim mee om? (Strategie)</h2>
-    <p>Voor de <a href="blog-hangmatbeleggen.html">"hangmatbelegger"</a> die elke maand een vast bedrag in een brede ETF stort voor zijn pensioen over 20 jaar, is de nieuwe wetgeving geen reden om de strategie om te gooien. Sterker nog: de strategie blijft exact hetzelfde.</p>
+    <p>Voor de <a href="blog-hangmatbeleggen.html">hangmatbelegger</a> die elke maand een vast bedrag in een brede ETF stort voor zijn pensioen over 20 jaar, is de nieuwe wetgeving geen reden om de strategie om te gooien. Sterker nog: de strategie blijft exact hetzelfde.</p>
     
     <ol>
       <li><strong>Tijdens de opbouwfase:</strong> Blijf gewoon maandelijks aankopen. Omdat je niet verkoopt, realiseer je geen winst en betaal je geen meerwaardebelasting. Je profiteert maximaal van rente op rente (compound interest).</li>
@@ -374,27 +393,32 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   </div>
 </main>
 
-<!-- FOOTER -->
+<!-- ─── FOOTER ─── -->
+</main>
 <footer>
   <div class="wrap">
     <div class="ft">
       <div>
         <div class="ft-logo">StartTo<span>ETF</span></div>
-        <div class="ft-tag">Slim beleggen in ETF's.<br>Speciaal voor Belgen.</div>
+        <div class="ft-tag">Slim en passief beleggen.<br>Op maat van de Belg.</div>
       </div>
       <div class="ft-nav">
-        <a href="index.html#etf">Wat is een ETF?</a>
-        <a href="index.html#inflatie">Sparen vs inflatie</a>
-        <a href="index.html#stappenplan">Stappenplan</a>
-        <a href="index.html#brokers">Brokers</a>
-        <a href="index.html#pensioen">Pensioen</a>
-        <a href="index.html#vergelijking">Vergelijking</a>
-        <a href="index.html#kickstarter">ETF Startgids</a>
-        <a href="index.html#blog">Kennisbank</a>
+        <a href="#etf">Wat is een ETF?</a>
+        <a href="#inflatie">Sparen vs inflatie</a>
+        <a href="#stappenplan">Stappenplan</a>
+        <a href="#brokers">Brokers vergeleken</a>
+        <a href="#pensioen">Pensioen</a>
+        <a href="#vergelijking">De vergelijking</a>
+        <a href="#kickstarter">ETF Startgids</a>
+        <a href="#blog">Kennisbank</a>
+        <a href="#faq">Veelgestelde vragen</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacybeleid</a>
+        <a href="#">Disclaimer</a>
       </div>
     </div>
     <div class="ft-disc">
-      <strong>Financiële disclaimer -</strong> De informatie op StartToETF is uitsluitend bedoeld voor educatieve doeleinden en vormt geen financieel, juridisch of fiscaal advies. Beleggen brengt risico's met zich mee, waaronder het mogelijke verlies van je inleg. Rendementen uit het verleden bieden geen garantie voor de toekomst. Grafieken en simulaties zijn illustratief en geen beleggingsadvies. Raadpleeg een erkend financieel adviseur voor persoonlijk advies. StartToETF is niet geregistreerd als beleggingsadviseur bij de FSMA of AFM.
+      <strong>Financiële disclaimer -</strong> De informatie op StartToETF is uitsluitend bedoeld voor educatieve doeleinden en vormt geen financieel, juridisch of fiscaal advies. Beleggen brengt risico's met zich mee, waaronder het mogelijke verlies van (een deel van) je inleg. Rendementen uit het verleden bieden geen garantie voor de toekomst. De simulaties op deze website zijn puur illustratief. Raadpleeg bij twijfel steeds een erkend financieel adviseur. StartToETF is niet geregistreerd als financieel adviseur bij de FSMA.
     </div>
     <div class="ft-copy">© 2026 StartToETF. Alle rechten voorbehouden.</div>
   </div>
