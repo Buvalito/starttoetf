@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Account openen bij Saxo Bank + AutoInvest instellen: stap voor stap - StartToETF</title>
-<meta name="description" content="Stap-voor-stap handleiding: account aanmaken bij Saxo Bank België en AutoInvest instellen voor automatisch maandelijks beleggen in ETF's. Inclusief tips voor de MiFID-vragenlijst en timing van stortingen.">
+<meta name="description" content="Stap-voor-stap handleiding: account aanmaken bij Saxo Bank België en AutoInvest instellen voor automatisch maandelijks beleggen in ETF's. Inclusief uitleg over de kosten, de MiFID-vragenlijst en timing van stortingen.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="StartToETF">
 <link rel="canonical" href="https://www.starttoetf.be/blog-account-op-saxo-bank.html">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="StartToETF">
 <meta property="og:locale" content="nl_BE">
 <meta property="og:title" content="Account openen bij Saxo Bank + AutoInvest instellen: stap voor stap">
-<meta property="og:description" content="Stap-voor-stap: account aanmaken bij Saxo Bank België en AutoInvest instellen voor automatisch maandelijks beleggen in ETF's. Inclusief tips voor de MiFID-vragenlijst en timing.">
+<meta property="og:description" content="Stap-voor-stap: account aanmaken bij Saxo Bank België en AutoInvest instellen voor automatisch maandelijks beleggen in ETF's. Inclusief uitleg over de actuele prijzen, MiFID en de correcte timing.">
 <meta property="og:url" content="https://www.starttoetf.be/blog-account-op-saxo-bank.html">
 <meta property="article:published_time" content="2026-04-23">
 <meta property="article:section" content="Aan de slag">
@@ -22,7 +22,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Account openen bij Saxo Bank + AutoInvest instellen: stap voor stap">
-<meta name="twitter:description" content="Stap-voor-stap handleiding voor Belgische beleggers: account aanmaken bij Saxo Bank en AutoInvest instellen voor automatisch maandelijks beleggen in ETF's.">
+<meta name="twitter:description" content="Stap-voor-stap handleiding voor Belgische beleggers: account aanmaken bij Saxo Bank en AutoInvest instellen. Leer alles over de kosten en het automatiseren van je ETF-aankopen.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -226,7 +226,7 @@ nav{
   color:white !important;
   text-decoration:none;
   border-bottom:none;
-  padding:12px 24px;
+  padding:11px 24px;
   margin:0;
   font-family:'Inter',sans-serif;
   font-weight:600;
@@ -238,15 +238,15 @@ nav{
   background:var(--blue-deep);
   color:white !important;
   border-bottom:none;
-  padding:12px 24px;
+  padding:11px 24px;
   border-radius:6px;
   margin:0;
 }
 .btn-cta-card i.fas.fa-chevron-right {
-    font-size: 0.8em;          /* Maakt de chevron kleiner (80% van de tekst) */
-    margin-left: 10px;         /* Duwt de chevron verder naar rechts */
-    vertical-align: middle;    /* Zorgt dat hij mooi uitgelijnd blijft met de tekst */
-    transition: transform 0.2s; /* Optioneel: voor een soepele hover-animatie */
+    font-size: 0.8em;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: transform 0.2s;
 }
 
 /* ── FOOTER ── */
@@ -268,7 +268,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 }
 .ft-disc strong{color:var(--ink-3);font-weight:600}
 .ft-copy{border-top:1px solid var(--rule);padding-top:14px;margin-top:14px;font-size:0.71rem;color:var(--ink-4)}
-
 
 /* ── INTERNAL LINKS ── */
 .article-content a:not(.btn-cta-card) {
@@ -356,8 +355,8 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   "step": [
     {"@type": "HowToStep", "name": "Account aanmaken", "text": "Ga naar de Belgische website van Saxo Bank en klik op Klant worden."},
     {"@type": "HowToStep", "name": "MiFID-vragenlijst invullen", "text": "Vul eerlijk de wettelijke vragenlijst over je inkomen en beleggingskennis in."},
-    {"@type": "HowToStep", "name": "Geld storten", "text": "Doe je eerste storting via een bankoverschrijving vanuit een rekening op jouw naam."},
-    {"@type": "HowToStep", "name": "AutoInvest instellen", "text": "Open de AutoInvest rekening, kies je ETF via ISIN-code, stel het maandelijks bedrag in en bevestig."}
+    {"@type": "HowToStep", "name": "AutoInvest openen & storten", "text": "Activeer de AutoInvest rekening, zoek je eigen unieke AutoInvest IBAN op en stel een automatische bankoverschrijving in bij je huisbank."},
+    {"@type": "HowToStep", "name": "Plan instellen", "text": "Kies je ETF of ETF's, verdeel de percentages en bevestig. Saxo belegt voortaan automatisch elke 5de van de maand."}
   ]
 }
 </script>
@@ -429,20 +428,31 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
     
     <p>Wees hier gewoon eerlijk in. Als je aangeeft dat je een beginner bent en een laag risicoprofiel hebt, kan de bank achteraf een kleine melding geven die waarschuwt dat "beleggen risico's inhoudt". Dit is standaard. Je zult na deze waarschuwing nog steeds probleemloos de bekende wereldwijde ETF's kunnen aankopen.</p>
 
-    <h2>Stap 3: Geld storten</h2>
-    <p>Binnen 1 à 2 werkdagen wordt je account goedgekeurd. Je krijgt dan een rekeningnummer (IBAN) toegewezen dat bij jouw nieuwe effectenrekening hoort. Doe je allereerste storting via een gewone bankoverschrijving. Let op: het geld moet afkomstig zijn van een bankrekening die op exact dezelfde naam staat als jouw Saxo-account.</p>
+    <h2>Stap 3: AutoInvest-rekening openen</h2>
+    <p>Binnen 1 à 2 werkdagen wordt je account goedgekeurd. Zodra je kunt inloggen op de Saxo web-applicatie (SaxoInvestor) of de mobiele app, zie je op het overzichtsscherm van je gewone rekening meestal direct een banner met <strong>‘Starten met AutoInvest’</strong> of de knop <strong>‘AutoInvest rekening openen’</strong>. Klik hierop om de functie voor jouw profiel te activeren.</p>
+
+    <h3>Hoeveel kost AutoInvest?</h3>
+    <p>Je betaalt een vaste, lage commissie van <strong>€ 2 per maand</strong>, ongeacht in hoeveel verschillende ETF's je belegt. Er zijn <strong>geen extra transactiekosten</strong> bij de aankoop zelf. Wel betaal je natuurlijk de wettelijke Belgische beurstaks (TOB), wat voor de meeste populaire ETF's 0,12% is (bv. een eenmalige taks van € 0,60 op een inleg van € 500).</p>
+    
+    <p></p>
 
     <div class="callout">
-      <strong>Let op de timing:</strong> Omdat Saxo rond de 5de van de maand belegt, stel je de doorlopende opdracht bij je eigen bank (KBC, Belfius, etc.) best in rond de <strong>28ste of de 1ste</strong> van de maand. Zo staat het geld zeker op tijd op je Saxo-rekening.
+      <strong>Goed om te weten:</strong> Je betaalt de commissie van € 2 pas voor de eerste keer van zodra een eerste som effectief belegd is. Ben je nog niet gestart, staat er tijdelijk geen geld op de rekening of heb je louter nog cash staan? Dan worden er ook géén kosten aangerekend.
     </div>
 
-    <h2>Stap 4: AutoInvest instellen en aanzetten</h2>
-    <p>Als er geld op je Saxo rekening staat (of onderweg is), kunnen we de automatische piloot gaan instellen. Dit is de gouden zet.</p>
+    <h2>Stap 4: Geld storten</h2>
+    <p>Je AutoInvest-rekening krijgt een <strong>eigen, uniek IBAN-nummer</strong>. Je kan dit nummer terugvinden door te klikken op de blauwe balk bovenaan de hoofdpagina van AutoInvest, en vervolgens te kiezen voor 'Klassieke overschrijving'. Stel bij je eigen huisbank (bv. KBC of Belfius) een automatische, maandelijkse doorlopende opdracht in naar dit specifieke IBAN-nummer. Het geld moet wel afkomstig zijn van een bankrekening op jouw eigen naam.</p>
+
+    <div class="callout">
+      <strong>Let op de timing:</strong> Saxo belegt je geld automatisch elke <strong>5de dag van de maand</strong>. Stel de doorlopende opdracht bij je eigen bank daarom best in rond de <strong>28ste of 1ste</strong> van de maand. Zo staat de inleg zeker op tijd klaar op je AutoInvest-rekening voor de investeringsronde.
+    </div>
+
+    <h2>Stap 5: Je plan instellen en activeren</h2>
+    <p>Nu de financiële toevoer via je huisbank is klaargezet, hoef je alleen nog maar aan te geven wát Saxo met dat geld moet doen. Voor de beginnende belegger is dit dé manier om consequent vermogen op te bouwen zonder emotie of omkijken.</p>
 
     <ol>
-      <li><strong>AutoInvest rekening openen:</strong> Log in op de Saxo web-applicatie (SaxoInvestor) of de mobiele app. Klik op de knop <strong>"AutoInvest rekening openen"</strong> om de functie te activeren.</li>
       <li>
-        <strong>Kies je ETF:</strong> Klik op "Plan maken". Zoek naar de ETF waarin je wil beleggen. Typ hiervoor de naam of de ISIN-code in (bv. IE00B4L5Y983 voor de iShares Core MSCI World, vaak gewoon "IWDA" genoemd). Selecteer hem en voeg hem toe aan je plan.
+        <strong>Kies je ETF('s):</strong> Klik op "Plan maken" in je AutoInvest dashboard. Typ de naam of de ISIN-code in van de ETF die je wilt kopen (bv. IE00B4L5Y983 voor de iShares Core MSCI World, in de volksmond "IWDA" genoemd). Wil je spreiden over meerdere ETF's? Dat kan perfect! Je voegt ze toe en kiest simpelweg een procentuele verdeling (bv. 80% in IWDA, 20% in een andere ETF).
         <div class="cta-card">
           <div class="cta-card-eyebrow"><i class="fa-solid fa-arrow-trend-up"></i> ETF Startgids</div>
           <h4>Nog niet zeker welke ETF bij jouw strategie past?</h4>
@@ -450,15 +460,18 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
           <a href="index.html#kickstarter" class="btn-cta-card">Ontdek de Startgids<i class="fas fa-chevron-right"></i></a>
         </div>
       </li>
-      <li><strong>Bepaal het bedrag:</strong> Kies hoeveel je maandelijks wil investeren in deze ETF (bijvoorbeeld €200).</li>
-      <li><strong>Uitvoering door Saxo:</strong> Bij AutoInvest kun je niet zelf een orderdatum kiezen. Saxo bundelt alle orders en voert deze maandelijks uit, meestal rond de <strong>5de of 6de van de maand</strong>.</li>
-      <li><strong>Afronden:</strong> Bevestig je plan.</li>
+      <li>
+        <strong>Bepaal je bedrag:</strong> Geef in de tool aan welk bedrag je verwacht elke maand te storten via de doorlopende opdracht.
+        <div class="callout"><strong>Cruciale tip:</strong> Vink in de instellingen van je plan de optie <strong>"Alle beschikbare cash beleggen"</strong> aan. Saxo Bank laat het namelijk niet toe om <em>fractionele aandelen</em> (stukjes van een ETF) te kopen via AutoInvest. Kost een ETF bijvoorbeeld € 80 en stort jij € 100, dan koopt Saxo 1 stuk en blijft er € 20 cash op de rekening staan. Door "Alle beschikbare cash beleggen" te activeren, neemt Saxo die overgebleven cash de volgende maand automatisch mee in de berekening, zodat je geld nooit onnodig lang stilstaat.</div>
+      </li>
+      <li><strong>Automatische uitvoering:</strong> Elke 5de dag van de maand kijkt Saxo naar het effectieve cashsaldo op je AutoInvest-rekening. Dit bedrag wordt diezelfde dag automatisch geïnvesteerd volgens jouw ingestelde verdeling.</li>
+      <li><strong>Afronden en loslaten:</strong> Bevestig je plan. Wil je in de toekomst je maandelijkse inleg verhogen of verlagen omdat je budget verandert? Dan hoef je niets aan te passen binnen het platform van Saxo. Je wijzigt gewoon de automatische overschrijving bij je eigen huisbank. Saxo belegt op de 5de van de maand telkens automatisch de nieuwe balans die beschikbaar is.</li>
     </ol>
 
     <h2>Vermogensopbouw op automatische piloot</h2>
-    <p>Dat is alles. Je hebt nu een volwaardig, gespreid en passief beleggingsmechanisme gecreëerd dat zichzelf elke maand opnieuw voedt. Het geld gaat automatisch van je bank naar de broker, de broker koopt automatisch de ETF voor je aan via AutoInvest, en de belastingen (zoals de TOB van 0,12%) worden automatisch in mindering gebracht.</p>
+    <p>Dat is alles. Je hebt nu een volwaardig, gespreid en passief beleggingsmechanisme gecreëerd dat zichzelf elke maand opnieuw voedt. Het geld gaat automatisch van je bank naar de broker, de broker koopt automatisch de ETF voor je aan via AutoInvest, en de belastingen (zoals de TOB) worden netjes op de achtergrond afgehandeld.</p>
     
-    <p>Het moeilijkste komt nu: <strong>niets doen.</strong> Log maximaal twee keer per jaar in. De tijd en de wereldeconomie doen de rest voor je.</p>
+    <p>Het moeilijkste komt nu: <strong>niets doen.</strong> Log maximaal één of twee keer per jaar in. De tijd en de wereldeconomie doen vanaf nu het zware werk.</p>
 
     <h2>Verder lezen</h2>
     <p>Nu je systeem staat, begrijp je misschien beter waarom dit zo krachtig is. Lees hoe <a href="blog-rente-op-rente.html">rente op rente</a> jouw maandelijkse aankopen na verloop van tijd exponentieel laat groeien. Of bekijk <a href="blog-meerwaardebelasting.html">de meerwaardebelasting uitgelegd</a> om te weten wat je later bij het verkopen te wachten staat.</p>
@@ -466,7 +479,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 </main>
 
 <!-- ─── FOOTER ─── -->
-</main>
 <footer>
   <div class="wrap">
     <div class="ft">
