@@ -485,6 +485,11 @@ input[type=range]::-webkit-slider-thumb{
   font-weight:700;font-size:0.875rem;text-decoration:none;
   transition:opacity .15s;
 }
+.btn-buy.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 .btn-buy:hover{opacity:.88}
 .p-guar{text-align:center;font-size:0.7rem;color:rgba(255,255,255,0.2);margin-top:10px}
 
@@ -1303,7 +1308,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div class="p-li">Alle ETF’s helder uitgelegd</div>
         <div class="p-li">Volledige fiscale gids voor Belgen</div>
         <div class="p-li">Handige starterschecklist & begrippenlijst</div>
-        <a href="etf-startgids.html" class="btn-buy">Koop nu - €14,99</a>
+        <a href="javascript:void(0);" class="btn-buy disabled" aria-disabled="true">Binnenkort beschikbaar</a>
         <div class="p-guar">Veilig en snel. Geen verborgen abonnementen.</div>
         <div style="margin-top:12px;font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5;text-align:center;">Bedoeld voor absolute beginners. Ervaren beleggers die al weten wat VWCE of IWDA is, vinden hier geen nieuwe inzichten.</div>
       </div>
