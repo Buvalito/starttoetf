@@ -51,12 +51,12 @@ body{
   overflow:hidden;
 }
 .cover-brand{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,0.4);margin-bottom:40px}
-.cover-title{font-size:2.8rem;font-weight:800;line-height:1.1;letter-spacing:-0.025em;margin-bottom:16px}
+.cover-title{font-size:2.8rem;font-weight:700;line-height:1.1;letter-spacing:-0.025em;margin-bottom:16px}
 .cover-title span{color:var(--white)}
 .cover-sub{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;max-width:520px;margin-bottom:48px}
 .cover-meta{display:flex;gap:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1)}
 .cover-meta-item{}
-.cmi-val{font-size:1.3rem;font-weight:800;line-height:1;margin-bottom:3px}
+.cmi-val{font-size:1.3rem;font-weight:700;line-height:1;margin-bottom:3px}
 .cmi-label{font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:500}
 .cover-warning{
   margin-top:40px;background:rgba(255,255,255,0.05);border-left:3px solid rgba(255,255,255,0.2);
@@ -75,10 +75,10 @@ body{
   width:28px;height:28px;border-radius:50%;
   background:rgba(255,255,255,0.12);
   display:flex;align-items:center;justify-content:center;
-  font-size:0.72rem;font-weight:800;
+  font-size:0.72rem;font-weight:700;
 }
 
-.sec-title{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px}
+.sec-title{font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px}
 .sec-intro{font-size:0.9rem;color:var(--ink-3);line-height:1.75;max-width:660px;margin-bottom:28px}
 
 /* ── TOC ── */
@@ -125,7 +125,7 @@ body{
 }
 .master-table tr:hover td{background:var(--surface)}
 .master-table tr:last-child td{border-bottom:none}
-.etf-ticker{font-weight:800;font-size:0.9rem;color:var(--ink);letter-spacing:-0.01em}
+.etf-ticker{font-weight:700;font-size:0.9rem;color:var(--ink);letter-spacing:-0.01em}
 .etf-full-name{font-size:0.72rem;color:var(--ink-3);margin-top:1px}
 .isin-code{font-family:monospace;font-size:0.78rem;color:var(--blue);background:var(--blue-tint);padding:2px 6px;border-radius:3px;letter-spacing:.02em}
 .ter-badge{font-weight:700;font-size:0.82rem}
@@ -144,7 +144,7 @@ body{
 .rec-badge{
   display:inline-block;background:var(--green);color:white;
   border-radius:3px;padding:1px 6px;font-size:0.6rem;font-weight:700;
-  letter-spacing:.03em;
+  letter-spacing:.03em;vertical-align:top;margin-top:2px;margin-left:4px;
 }
 
 /* ── ETF PROFILE CARDS ── */
@@ -155,10 +155,10 @@ body{
   display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
 }
 .etf-header-left{}
-.etf-ticker-large{font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:2px}
+.etf-ticker-large{font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:2px}
 .etf-name-sub{font-size:0.78rem;color:rgba(255,255,255,0.5);font-weight:400}
 .etf-header-right{text-align:right;flex-shrink:0}
-.etf-ter-large{font-size:1.4rem;font-weight:800;color:#4ADE80;line-height:1}
+.etf-ter-large{font-size:1.4rem;font-weight:700;color:#4ADE80;line-height:1}
 .etf-ter-label{font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:.06em}
 .etf-body{
   border:1px solid var(--rule);border-top:none;
@@ -199,12 +199,17 @@ body{
 .pc-item.pro::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
 .pc-item.con::before{content:'!';color:var(--amber);font-weight:700;flex-shrink:0}
 .etf-footer{padding:12px 18px;background:var(--surface);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.etf-holdings{padding:12px 18px;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.eh-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);flex-shrink:0;min-width:96px}
+.eh-chips{display:flex;flex-wrap:wrap;gap:5px}
+.eh-chip{font-size:0.72rem;font-weight:600;color:var(--ink-2);background:var(--white);border:1px solid var(--rule);border-radius:3px;padding:2px 8px}
 .ef-tag{font-size:0.7rem;font-weight:600;padding:3px 8px;border-radius:3px;border:1px solid var(--rule);color:var(--ink-3)}
 
 /* ── PORTFOLIO SECTION ── */
 .portfolio-card{
   border:1px solid var(--rule);border-radius:8px;
-  overflow:hidden;margin-bottom:20px;
+  overflow:hidden;margin-bottom:28px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 .portfolio-header{
   padding:16px 20px;
@@ -218,10 +223,10 @@ body{
 .ph-badge.p1{background:#1E40AF;color:white}
 .ph-badge.p2{background:var(--green);color:white}
 .ph-badge.p3{background:#7C3AED;color:white}
-.ph-name{font-size:1rem;font-weight:800;color:var(--ink)}
+.ph-name{font-size:1rem;font-weight:700;color:var(--ink)}
 .ph-sub{font-size:0.78rem;color:var(--ink-3);margin-top:2px}
 .ph-right{text-align:right;flex-shrink:0}
-.ph-ter{font-size:1.1rem;font-weight:800;color:var(--green)}
+.ph-ter{font-size:1.1rem;font-weight:700;color:var(--green)}
 .ph-ter-label{font-size:0.65rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em}
 .portfolio-body{padding:0}
 .port-alloc{
@@ -229,7 +234,7 @@ body{
 }
 .pa-item{flex:1;padding:14px 16px;border-right:1px solid var(--rule);text-align:center}
 .pa-item:last-child{border-right:none}
-.pa-pct{font-size:1.4rem;font-weight:800;color:var(--blue);line-height:1;margin-bottom:3px}
+.pa-pct{font-size:1.4rem;font-weight:700;color:var(--blue);line-height:1;margin-bottom:3px}
 .pa-ticker{font-size:0.8rem;font-weight:700;color:var(--ink)}
 .pa-index{font-size:0.7rem;color:var(--ink-3);margin-top:2px}
 .port-bar{height:6px;display:flex}
@@ -257,7 +262,7 @@ body{
 .rank-badge{
   display:inline-flex;align-items:center;justify-content:center;
   width:20px;height:20px;border-radius:50%;
-  font-size:0.65rem;font-weight:800;
+  font-size:0.65rem;font-weight:700;
 }
 .rank-1{background:var(--green);color:white}
 .rank-2{background:#64748B;color:white}
@@ -268,7 +273,7 @@ body{
 .tax-card{background:white;padding:20px}
 .tc-icon{font-size:1.2rem;margin-bottom:10px}
 .tc-title{font-size:0.85rem;font-weight:700;margin-bottom:6px}
-.tc-rate{font-size:1.4rem;font-weight:800;color:var(--blue);margin-bottom:6px;line-height:1}
+.tc-rate{font-size:1.4rem;font-weight:700;color:var(--blue);margin-bottom:6px;line-height:1}
 .tc-body{font-size:0.78rem;color:var(--ink-3);line-height:1.65}
 .tc-highlight{font-size:0.75rem;font-weight:600;color:var(--green);margin-top:6px}
 
@@ -420,11 +425,11 @@ strong{font-weight:700;color:var(--ink)}
   <div class="page-wrap" style="padding:0">
     <div class="cover-brand">Start To ETF · Premium Document · 2026</div>
     <h1 class="cover-title">ETF <span>Startgids</span></h1>
-    <p class="cover-sub">Alles wat je nodig hebt om morgen al te beginnen beleggen in ETF's. 10 geselecteerde fondsen, concrete portfoliocombinaties en fiscale uitleg voor Belgische beleggers, gebaseerd op de nieuwste inzichten.</p>
+    <p class="cover-sub">Alles wat je nodig hebt om morgen al te beginnen beleggen in ETF's. 10 geselecteerde fondsen, concrete portfoliocombinaties en diepgaande strategische en fiscale uitleg voor de beginnende Belgische langetermijnbelegger.</p>
     <div class="cover-meta">
       <div class="cover-meta-item"><div class="cmi-val">10</div><div class="cmi-label">ETF-profielen</div></div>
       <div class="cover-meta-item"><div class="cmi-val">8</div><div class="cmi-label">Portfoliocombinaties</div></div>
-      <div class="cover-meta-item"><div class="cmi-val">België</div><div class="cmi-label">Fiscale uitleg</div></div>
+      <div class="cover-meta-item"><div class="cmi-val">België</div><div class="cmi-label">Fiscale optimalisatie</div></div>
       <div class="cover-meta-item"><div class="cmi-val">2026</div><div class="cmi-label">Versie / editie</div></div>
     </div>
     <div class="cover-warning">
@@ -455,7 +460,7 @@ strong{font-weight:700;color:var(--ink)}
         <hr class="toc-divider">
         <div class="toc-item"><a href="#platforms">5. Tickers per platform</a><span class="toc-item-num">Praktisch</span></div>
         <hr class="toc-divider">
-        <div class="toc-item"><a href="#autoinvest">6. Hangmatbeleggen met Saxo AutoInvest</a><span class="toc-item-num">Automatisatie</span></div>
+        <div class="toc-item"><a href="#autopiloot">6. De Autopiloot-Strategie</a><span class="toc-item-num">Automatisatie</span></div>
         <hr class="toc-divider">
         <div class="toc-item"><a href="#belastingen">7. Fiscale uitleg voor België</a><span class="toc-item-num">Fiscaal</span></div>
         <hr class="toc-divider">
@@ -473,7 +478,7 @@ strong{font-weight:700;color:var(--ink)}
     <p class="sec-intro">Hieronder vind je een overzicht van alle 10 ETF's in dit document. Gesorteerd op categorie en aanbevelingen van experts. Gebruik de ISIN-code om het fonds te vinden op jouw broker.</p>
 
     <div style="background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:24px; margin-bottom: 32px; page-break-inside: avoid;">
-      <h3 style="font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:12px">Waarom precies deze selectie?</h3>
+      <h3 style="font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:12px">Waarom precies deze selectie?</h3>
       <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.6">Deze selectie is niet zomaar tot stand gekomen. Elk van deze ETF’s is streng gefilterd op basis van <strong>7 objectieve selectiecriteria</strong>: lage totale kosten, grote fondsomvang, fysieke replicatie, voldoende liquiditeit, brede geografische spreiding, hoge interne spreiding en fiscale efficiëntie voor Belgische beleggers. Deze criteria zijn steeds gericht op 3 absolute kernwaarden voor de startende belegger:</p>
       
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
@@ -646,6 +651,18 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etf-stat"><div class="es-label">Oprichtingsjaar</div><div class="es-val">2019</div></div>
       </div>
       <div class="etf-desc">VWCE is de populairste klassieke keuze voor Belgische beginners. Het fonds volgt de FTSE All-World index, die zowel ontwikkelde markten (VS, Europa, Japan, ...) als opkomende markten (China, India, Brazilië, ...) omvat. Met ongeveer 3.700 aandelen ben je in één product wereldwijd gespreid. Dividenden worden automatisch herbelegd (accumulating), wat fiscaal voordelig is voor Belgische beleggers. Ideaal als enige ETF in een eenvoudig maandelijks plan.</div>
+      <div class="etf-holdings">
+        <div class="eh-label">Bekende namen</div>
+        <div class="eh-chips">
+          <span class="eh-chip">Apple</span>
+          <span class="eh-chip">Microsoft</span>
+          <span class="eh-chip">Nvidia</span>
+          <span class="eh-chip">Amazon</span>
+          <span class="eh-chip">Alphabet (Google)</span>
+          <span class="eh-chip">Meta</span>
+          <span class="eh-chip">TSMC</span>
+        </div>
+      </div>
       <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -705,6 +722,18 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IMIE / SPYI</div></div>
         </div>
         <div class="etf-desc">IMIE is volgens experts één van de absoluut beste 'alles-in-één' ETF's op de markt. Het volgt de zeer brede MSCI ACWI IMI index. Dit betekent dat je belegt in ontwikkelde markten, opkomende markten én small-caps (kleine bedrijven). Waar VWCE stopt bij de grotere bedrijven, neemt IMIE ook de kleinere spelers mee. Met een TER van 0,17% is het bovendien goedkoper. Op Xetra noteert dit fonds vaak als SPYI.</div>
+        <div class="etf-holdings">
+          <div class="eh-label">Bekende namen</div>
+          <div class="eh-chips">
+            <span class="eh-chip">Apple</span>
+            <span class="eh-chip">Microsoft</span>
+            <span class="eh-chip">Nvidia</span>
+            <span class="eh-chip">Amazon</span>
+            <span class="eh-chip">Alphabet (Google)</span>
+            <span class="eh-chip">TSMC</span>
+            <span class="eh-chip">Samsung</span>
+          </div>
+        </div>
         <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -763,6 +792,18 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IWDA</div></div>
         </div>
         <div class="etf-desc">IWDA is het meest verhandelde ETF in Europa. Het volgt de MSCI World index (geen opkomende markten, geen small-caps). Het is een uitstekende, zeer liquide bouwsteen. Op Xetra heet het EUNL.</div>
+        <div class="etf-holdings">
+          <div class="eh-label">Bekende namen</div>
+          <div class="eh-chips">
+            <span class="eh-chip">Apple</span>
+            <span class="eh-chip">Microsoft</span>
+            <span class="eh-chip">Nvidia</span>
+            <span class="eh-chip">Amazon</span>
+            <span class="eh-chip">Alphabet (Google)</span>
+            <span class="eh-chip">Meta</span>
+            <span class="eh-chip">ASML</span>
+          </div>
+        </div>
         <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -812,6 +853,18 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etf-stat"><div class="es-label">TER-voordeel vs IWDA</div><div class="es-val" style="color:var(--green)">-0,08%/jaar</div></div>
       </div>
       <div class="etf-desc">SWRD is een absolute favoriet voor kostenbewuste beleggers. Met een TER van 0,12% is SWRD aanzienlijk goedkoper dan IWDA (0,20%), terwijl het exact dezelfde index volgt. SWRD is dé absolute topkeuze als basis voor een 2-ETF portfolio (samen met EMIM).</div>
+      <div class="etf-holdings">
+        <div class="eh-label">Bekende namen</div>
+        <div class="eh-chips">
+          <span class="eh-chip">Apple</span>
+          <span class="eh-chip">Microsoft</span>
+          <span class="eh-chip">Nvidia</span>
+          <span class="eh-chip">Amazon</span>
+          <span class="eh-chip">Alphabet (Google)</span>
+          <span class="eh-chip">Meta</span>
+          <span class="eh-chip">ASML</span>
+        </div>
+      </div>
       <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -869,6 +922,18 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IS3N of EMIM</div></div>
         </div>
         <div class="etf-desc">EMIM is dé to-go ETF voor opkomende markten bij Belgische beleggers. Het dekt China, India, Taiwan, Brazilië en tientallen andere opkomende economieën, inclusief de small-caps van deze regio's. Ideaal als vaste partner voor SWRD of IWDA.</div>
+        <div class="etf-holdings">
+          <div class="eh-label">Bekende namen</div>
+          <div class="eh-chips">
+            <span class="eh-chip">Samsung</span>
+            <span class="eh-chip">TSMC</span>
+            <span class="eh-chip">Alibaba</span>
+            <span class="eh-chip">Tencent</span>
+            <span class="eh-chip">Reliance Industries</span>
+            <span class="eh-chip">Infosys</span>
+            <span class="eh-chip">Meituan</span>
+          </div>
+        </div>
         <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -919,6 +984,18 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etf-stat"><div class="es-label">Markt</div><div class="es-val">VS enkel</div></div>
       </div>
       <div class="etf-desc">SPYL is de absolute prijzenbreker voor de Amerikaanse markt met een TER van amper 0,03% per jaar. Het volgt de beroemde S&P 500, de index van de 500 grootste Amerikaanse bedrijven. De Amerikaanse beurs heeft historisch zeer sterk gepresteerd. Een prachtig goedkoop fonds, maar let op: je hebt hiermee letterlijk 0% geografische spreiding buiten de Verenigde Staten.</div>
+      <div class="etf-holdings">
+        <div class="eh-label">Bekende namen</div>
+        <div class="eh-chips">
+          <span class="eh-chip">Apple</span>
+          <span class="eh-chip">Microsoft</span>
+          <span class="eh-chip">Nvidia</span>
+          <span class="eh-chip">Amazon</span>
+          <span class="eh-chip">Alphabet (Google)</span>
+          <span class="eh-chip">Tesla</span>
+          <span class="eh-chip">Berkshire Hathaway</span>
+        </div>
+      </div>
       <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -963,6 +1040,18 @@ strong{font-weight:700;color:var(--ink)}
         <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
       </div>
       <div class="etf-desc">IMEU volgt de MSCI Europe index: ~430 grote en middelgrote Europese bedrijven uit 15 landen. Bedrijven zoals ASML, Nestlé, LVMH en Novo Nordisk. Voor wie een hogere weging naar Europa wil dan wat in een wereldfonds zit (Europa is wereldwijd slechts ~15%). Lage TER van 0,12%. Ideaal om valutarisico (USD) te beperken.</div>
+      <div class="etf-holdings">
+        <div class="eh-label">Bekende namen</div>
+        <div class="eh-chips">
+          <span class="eh-chip">ASML</span>
+          <span class="eh-chip">Nestlé</span>
+          <span class="eh-chip">LVMH</span>
+          <span class="eh-chip">Novo Nordisk</span>
+          <span class="eh-chip">SAP</span>
+          <span class="eh-chip">Roche</span>
+          <span class="eh-chip">HSBC</span>
+        </div>
+      </div>
       <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -1007,6 +1096,18 @@ strong{font-weight:700;color:var(--ink)}
         <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
       </div>
       <div class="etf-desc">Voor beleggers die duurzaamheid belangrijk vinden is XMAW een uitstekende All-in-One keuze. Het volgt de All Country World index (inclusief opkomende markten), maar filtert bedrijven uit die betrokken zijn bij controversiële wapens, tabak, of die ernstige milieuovertredingen begaan. Je krijgt nog steeds een brede, wereldwijde spreiding.</div>
+      <div class="etf-holdings">
+        <div class="eh-label">Bekende namen</div>
+        <div class="eh-chips">
+          <span class="eh-chip">Microsoft</span>
+          <span class="eh-chip">Nvidia</span>
+          <span class="eh-chip">Apple</span>
+          <span class="eh-chip">Alphabet (Google)</span>
+          <span class="eh-chip">Amazon</span>
+          <span class="eh-chip">ASML</span>
+          <span class="eh-chip">TSMC</span>
+        </div>
+      </div>
       <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -1051,6 +1152,17 @@ strong{font-weight:700;color:var(--ink)}
         <div class="etf-stat"><div class="es-label">Domicilie</div><div class="es-val">Ierland</div></div>
       </div>
       <div class="etf-desc">SYSC belegt in bedrijfsobligaties (schulden van grote bedrijven) in euro met een hoge kredietwaardigheid (investment grade). Het biedt een iets hoger verwacht rendement dan overheidsobligaties. En cruciaal voor Belgische beleggers: omdat dit fonds een Ierse domicilie (IE...) heeft, valt het onder het lage TOB-tarief van 0,12%. Dat maakt dit een veel slimmere defensieve keuze dan de Luxemburgse XGOV-variant.</div>
+      <div class="etf-holdings">
+        <div class="eh-label">Grote uitgevers</div>
+        <div class="eh-chips">
+          <span class="eh-chip">Deutsche Telekom</span>
+          <span class="eh-chip">Volkswagen</span>
+          <span class="eh-chip">BNP Paribas</span>
+          <span class="eh-chip">Siemens</span>
+          <span class="eh-chip">Engie</span>
+          <span class="eh-chip">Stellantis</span>
+        </div>
+      </div>
       <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -1108,6 +1220,17 @@ strong{font-weight:700;color:var(--ink)}
           <div class="etr-group"><div class="etr-label">Bolero</div><div class="etr-val">IWMO</div></div>
         </div>
         <div class="etf-desc">IS3R is de perfecte <strong>'satelliet'-ETF</strong>. Waar brede wereld-ETF's gewoon de grootste bedrijven kopen, selecteert IS3R aandelen op basis van <em>momentum</em>: het koopt specifiek de ~350 bedrijven die de afgelopen 6 tot 12 maanden het sterkst gestegen zijn. Het surft dus mee op de opwaartse trends. Historisch gezien levert de momentum-factor een hoger rendement op dan de brede markt, al gaat dit gepaard met hevigere koersschommelingen (volatiliteit). Ideaal om voor 5% tot 15% toe te voegen aan een bestaande basis (zoals SWRD of VWCE) als rendements-boost.</div>
+        <div class="etf-holdings">
+          <div class="eh-label">Bekende namen</div>
+          <div class="eh-chips">
+            <span class="eh-chip">Nvidia</span>
+            <span class="eh-chip">Meta</span>
+            <span class="eh-chip">Apple</span>
+            <span class="eh-chip">Microsoft</span>
+            <span class="eh-chip">Eli Lilly</span>
+            <span class="eh-chip">Broadcom</span>
+          </div>
+        </div>
         <div class="etf-pros-cons">
           <div class="etf-pros">
             <div class="pc-title pos">Voordelen</div>
@@ -1143,10 +1266,10 @@ strong{font-weight:700;color:var(--ink)}
     <p class="sec-intro">Je hoeft geen 10 ETF's te kopen. Minder is vaak beter. Hieronder vind je concrete combinaties, geüpdatet met de laatste inzichten van experts. Per combinatie: de ETF's, verdeling, verwacht profiel en blended TER.</p>
 
     <div class="callout">
-      <strong>Hoe kies je?</strong> Begin met je beleggingsdoel en tijdshorizon. Lang beleggen (10+ jaar) voor pensioen of vermogen? Dan kan je meer risico nemen. Een 1-ETF portfolio is voor 95% van de beginners de beste en veiligste start.
+      <strong>Hoe kies je?</strong> Begin met je beleggingsdoel en tijdshorizon. Lang beleggen (10+ jaar) voor pensioen of vermogen? Dan kan je meer risico nemen. Een 1-ETF portfolio is voor 95% van de beginners de beste en veiligste start, omdat dit wiskundig perfect is om maandelijks automatisch aan te kopen (Euro-Cost Averaging).
     </div>
 
-    <h3 class="portfolio-group-title first" style="font-size:1rem;font-weight:800;color:var(--ink);margin:28px 0 16px;padding-top:8px;border-top:2px solid var(--blue)">1-ETF Portfolio's - Het kan echt zo simpel</h3>
+    <h3 class="portfolio-group-title first" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:36px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 1 ETF &nbsp;·&nbsp; Het kan echt zo simpel</h3>
 
     <!-- P1-A -->
     <div class="portfolio-card">
@@ -1154,7 +1277,7 @@ strong{font-weight:700;color:var(--ink)}
         <div class="ph-left">
           <div><span class="ph-badge p1">1-ETF · Populaire Basis</span></div>
           <div class="ph-name">Ontwikkelde Wereld (IWDA)</div>
-          <div class="ph-sub">Eenvoudig, 100% gericht op ontwikkelde markten, perfect voor Saxo AutoInvest</div>
+          <div class="ph-sub">Eenvoudig, 100% gericht op ontwikkelde markten, perfect voor automatische spaarplannen</div>
         </div>
         <div class="ph-right">
           <div class="ph-ter">0,20%</div>
@@ -1171,7 +1294,7 @@ strong{font-weight:700;color:var(--ink)}
         <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
         <div class="pd-item"><div class="pd-label">Horizon</div><div class="pd-val">10+ jaar</div></div>
       </div>
-      <div class="port-desc">IWDA is de populairste ETF voor beleggers die er bewust voor kiezen zich puur op de ontwikkelde wereld (zoals VS, Europa en Japan) te richten. Het is enorm liquide, eenvoudig op te zetten in een maandelijks spaarplan via Saxo AutoInvest en je hebt er verder geen omkijken meer naar, zolang je accepteert dat opkomende markten ontbreken.</div>
+      <div class="port-desc">IWDA is de populairste ETF voor beleggers die er bewust voor kiezen zich puur op de ontwikkelde wereld (zoals VS, Europa en Japan) te richten. Het is enorm liquide, eenvoudig op te zetten in een maandelijks spaarplan bij eender welke broker, en je hebt er verder geen omkijken meer naar, zolang je accepteert dat opkomende markten ontbreken.</div>
     </div>
 
     <!-- P1-B -->
@@ -1197,7 +1320,7 @@ strong{font-weight:700;color:var(--ink)}
         <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
         <div class="pd-item"><div class="pd-label">Horizon</div><div class="pd-val">10+ jaar</div></div>
       </div>
-      <div class="port-desc">IMIE wordt aangeraden als het modernere en goedkopere broertje van VWCE. Je krijgt niet enkel de giganten, maar ook pure blootstelling aan small-caps in 47 landen. Met 0,17% TER is dit een uiterst efficiënte oplossing.</div>
+      <div class="port-desc">IMIE wordt aangeraden als het modernere en goedkopere broertje van VWCE. Je krijgt niet enkel de giganten, maar ook pure blootstelling aan small-caps in 47 landen. Met 0,17% TER is dit een uiterst efficiënte oplossing voor de set-and-forget belegger.</div>
     </div>
 
     <!-- P1-C -->
@@ -1226,7 +1349,7 @@ strong{font-weight:700;color:var(--ink)}
       <div class="port-desc">Wil je niet investeren in controversiële wapens, tabak of thermische steenkool? Dan is XMAW het makkelijkste alles-in-één antwoord. Je behoudt wereldwijde dekking maar op een schonere manier. Het is wel fractie duurder dan IMIE.</div>
     </div>
 
-    <h3 class="portfolio-group-title" style="font-size:1rem;font-weight:800;color:var(--ink);margin:28px 0 16px;padding-top:8px;border-top:2px solid var(--green)">2-ETF Portfolio's - Werelddekking met maatwerk</h3>
+    <h3 class="portfolio-group-title" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:44px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 2 ETF's &nbsp;·&nbsp; Werelddekking met maatwerk</h3>
 
     <!-- P2-A -->
     <div class="portfolio-card">
@@ -1252,7 +1375,7 @@ strong{font-weight:700;color:var(--ink)}
         <div class="pd-item"><div class="pd-label">Profiel</div><div class="pd-val">Offensief</div></div>
         <div class="pd-item"><div class="pd-label">Blended TER</div><div class="pd-val" style="color:var(--green)">0,13%</div></div>
       </div>
-      <div class="port-desc">SWRD is de favoriet als goedkoopste MSCI World ETF (0,12%). Aangevuld met EMIM (0,18%) dek je de volledige wereld voor gemiddeld slechts ~0,13% per jaar - merkbaar goedkoper dan VWCE alleen. Herbalanceer simpelweg eenmaal per jaar.</div>
+      <div class="port-desc">SWRD is de favoriet als goedkoopste MSCI World ETF (0,12%). Aangevuld met EMIM (0,18%) dek je de volledige wereld voor gemiddeld slechts ~0,13% per jaar - merkbaar goedkoper dan VWCE alleen. Herbalanceer simpelweg eenmaal per jaar door het achtergebleven fonds te kopen.</div>
     </div>
 
     <!-- NEW IS3R COMBO -->
@@ -1336,7 +1459,7 @@ strong{font-weight:700;color:var(--ink)}
       <div class="port-desc">Geschikt voor wie minder volatiliteit (schommelingen) wil in zijn portfolio - bijvoorbeeld wanneer je dichter bij je financiële doel komt. De obligaties (SYSC) temperen zware klappen. We raden hier SYSC aan omdat dit een Ierse domicilie (0,12% TOB) heeft, wat voor Belgen véél voordeliger is dan bijvoorbeeld het Luxemburgse XGOV-fonds (1,32% TOB).</div>
     </div>
 
-    <h3 class="portfolio-group-title" style="font-size:1rem;font-weight:800;color:var(--ink);margin:28px 0 16px;padding-top:8px;border-top:2px solid #7C3AED">3-ETF Portfolio's - Geavanceerd</h3>
+    <h3 class="portfolio-group-title" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:44px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 3 ETF's &nbsp;·&nbsp; Geavanceerd</h3>
 
     <!-- P3-A -->
     <div class="portfolio-card">
@@ -1485,97 +1608,133 @@ strong{font-weight:700;color:var(--ink)}
     </table>
   </section>
 
-<!-- ── 6. SAXO AUTOINVEST (Nieuwe pagina) ── -->
-  <section id="autoinvest" class="chapter-section">
-    <div class="chapter"><div class="chapter-num">6</div>Hangmatbeleggen met Saxo AutoInvest</div>
-    <h2 class="sec-title">Automatisch beleggen zonder stress</h2>
-    <p class="sec-intro">De allerbeste beleggers zijn vaak degenen die na hun eerste aankoop helemaal niets meer doen. "Hangmatbeleggen" is de ultieme strategie voor beginners: je stelt één keer een automatisch spaarplan in, en kijkt er jarenlang niet meer naar om. Saxo Bank biedt hier de perfecte tool voor aan.</p>
+<!-- ── 6. AUTOPILOOT STRATEGIE (Nieuwe pagina) ── -->
+  <section id="autopiloot" class="chapter-section">
+    <div class="chapter"><div class="chapter-num">6</div>De Autopiloot-Strategie</div>
+    <h2 class="sec-title">Waarom automatisatie je rijk maakt</h2>
+    <p class="sec-intro">Een succesvolle belegger is geen beursexpert die dagelijks grafieken analyseert. Het is iemand die een waterdicht systeem opzet en de tijd het zware werk laat doen. In dit hoofdstuk ontdek je het 'Pay Yourself First' systeem en de wiskundige zekerheid van Euro-Cost Averaging.</p>
 
-    <h3 style="font-size:1rem;font-weight:800;color:var(--ink);margin:24px 0 12px">Waarom is AutoInvest de ultieme aanrader?</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:16px;margin-bottom:24px">
-      <div style="background:var(--surface);border-radius:8px;padding:16px;border:1px solid var(--rule)">
-        <div style="font-weight:700;color:var(--blue);margin-bottom:8px">1. Nul emoties</div>
-        <p style="font-size:0.8rem;margin:0">De beurs zakt? Het systeem koopt goedkoper bij. De beurs stijgt? Het systeem koopt de winnaars. Je hoeft nooit te twijfelen, het nieuws te volgen of te wachten op 'het perfecte moment'.</p>
+    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:24px 0 12px">1. Het geheim: Euro-Cost Averaging (ECA)</h3>
+    <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:16px;line-height:1.7">
+      Beginnende beleggers stellen steevast dezelfde vraag: <em>"Staat de beurs nu niet te hoog om in te stappen?"</em>. Het eerlijke antwoord: niemand die het weet. Exact de bodem of de top van de beurs voorspellen ("timing the market") is zelfs voor professionele analisten onmogelijk gebleken.
+    </p>
+    <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">
+      De oplossing is <strong>Euro-Cost Averaging (ECA)</strong> of <em>Dollar-Cost Averaging</em>. Dit betekent dat je op vaste tijdstippen (bijvoorbeeld elke 5de van de maand) een vast bedrag (bijvoorbeeld €200) belegt, ongeacht of de beurs hoog of laag staat. De wiskunde hierachter werkt fenomenaal in jouw voordeel:
+    </p>
+    
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px">
+      <div style="background:var(--surface);border-left:3px solid var(--red);padding:16px;border-radius:0 6px 6px 0;">
+        <div style="font-weight:700;color:var(--ink);margin-bottom:6px;font-size:0.85rem">De beurs crasht</div>
+        <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.5">Jouw vaste €200 koopt deze maand plots véél meer aandelen (stuks) van je ETF. Je slaat massaal in met een korting. Zodra de beurs later herstelt, schiet de waarde van al deze extra aangekochte stuks de hoogte in.</p>
       </div>
-      <div style="background:var(--surface);border-radius:8px;padding:16px;border:1px solid var(--rule)">
-        <div style="font-weight:700;color:var(--blue);margin-bottom:8px">2. Tijd besparen</div>
-        <p style="font-size:0.8rem;margin:0">Via een automatische overschrijving vanaf je gewone bankrekening gaat je inleg elke maand automatisch naar je broker en wordt dit de volgende dag automatisch belegd. Je hoeft zelf niet meer in te loggen.</p>
-      </div>
-      <div style="background:var(--surface);border-radius:8px;padding:16px;border:1px solid var(--rule)">
-        <div style="font-weight:700;color:var(--blue);margin-bottom:8px">3. Geen transactiekosten</div>
-        <p style="font-size:0.8rem;margin:0">Saxo rekent momenteel <strong>€0 transactiekosten</strong> aan voor het beleggen via AutoInvest op hun ruime selectie aan kern-ETF's. Je betaalt weliswaar een vaste AutoInvest kost van €2 per maand, maar dat bespaart je dure transactiekosten die je bij klassieke orders wél zou betalen.</p>
+      <div style="background:var(--surface);border-left:3px solid var(--green);padding:16px;border-radius:0 6px 6px 0;">
+        <div style="font-weight:700;color:var(--ink);margin-bottom:6px;font-size:0.85rem">De beurs piekt</div>
+        <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.5">Jouw vaste €200 koopt deze maand iets minder aandelen (stuks), waardoor je op de top automatisch wat afremt qua volume. Ondertussen vieren de stuks die je vorige maanden al bezat natuurlijk wel mooi deze winst mee.</p>
       </div>
     </div>
 
-    <div class="callout callout-green">
-      <strong>Tip voor de startende belegger:</strong> Zorg via je grootbank voor een "automatische overschrijving" naar je Saxo-rekening die zo'n 2 à 3 dagen vóór je AutoInvest dag wordt uitgevoerd. Zo staat er altijd gegarandeerd voldoende saldo klaar.
+    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:32px 0 12px;border-top:1px solid var(--rule);padding-top:24px">2. Het 'Pay Yourself First' Systeem</h3>
+    <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">
+      De theorie is nutteloos zonder uitvoering. Als je wacht met beleggen tot het einde van de maand "met het geld dat overblijft", blijft er gegarandeerd niets over. De succesvolle passieve belegger draait dit om: je betaalt eerst jezelf.
+    </p>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px;">
+      <div style="display:flex;gap:16px;background:white;padding:16px;border-radius:8px;border:1px solid var(--rule);align-items:center;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">1</div>
+        <div>
+          <div style="font-weight:700;font-size:0.85rem;color:var(--ink)">Loonstorting</div>
+          <p style="font-size:0.8rem;margin:0;color:var(--ink-3);line-height:1.5">Je salaris komt op de 28ste of 1ste van de maand binnen op je zichtrekening.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:16px;background:white;padding:16px;border-radius:8px;border:1px solid var(--rule);align-items:center;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">2</div>
+        <div>
+          <div style="font-weight:700;font-size:0.85rem;color:var(--ink)">Automatische overschrijving</div>
+          <p style="font-size:0.8rem;margin:0;color:var(--ink-3);line-height:1.5">Eén dag na je loonstorting wordt je vaste beleggingsbedrag automatisch overgeschreven van je bank naar het unieke IBAN-nummer van je brokeraccount (Bolero, Saxo, Keytrade, ...).</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:16px;background:white;padding:16px;border-radius:8px;border:1px solid var(--rule);align-items:center;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">3</div>
+        <div>
+          <div style="font-weight:700;font-size:0.85rem;color:var(--ink)">Automatisch of Routine Order</div>
+          <p style="font-size:0.8rem;margin:0;color:var(--ink-3);line-height:1.5">Biedt je broker automatische spaarplannen aan (zoals Saxo AutoInvest)? Dan wordt het geld automatisch geïnvesteerd. Zo niet, log je elke maand op dag 4 manueel exact 2 minuutjes in om je order door te voeren. Emotieloos en routineus.</p>
+        </div>
+      </div>
     </div>
 
-    <div style="margin-top:40px;">
-      <h3 style="font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:16px">Stap-voor-stap: AutoInvest instellen bij Saxo Bank</h3>
-      <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px">Volg deze stappen om je account één keer correct op te zetten. Daarna hoef je er de komende jaren in principe niet meer naar te kijken.</p>
-      
-      <div style="display:flex;flex-direction:column;gap:16px;">
+    <div class="callout callout-amber" style="margin-bottom: 36px;">
+      <strong>Let op: geen fractieaandelen bij Belgische brokers.</strong> Bij de meeste Belgische brokers koop je ETF's in hele stuks. Als SWRD noteert op €87 en je wilt €200 inleggen, kun je slechts 2 stuks kopen (€174). De resterende €26 blijft als cash staan op je rekening en wordt de volgende maand automatisch meegenomen als je opnieuw koopt. Bij Saxo AutoInvest zorgt de optie "alle beschikbare cash beleggen" ervoor dat deze resterende cash maand na maand wordt meegeteld.
+    </div>
+
+    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:32px 0 12px;border-top:1px solid var(--rule);padding-top:24px">3. De 3 gouden gedragsregels</h3>
+    <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.7">
+      Zodra je systeem loopt, is je grootste vijand niet de beurs, maar je eigen psychologie. Als hangmatbelegger beloof je plechtig aan jezelf om de volgende drie regels nooit te breken:
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;">
+      <div style="background:var(--surface);border-radius:8px;padding:20px;border:1px solid var(--rule)">
+        <div style="font-weight:700;color:var(--ink);margin-bottom:8px;font-size:0.9rem">I. Negeer het financiële nieuws</div>
+        <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.6">Media verkopen drama, geen rendement. Een krantenkop zoals "Beurs verdampt miljarden" trekt kliks, maar betekent voor een langetermijnbelegger die maandelijks koopt enkel dat de aandelen goedkoper in de solden staan. Laat je niet afschrikken.</p>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:20px;border:1px solid var(--rule)">
+        <div style="font-weight:700;color:var(--ink);margin-bottom:8px;font-size:0.9rem">II. Rood is geen verlies</div>
+        <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.6">Als je portfolio op -20% staat, heb je geen euro verloren. Je bezit nog steeds exact evenveel stukjes van bedrijven. Het verlies wordt pas definitief ('gerealiseerd') als je op dat moment in paniek verkoopt. Blijf gewoon maandelijks bijkopen.</p>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:20px;border:1px solid var(--rule)">
+        <div style="font-weight:700;color:var(--ink);margin-bottom:8px;font-size:0.9rem">III. Minimaliseer het inloggen</div>
+        <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.6">Hoe vaker je naar je portefeuille kijkt, hoe groter de verleiding om actie te ondernemen, iets aan te passen of te "timen". Haal de beleggingsapp van je startscherm. Eén à twee keer per kwartaal je stand van zaken bekijken is méér dan voldoende.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:40px 0 12px;border-top:1px solid var(--rule);padding-top:24px">4. Wat levert dit eigenlijk op? Rendement in perspectief</h3>
+    <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.7">
+      De menselijke hersenen kunnen exponentiële groei (het rente-op-rente effect of <em>compound interest</em>) moeilijk inschatten. Wat gebeurt er als je trouw <strong>€ 250 per maand</strong> belegt in een wereldwijd gespreide ETF, uitgaande van een realistisch historisch gemiddeld rendement van 7% per jaar?
+    </p>
+
+    <div style="background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:24px; margin-bottom:16px; overflow:hidden;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
         
-        <!-- Step 1 -->
-        <div style="display:flex;gap:16px;background:white;padding:20px;border-radius:8px;border:1px solid var(--rule);">
-           <div style="width:32px;height:32px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
-           <div>
-             <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px">Account aanmaken & MiFID</div>
-             <p style="font-size:0.85rem;margin:0;color:var(--ink-3);line-height:1.6">
-              Ga naar de Belgische website van Saxo Bank en klik op "Klant worden". Zorg dat je dit via de Belgische portaalsite doet (.be). Houd je identiteitskaart klaar of gebruik Itsme voor een vlotte aanmelding.<br><br>
-              Tijdens je aanmelding moet je de wettelijke MiFID-vragenlijst invullen over je inkomen en beleggingskennis. Wees hier gewoon eerlijk in. Als je aangeeft dat je een beginner bent, kan de bank achteraf een waarschuwing geven dat "beleggen risico's inhoudt". Dit is standaard, je zult hierna nog steeds probleemloos de bekende wereldwijde ETF's kunnen aankopen.
-             </p>
-           </div>
+        <!-- 10 Jaar -->
+        <div style="background:white; border:1px solid var(--rule); border-radius:6px; padding:16px; text-align:center;">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 10 jaar</div>
+          <div style="font-size:1.4rem; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">€ 43.496</div>
+          <div style="font-size:0.75rem; color:var(--ink-3);">Eigen inleg: € 30.000</div>
+          <div style="margin-top:12px; height:8px; background:var(--rule); border-radius:4px; display:flex; overflow:hidden;">
+            <div style="width:69%; background:var(--ink-4);" title="Eigen inleg"></div>
+            <div style="width:31%; background:var(--green);" title="Winst"></div>
+          </div>
+          <div style="font-size:0.65rem; color:var(--green); font-weight:700; margin-top:6px; text-align:right;">+ € 13.496 winst</div>
         </div>
 
-        <!-- Step 2 -->
-        <div style="display:flex;gap:16px;background:white;padding:20px;border-radius:8px;border:1px solid var(--rule);">
-           <div style="width:32px;height:32px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
-           <div>
-             <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px">AutoInvest-rekening openen</div>
-             <p style="font-size:0.85rem;margin:0;color:var(--ink-3);line-height:1.6">
-              Binnen 1 à 2 werkdagen wordt je account goedgekeurd. Zodra je kunt inloggen op de Saxo web-applicatie of de mobiele app, zie je op het overzichtsscherm van je gewone rekening meestal direct een banner met <strong>‘Starten met AutoInvest’</strong> of de knop <strong>‘AutoInvest rekening openen’</strong>. Klik hierop om de functie voor jouw profiel te activeren.
-             </p>
-           </div>
+        <!-- 20 Jaar -->
+        <div style="background:white; border:1px solid var(--rule); border-radius:6px; padding:16px; text-align:center;">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 20 jaar</div>
+          <div style="font-size:1.4rem; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">€ 130.229</div>
+          <div style="font-size:0.75rem; color:var(--ink-3);">Eigen inleg: € 60.000</div>
+          <div style="margin-top:12px; height:8px; background:var(--rule); border-radius:4px; display:flex; overflow:hidden;">
+            <div style="width:46%; background:var(--ink-4);" title="Eigen inleg"></div>
+            <div style="width:54%; background:var(--green);" title="Winst"></div>
+          </div>
+          <div style="font-size:0.65rem; color:var(--green); font-weight:700; margin-top:6px; text-align:right;">+ € 70.229 winst</div>
         </div>
 
-        <!-- Step 3 -->
-        <div style="display:flex;gap:16px;background:white;padding:20px;border-radius:8px;border:1px solid var(--rule);">
-           <div style="width:32px;height:32px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
-           <div>
-             <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px">Geld storten via je huisbank</div>
-             <p style="font-size:0.85rem;margin:0;color:var(--ink-3);line-height:1.6">
-              Je AutoInvest-rekening krijgt een <strong>eigen, uniek IBAN-nummer</strong> (te vinden via de blauwe balk bovenaan > 'Klassieke overschrijving'). Stel bij je eigen huisbank een maandelijkse doorlopende opdracht in naar dit specifieke IBAN. <strong>Let op de timing:</strong> Saxo belegt je geld automatisch elke 5de dag van de maand. Stel de doorlopende opdracht bij je eigen bank daarom best in rond de 28ste of 1ste van de maand.
-             </p>
-           </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div style="display:flex;gap:16px;background:white;padding:20px;border-radius:8px;border:1px solid var(--rule);">
-           <div style="width:32px;height:32px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
-           <div>
-             <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px">Je plan instellen</div>
-             <p style="font-size:0.85rem;margin:0;color:var(--ink-3);line-height:1.6">
-              Klik op "Plan maken" in je AutoInvest dashboard. Typ de ISIN-code in van je gewenste ETF('s), kies je procentuele verdeling en geef aan welk bedrag je maandelijks gaat storten. <strong>Cruciale tip:</strong> Vink in de instellingen de optie <strong>"Alle beschikbare cash beleggen"</strong> aan. Saxo laat geen fractionele aandelen toe via AutoInvest; dit vinkje zorgt ervoor dat de ongebruikte cash van de vorige aankoop de volgende maand automatisch mee wordt berekend.
-             </p>
-           </div>
-        </div>
-
-        <!-- Step 5 -->
-        <div style="display:flex;gap:16px;background:white;padding:20px;border-radius:8px;border:1px solid var(--rule);">
-           <div style="width:32px;height:32px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
-           <div>
-             <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px">Bevestigen & automatische uitvoering</div>
-             <p style="font-size:0.85rem;margin:0;color:var(--ink-3);line-height:1.6">
-              Bevestig je plan. Elke 5de dag van de maand kijkt Saxo naar het effectieve cashsaldo op je AutoInvest-rekening en investeert dit automatisch volgens jouw verdeling. Je betaalt hiervoor <strong>€ 2 per maand</strong> commissie (pas te betalen vanaf je eerste effectieve belegging), ongeacht hoeveel verschillende ETF's je koopt. Je vermogen bouwt zichzelf vanaf nu automatisch op!
-             </p>
-           </div>
+        <!-- 30 Jaar -->
+        <div style="background:white; border:1px solid var(--rule); border-radius:6px; padding:16px; text-align:center;">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 30 jaar</div>
+          <div style="font-size:1.4rem; font-weight:700; color:var(--blue); line-height:1; margin-bottom:4px;">€ 302.873</div>
+          <div style="font-size:0.75rem; color:var(--ink-3);">Eigen inleg: € 90.000</div>
+          <div style="margin-top:12px; height:8px; background:var(--rule); border-radius:4px; display:flex; overflow:hidden;">
+            <div style="width:30%; background:var(--ink-4);" title="Eigen inleg"></div>
+            <div style="width:70%; background:var(--green);" title="Winst"></div>
+          </div>
+          <div style="font-size:0.65rem; color:var(--green); font-weight:700; margin-top:6px; text-align:right;">+ € 212.873 winst</div>
         </div>
 
       </div>
+      <div style="font-size:0.7rem; color:var(--ink-4); margin-top:16px; text-align:center;">
+        *Simulatie op basis van een gemiddeld netto jaarlijks rendement van 7%. Rendementen uit het verleden bieden geen garantie voor de toekomst.
+      </div>
     </div>
-
   </section>
 
 <!-- ── 7. BELASTINGEN (Nieuwe pagina) ── -->
@@ -1606,74 +1765,75 @@ strong{font-weight:700;color:var(--ink)}
       </div>
     </div>
 
-    <!-- START DEEP DIVE FISCALE GIDS -->
+    <!-- START FISCAAL OVERZICHT VOOR BEGINNERS -->
     <div style="margin-top:48px;">
-      <h3 style="font-size:1.4rem;font-weight:800;color:var(--ink);margin-bottom:20px;border-bottom:2px solid var(--rule);padding-bottom:10px">De fiscale deep-dive voor Belgen</h3>
-      <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px">We snappen dat belastingen intimiderend kunnen klinken, maar als passieve ETF-belegger is de Belgische wetgeving eigenlijk redelijk goed te navigeren. Laten we elk onderdeel stap voor stap ontleden zodat je precies weet waar je aan toe bent.</p>
+      <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:8px">Wat betekent dit voor jou als beginner?</h3>
+      <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">Goed nieuws: als je de ETF's uit deze gids koopt via een Belgische broker, is vrijwel alles geautomatiseerd. Hieronder de 4 regels die je écht moet kennen.</p>
 
-      <!-- DEEL 1: TOB -->
-      <div style="background:var(--surface);padding:24px;border-radius:8px;border:1px solid var(--rule);margin-bottom:24px;">
-        <h4 style="font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-          <span style="display:inline-block;width:24px;height:24px;background:var(--blue);color:white;border-radius:50%;text-align:center;line-height:24px;font-size:0.8rem">1</span> 
-          De Taks op Beursverrichtingen (TOB)
-        </h4>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:12px">De TOB is een federale belasting die je betaalt telkens je een effect (zoals een ETF) koopt of verkoopt. De tarieven hangen af van het type fonds en, cruciaal, waar het fonds wettelijk geregistreerd is ("gedomicilieerd").</p>
-        <ul style="font-size:0.85rem;color:var(--ink-2);margin-bottom:16px;padding-left:18px">
-          <li><strong>0,12%:</strong> Het allerlaagste en meest voordelige tarief. Geldt voor <em>kapitaliserende (Accumulating)</em> ETF's die niet rechtstreeks in België geregistreerd zijn, wat standaard het geval is voor ETF's met een <strong>Ierse (IE...) domicilie</strong>. (Daarom staan er in deze gids voornamelijk Ierse ETF's!).</li>
-          <li><strong>1,32%:</strong> Het "straftarief". Dit geldt voor fondsen die in België geregistreerd zijn. Vaak vallen <strong>Luxemburgse (LU...)</strong> ETF's (zoals XGOV) hier onder, omdat hun beheerders het fonds vaak te breed registreren in Europa.</li>
-        </ul>
-        <div style="background:white;padding:12px 16px;border-radius:4px;border-left:3px solid var(--blue);font-size:0.8rem;color:var(--ink-3)">
-          <strong>Voorbeeld:</strong> Je koopt maandelijks voor €200 aan VWCE (Ierse ISIN: IE00BK5BQT80). De TOB is 0,12%. Dat komt neer op <strong>amper €0,24 aan belasting</strong> per aankoop. Je Belgische broker (Saxo, Bolero...) houdt dit vanzelf af van je cashsaldo en stort dit door naar de staat. Je hoeft zelf niets te doen in je belastingbrief.
+      <!-- RIJEN: compacte fiscale regels -->
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
+
+        <!-- TOB -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+          <div>
+            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Beurstaks (TOB) bij elke aankoop</div>
+            <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Elke keer dat je een Ierse ETF (IE...) koopt of verkoopt, houdt je broker automatisch <strong>0,12%</strong> in. Bij €200 inleg is dat €0,24. Jij hoeft niets aan te geven.</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1rem;font-weight:700;color:var(--green)">0,12%</div>
+            <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Automatisch</div>
+          </div>
         </div>
+
+        <!-- Dividendbelasting -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+          <div>
+            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Dividendbelasting (30%) — je vermijdt dit automatisch</div>
+            <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Bedrijven keren winsten uit als dividend. België belast dat met 30%. Maar alle ETF's in deze gids zijn <strong>Accumulating</strong>: het dividend wordt intern herbelegd. Geen uitkering op je rekening = geen 30%.</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1rem;font-weight:700;color:var(--green)">0%</div>
+            <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Via Acc ETF's</div>
+          </div>
+        </div>
+
+        <!-- Meerwaardebelasting -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#D97706;flex-shrink:0"></div>
+          <div>
+            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Meerwaardebelasting bij verkoop (nieuw in 2026)</div>
+            <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Verkoop je een ETF met winst? Dan betaal je <strong>10%</strong> op de winst. De eerste <strong>€10.000 per jaar is vrij</strong>. Winst opgebouwd vóór 2026 telt niet mee. Zolang je niet verkoopt, betaal je niets. Je verwerkt dit zelf jaarlijks in je belastingaangifte — je broker levert de documenten aan.</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1rem;font-weight:700;color:var(--amber)">10%</div>
+            <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Op winst bij verkoop</div>
+          </div>
+        </div>
+
+        <!-- Reynderstaks (obligaties) -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--ink-4);flex-shrink:0"></div>
+          <div>
+            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Reynderstaks — enkel bij obligatie-ETF's</div>
+            <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Gebruik je <strong>SYSC</strong> als obligatie-buffer in je portfolio? Dan betaal je bij verkoop met winst ook 30% op die winst. Geldt <em>niet</em> voor aandelen-ETF's. Je broker houdt dit automatisch in.</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1rem;font-weight:700;color:var(--ink-3)">30%</div>
+            <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Enkel SYSC/obligaties</div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- DEEL 2: ROERENDE VOORHEFFING -->
-      <div style="background:var(--surface);padding:24px;border-radius:8px;border:1px solid var(--rule);margin-bottom:24px;">
-        <h4 style="font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-          <span style="display:inline-block;width:24px;height:24px;background:var(--blue);color:white;border-radius:50%;text-align:center;line-height:24px;font-size:0.8rem">2</span> 
-          De roerende voorheffing
-        </h4>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:12px">Bedrijven in je ETF keren regelmatig winsten uit, de zogenaamde dividenden. De Belgische staat belast deze dividenden zwaar met een taks van <strong>30%</strong>, de roerende voorheffing.</p>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:12px">De ultieme oplossing hiervoor heet <strong>Accumulating (Acc)</strong> of <em>Kapitaliserende</em> ETF's. Deze fondsen keren het dividend simpelweg <em>niet</em> uit naar je rekening. In plaats daarvan herbelegt de fondsbeheerder (zoals Vanguard of iShares) dat dividend automatisch in de ETF zelf om nieuwe aandelen te kopen, wat de waarde van jouw stukje doet stijgen. <strong>Omdat het dividend jouw Belgische bankrekening nooit raakt, betaal je de Belgische 30% dividendbelasting hierop niet.</strong> Distributing (uitkerende) ETF's worden daarom in België sterk afgeraden in de opbouwfase.</p>
-      </div>
-
-      <!-- DEEL 3: REYNDERSTAKS -->
-      <div style="background:var(--surface);padding:24px;border-radius:8px;border:1px solid var(--rule);margin-bottom:24px;">
-        <h4 style="font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-          <span style="display:inline-block;width:24px;height:24px;background:var(--blue);color:white;border-radius:50%;text-align:center;line-height:24px;font-size:0.8rem">3</span> 
-          De Reynderstaks (Opgelet bij Obligatie-ETF's!)
-        </h4>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:12px">De Reynderstaks is een specifieke belasting van 30% op de <strong>meerwaarde (winst) bij verkoop</strong>, die enkel van toepassing is op fondsen die voor <strong>meer dan 10% uit obligaties</strong> (schuldbewijzen) bestaan. Puur aandelen-ETF's zoals VWCE, IMIE, SWRD of SPYL vallen hier dus <em>nooit</em> onder.</p>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:12px">Echter, als je een ETF aankoopt zoals <strong>SYSC</strong> of <strong>XGOV</strong> (die voor 100% uit obligaties bestaan om je portfolio te stabiliseren), zal je bij de verkoop van die ETF in de toekomst 30% belasting betalen op de gerealiseerde winst van die specifieke obligatie-ETF. Jouw Belgische broker (zoals Bolero of Saxo) is verplicht deze 30% in te houden wanneer je het fonds verkoopt.</p>
-      </div>
-
-      <!-- DEEL 4: MEERWAARDEBELASTING 2026 -->
-      <div style="background:var(--surface);padding:24px;border-radius:8px;border:1px solid var(--rule);margin-bottom:24px;">
-        <h4 style="font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-          <span style="display:inline-block;width:24px;height:24px;background:var(--blue);color:white;border-radius:50%;text-align:center;line-height:24px;font-size:0.8rem">4</span> 
-          De nieuwe meerwaardebelasting (2026)
-        </h4>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:12px">Onder voorbehoud van definitieve wetgeving introduceert België vanaf 1 januari 2026 een nieuwe meerwaardebelasting op financiële activa, waaronder ETF's en aandelen.</p>
-        <ul style="font-size:0.85rem;color:var(--ink-2);margin-bottom:16px;padding-left:18px">
-          <li><strong>Tarief:</strong> Je betaalt 10% belasting op je gerealiseerde netto-meerwaarde (de winst die je overhoudt <em>nadat</em> je een ETF hebt verkocht). Zolang je niet verkoopt, betaal je sowieso niets.</li>
-          <li><strong>Vrijstelling:</strong> De eerste <strong>€10.000 winst per jaar</strong> is volledig vrijgesteld van deze belasting. In een latere fase zou dit plafond zelfs opgetrokken worden naar €15.000 per jaar. Voor heel wat doorsnee spaarders en beleggers die hun portefeuille langzaam afbouwen ter aanvulling van hun pensioen (bijvoorbeeld in jaarlijkse schijfjes), betekent dit dat ze vaak volledig onder de radar van deze taks zullen blijven.</li>
-          <li><strong>Historische Winst:</strong> Belangrijk detail: alle meerwaarde die je portfolio heeft opgebouwd tot en met 31/12/2025, wordt (volgens de huidige teksten) vrijgesteld. De 'meter' begint pas te lopen voor winsten behaald na die datum.</li>
-          <li><strong>Aangifte:</strong> In tegenstelling tot de TOB, zal je deze gerealiseerde meerwaarde of minwaarde wellicht wél jaarlijks zelf moeten verwerken in je Personenbelasting, ook als je een Belgische broker hebt. De broker reikt hiervoor wel de nodige documenten aan.</li>
-        </ul>
-      </div>
-
-      <!-- DEEL 5: CAP -->
-      <div style="background:var(--surface);padding:24px;border-radius:8px;border:1px solid var(--rule);margin-bottom:24px;">
-        <h4 style="font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-          <span style="display:inline-block;width:24px;height:24px;background:var(--blue);color:white;border-radius:50%;text-align:center;line-height:24px;font-size:0.8rem">5</span> 
-          Buitenlandse rekeningen aangeven (NBB)
-        </h4>
-        <p style="font-size:0.85rem;color:var(--ink-2);line-height:1.6;margin-bottom:0">Als je belegt via een buitenlandse broker zoals DEGIRO, Trade Republic of Bux, ben je als Belg wettelijk verplicht om deze buitenlandse rekeningen eenmalig aan te geven bij het Centraal Aanspreekpunt (CAP) van de Nationale Bank, en jaarlijks het vinkje "Ik bezit een buitenlandse rekening" aan te duiden in je belastingaangifte.<br><br>
-        <strong>De oplossing?</strong> Zolang je kiest voor één van de in onze tabel aanbevolen Belgische brokers of brokers met een Belgisch bijhuis (zoals Saxo Bank, Bolero, MeDirect of Keytrade), hoef je dit <strong>NIET</strong> te doen. Jouw rekening wordt dan immers beschouwd als een gewone, interne Belgische rekening.</p>
+      <!-- Samenvatting callout -->
+      <div class="callout callout-green">
+        <strong>De gouden combinatie voor Belgische beginners:</strong> Ierse ETF (IE...) + Accumulating + Belgische broker = minimale belastingen, volledig geautomatiseerd, en geen extra paperassen in je belastingaangifte. Alle fondsen in deze gids zijn al op die manier geselecteerd.
       </div>
 
     </div>
-    <!-- EINDE DEEP DIVE FISCALE GIDS -->
+    <!-- EINDE FISCAAL OVERZICHT -->
 
   </section>
 
@@ -1692,7 +1852,7 @@ strong{font-weight:700;color:var(--ink)}
       <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Portfolio gekozen.</strong> 1-ETF (IMIE of VWCE), of een 2-ETF (SWRD + EMIM)? Kies op basis van je strategie in sectie 3.</div></label>
       <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>ETF gevonden via ISIN-code.</strong> Gebruik de ISIN uit sectie 1, niet de ticker. Zo vind je altijd het juiste fonds op jouw beurs.</div></label>
       <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Eerste aankoop gedaan.</strong> Koop je eerste ETF. Bedrag maakt niet uit - het gaat erom de gewoonte te starten.</div></label>
-      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Automatisch spaarplan ingesteld.</strong> Kies een vast bedrag per maand en een vaste dag. Saxo AutoInvest of handmatig order plannen.</div></label>
+      <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Automatisch spaarplan ingesteld.</strong> Stel de automatische 'Pay Yourself First' bankoverschrijving in. Gebruik een automatisch investeringsplan bij je broker of plan maandelijks een vast moment in voor een handmatig order.</div></label>
       <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Kalender: 1× per kwartaal checken.</strong> Zet een herinnering in je agenda. Bekijk je portfolio maximaal één keer per kwartaal. Hoe minder, hoe beter.</div></label>
       <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Jaarlijkse herbalancering gepland.</strong> (Enkel bij 2+ fondsen) Noteer wanneer je checkt of de verhouding nog klopt.</div></label>
       <label class="cl-item"><input type="checkbox" class="cl-checkbox"><div class="cl-text"><strong>Aankoopbewijzen bewaard.</strong> Sla alle transactiebevestigingen op (per e-mail of downloadbaar in je broker). Belangrijk voor de nieuwe meerwaardebelasting.</div></label>
@@ -1703,7 +1863,7 @@ strong{font-weight:700;color:var(--ink)}
   <section id="glossary" class="chapter-section">
     <div class="chapter"><div class="chapter-num">9</div>Woordenlijst</div>
     <h2 class="sec-title">Begrippen verklaard</h2>
-    <p class="sec-intro">Een beknopte uitleg van alle termen in dit document.</p>
+    <p class="sec-intro">Een beknopte uitleg van enkele financiële termen in dit document.</p>
 
     <div class="glossary-grid">
       <div class="gl-item"><div class="gl-term">ETF (Exchange Traded Fund)</div><div class="gl-def">Beleggingsfonds dat op de beurs verhandelbaar is. Bundelt aandelen, obligaties of andere activa op automatische (passieve) wijze.</div></div>
@@ -1725,7 +1885,7 @@ strong{font-weight:700;color:var(--ink)}
       <div class="gl-item"><div class="gl-term">Herbalanceren</div><div class="gl-def">De balans in je 2- of 3-ETF portfolio herstellen door het fonds dat is 'achtergebleven' extra bij te kopen met je nieuwe spaargeld.</div></div>
       <div class="gl-item"><div class="gl-term">Euro-cost averaging</div><div class="gl-def">Maandelijks exact hetzelfde bedrag investeren (bv. €200), ongeacht de beurskoers. Je koopt automatisch veel stuks bij dips, en minder stuks op pieken.</div></div>
       <div class="gl-item"><div class="gl-term">Blended TER</div><div class="gl-def">Het rekensommetje: de gemiddelde kosten van je portefeuile. 90% SWRD + 10% EMIM is (0,9 × 0,12%) + (0,1 × 0,18%) ≈ 0,13% TER.</div></div>
-      <div class="gl-item"><div class="gl-term">AutoInvest (Saxo)</div><div class="gl-def">Functie bij Saxo Bank om automatisch elke 5e van de maand via domiciliëring (of cash op je account) een gekozen ETF aan te kopen.</div></div>
+      <div class="gl-item"><div class="gl-term">Spaarplan</div><div class="gl-def">Een functie (zoals Saxo AutoInvest) aangeboden door sommige brokers waarbij je vaste maandelijkse storting automatisch voor jou belegd wordt.</div></div>
     </div>
   </section>
 
