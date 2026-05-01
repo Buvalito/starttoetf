@@ -152,7 +152,7 @@ body{
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-p { color: var(--ink-2); font-size:0.975rem; line-height:1.8; overflow-wrap:break-word; word-break:break-word; }
+p { color: var(--ink-2); font-size:clamp(0.875rem,2.4vw,0.975rem); line-height:1.8; overflow-wrap:break-word; word-break:break-word; }
 .body-text { min-width:0; overflow:hidden; }
 .etf-layout > div { min-width:0; }
 .callout { overflow-wrap:break-word; word-break:break-word; }
@@ -226,7 +226,7 @@ nav{
 }
 .h2-white{color:white}
 .lead{
-  font-size:1rem;font-weight:400;
+  font-size:clamp(0.9rem,2.5vw,1rem);font-weight:400;
   color:var(--ink-3);line-height:1.75;
   max-width:580px;margin-bottom:48px;
 }
@@ -242,7 +242,7 @@ nav{
   color:var(--ink);margin-bottom:18px;
 }
 .hero-sub{
-  font-size:1rem;font-weight:400;
+  font-size:clamp(0.9rem,2.5vw,1rem);font-weight:400;
   color:var(--ink-3);line-height:1.8;
   margin-bottom:30px;max-width:460px;
 }
@@ -258,7 +258,7 @@ nav{
 }
 .hs{padding-right:24px;margin-right:24px;border-right:1px solid var(--rule)}
 .hs:last-child{border-right:none;margin-right:0}
-.hs-val{font-size:1.35rem;font-weight:700;color:var(--ink);line-height:1;margin-bottom:5px}
+.hs-val{font-size:clamp(1rem,3vw,1.35rem);font-weight:700;color:var(--ink);line-height:1;margin-bottom:5px}
 .hs-label{font-size:0.72rem;color:var(--ink-4);font-weight:500;line-height:1.4;}
 
 /* HERO CARD */
@@ -288,7 +288,7 @@ nav{
   color:white;margin-bottom:14px;
 }
 .cost-desc{
-  font-size:0.95rem;color:rgba(255,255,255,0.6);
+  font-size:clamp(0.875rem,2.4vw,0.95rem);color:rgba(255,255,255,0.6);
   line-height:1.75;margin-bottom:28px;
 }
 .cost-cta{display:inline-block;width:auto;padding-left:24px;padding-right:24px}
@@ -313,7 +313,7 @@ nav{
 .cost-col-bank .cost-col-label{color:rgba(255,255,255,0.35)}
 .cost-col-etf  .cost-col-label{color:#93C5FD}
 .cost-col-stat{
-  font-size:1.6rem;font-weight:700;line-height:1;margin-bottom:4px;
+  font-size:clamp(1.2rem,3.5vw,1.6rem);font-weight:700;line-height:1;margin-bottom:4px;
 }
 .cost-col-stat--bad {color:rgba(255,255,255,0.4)}
 .cost-col-stat--good{color:white}
@@ -444,7 +444,7 @@ input[type=range]::-webkit-slider-thumb{
 }
 .calc-res{background:white;padding:16px 20px}
 .calc-res-label{font-size:0.69rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);margin-bottom:5px}
-.calc-res-val{font-size:1.2rem;font-weight:700;letter-spacing:-0.02em}
+.calc-res-val{font-size:clamp(1rem,3vw,1.2rem);font-weight:700;letter-spacing:-0.02em}
 .calc-res-sub{font-size:0.7rem;color:var(--ink-4);margin-top:1px}
 .legend-row{display:flex;gap:20px;margin-bottom:12px}
 .leg{display:flex;align-items:center;gap:7px;font-size:0.76rem;font-weight:600;color:var(--ink-3)}
@@ -474,7 +474,7 @@ input[type=range]::-webkit-slider-thumb{
   border:1px solid var(--rule);border-radius:8px;padding:24px;
 }
 .sp-k{font-size:0.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:8px}
-.sp-h{font-size:1.05rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em}
+.sp-h{font-size:clamp(0.95rem,2.5vw,1.05rem);font-weight:700;margin-bottom:10px;letter-spacing:-0.01em}
 .sp-p{font-size:0.84rem;color:var(--ink-3);line-height:1.75;margin-bottom:14px}
 .sp-list{display:flex;flex-direction:column;gap:7px}
 .sp-li{
@@ -513,7 +513,7 @@ input[type=range]::-webkit-slider-thumb{
   position:sticky;top:68px;
 }
 .p-was{font-size:0.78rem;color:rgba(255,255,255,0.3);text-decoration:line-through;margin-bottom:4px}
-.p-price{font-size:2.8rem;font-weight:700;color:white;line-height:1;margin-bottom:3px;letter-spacing:-0.03em}
+.p-price{font-size:clamp(2rem,6vw,2.8rem);font-weight:700;color:white;line-height:1;margin-bottom:3px;letter-spacing:-0.03em}
 .p-price sup{font-size:1.1rem;vertical-align:super}
 .p-note{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-bottom:20px}
 .p-list-h{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.28);margin-bottom:10px}
@@ -549,13 +549,13 @@ input[type=range]::-webkit-slider-thumb{
 .faq-q{
   padding:18px 0;display:flex;justify-content:space-between;
   align-items:center;gap:20px;cursor:pointer;
-  font-size:0.9rem;font-weight:600;color:var(--ink);
+  font-size:clamp(0.84rem,2.2vw,0.9rem);font-weight:600;color:var(--ink);
   transition:color .15s;user-select:none;
 }
 .faq-q:hover{color:var(--blue)}
 .faq-ico{font-style:normal;font-size:0.8rem;color:var(--ink-4);flex-shrink:0;transition:transform .25s}
 .faq-item.open .faq-ico{transform:rotate(180deg);color:var(--blue)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:0.875rem;color:var(--ink-3);line-height:1.8}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:clamp(0.82rem,2.2vw,0.875rem);color:var(--ink-3);line-height:1.8}
 .faq-a.open{max-height:1200px;padding-bottom:18px}
 .faq-a br{display:block;height:0;margin-bottom:7px}
 
@@ -583,13 +583,13 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 .inflatie-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-bottom:24px}
 .infl-stat{background:var(--white);padding:28px 24px;color:var(--ink);transition:background .15s}
 .infl-stat:hover{background:var(--surface)}
-.infl-stat-val{font-size:1.6rem;font-weight:700;line-height:1;margin-bottom:14px;letter-spacing:-0.02em}
+.infl-stat-val{font-size:clamp(1.2rem,3.5vw,1.6rem);font-weight:700;line-height:1;margin-bottom:14px;letter-spacing:-0.02em}
 .infl-stat-val.neg{color:var(--red)}
 .infl-stat-val.pos{color:var(--green)}
 .infl-stat-val.neu{color:var(--blue)}
-.infl-stat-label{font-size:0.9rem;font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:12px;letter-spacing:-0.01em}
+.infl-stat-label{font-size:clamp(0.82rem,2.2vw,0.9rem);font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:12px;letter-spacing:-0.01em}
 .infl-stat-context{font-size:0.8rem;color:var(--ink-3);line-height:1.7;padding-top:12px;border-top:1px solid var(--rule)}
-.inflatie-conclusion{background:var(--blue-tint);border-left:3px solid var(--blue);padding:16px 20px;border-radius:0 6px 6px 0;font-size:0.9rem;color:var(--ink-2);line-height:1.7}
+.inflatie-conclusion{background:var(--blue-tint);border-left:3px solid var(--blue);padding:16px 20px;border-radius:0 6px 6px 0;font-size:clamp(0.82rem,2.2vw,0.9rem);color:var(--ink-2);line-height:1.7}
 @media(max-width:640px){.inflatie-stats{grid-template-columns:1fr}}
 
 /* ── COMP3 TABLE ── */
@@ -618,8 +618,8 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 .tag-box.tb-blue{background:var(--blue-tint);color:var(--blue)}
 .tag-box.tb-green{background:var(--green-tint);color:var(--green)}
 .tag-box.tb-amber{background:var(--amber-tint);color:var(--amber)}
-.blog-card-title{font-size:0.95rem;font-weight:700;padding:12px 18px 8px;color:var(--ink);line-height:1.35}
-.blog-card-desc{font-size:0.84rem;color:var(--ink-3);padding:0 18px 24px 18px;line-height:1.65;flex-grow:1}
+.blog-card-title{font-size:clamp(0.875rem,2.4vw,0.95rem);font-weight:700;padding:12px 18px 8px;color:var(--ink);line-height:1.35}
+.blog-card-desc{font-size:clamp(0.8rem,2.2vw,0.84rem);color:var(--ink-3);padding:0 18px 24px 18px;line-height:1.65;flex-grow:1}
 .blog-card-footer{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;margin-top:auto;border-top:1px solid var(--rule);font-size:0.72rem;color:var(--ink-4)}
 .blog-card-footer span:first-child{color:var(--ink-4);font-weight:500}
 .blog-card-footer span:last-child{font-weight:600;color:var(--blue);font-size:0.75rem}
@@ -816,6 +816,9 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   .hs-label{font-size:0.62rem;line-height:1.4}
   .calc-results{grid-template-columns:1fr 1fr}
 }
+@media(max-width:480px){
+  .cost-compare{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -870,7 +873,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
       </div>
       
       <div class="hero-visual" aria-hidden="true">
-        <img src="hero-image.webp" alt="Stijgende grafiek" class="hero-img" width="600" height="500">
+        <img src="hero-image.webp" alt="Grafiek die de vermogensgroei van ETF-beleggen toont" class="hero-img" width="600" height="500">
       </div>
 
     </div>
@@ -1007,7 +1010,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div class="infl-stat-context">Bij 1% spaarrente en gemiddeld 2,5% inflatie. Je rekening toont winst (+€1.050), maar je dagelijkse leven werd véél duurder.</div>
       </div>
       <div class="infl-stat">
-        <div class="infl-stat-val neg">1,1%</div>
+        <div class="infl-stat-val neu">1,1%</div>
         <div class="infl-stat-label">Het gemiddelde rendement van een spaarrekening (laatste 20j)</div>
         <div class="infl-stat-context">De wettelijke minimumrente in België ligt op amper 0,11%. Zelfs de betere grootbanken tikken vandaag nauwelijks de 1,5% aan.</div>
       </div>
@@ -1421,7 +1424,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
       <a class="blog-card" href="blog-rente-op-rente.html" aria-label="Lees: Rente op rente – compound interest uitgelegd">
         <div class="blog-card-tag"><span class="tag-box tb-green">Strategie</span></div>
         <div class="blog-card-title">Rente op rente: hoe compound interest jouw vermogen laat exploderen</div>
-        <div class="blog-card-desc">Albert Einstein noemde het 'het achtste wereldwonder'. We tonen aan de hand van cijfers waarom vroeg beginnen zoveel belangrijker is dan veel inleggen.</div>
+        <div class="blog-card-desc">Compound interest wordt weleens het achtste wereldwonder genoemd. We tonen aan de hand van cijfers waarom vroeg beginnen zoveel belangrijker is dan veel inleggen.</div>
         <div class="blog-card-footer"><span>5 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
       <a class="blog-card" href="blog-account-op-saxo-bank.html" aria-label="Lees: Account openen bij Saxo Bank en AutoInvest instellen">

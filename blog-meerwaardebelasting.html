@@ -61,6 +61,18 @@ body{
 
 .wrap { max-width:1100px; margin:0 auto; padding:0 40px; }
 
+/* ── SOCIAL SHARE ── */
+.ft-logo-row{display:flex;flex-direction:column;gap:6px}
+.ft-tag-row{display:flex;flex-direction:column;gap:12px}
+.share-bar{display:flex;align-items:center;gap:12px}
+.share-btn{
+  font-size:1rem;text-decoration:none;
+  color:var(--ink-4);transition:color .15s;
+}
+.share-btn:hover{color:var(--blue)}
+
+.wrap   {max-width:1100px;margin:0 auto;padding:0 40px}
+
 /* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:300;
@@ -248,6 +260,21 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
     cursor:pointer;text-decoration:none;
     white-space:nowrap;transition:background .15s;
   }
+  /* Aangepast voor de social icons: wrappen is toegestaan, altijd rechts met margin-left:auto */
+  .ft-tag-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+    gap: 0; /* Zorg dat dit overeenkomt met de column-gap van .ft-nav als je die hebt */
+  }
+  
+  .share-bar {
+    margin-left: 0; /* Margin-left auto is niet meer nodig in een grid */
+    justify-content: flex-start;
+  }
+  
+  .nav-links{display:none}
+  .nav-mobile-group{display:flex}
   .nav-hamburger{
     display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
     width:auto;height:40px;background:none;border:none;cursor:pointer;
@@ -314,14 +341,14 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   <div class="nav-inner">
     <a class="nav-logo" href="/" aria-label="StartToETF – Home"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> StartTo<span>ETF</span></a>
     <div class="nav-links">
-      <a href="/#etf">Wat is een ETF?</a>
+      <a href="/#etf">Wat is een ETF</a>
       <a href="/#stappenplan">Stappenplan</a>
       <a href="/#vergelijking">Vergelijk</a>
-      <a href="/#faq">Veelgestelde vragen</a>
+      <a href="/#faq">FAQ</a>
       <a class="nav-btn" href="/#etf-startgids">Aan de slag <i class="fas fa-chevron-right" style="font-size:0.7em;margin-left:3px"></i></a>
     </div>
     <div class="nav-mobile-group">
-      <a class="nav-cta-mobile" href="/#etf-startgids">Aan de slag <i class="fas fa-chevron-right" style="font-size:0.65em;margin-left:3px"></i></a>
+      <a class="nav-cta-mobile" href="/#etf-startgids">Start nu <i class="fas fa-chevron-right" style="font-size:0.65em;margin-left:3px"></i></a>
       <button class="nav-hamburger" id="navToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -331,11 +358,10 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
-    <a href="/#etf">Wat is een ETF?</a>
-    <a href="/#stappenplan">Stappenplan</a>
-    <a href="/#vergelijking">Vergelijk</a>
-    <a href="/#pensioen">Pensioen</a>
-    <a href="/#faq">FAQ</a>
+    <a href="/#etf" onclick="closeMobileMenu()">Wat is een ETF</a>
+    <a href="/#stappenplan" onclick="closeMobileMenu()">Stappenplan</a>
+    <a href="/#vergelijking" onclick="closeMobileMenu()">Vergelijk</a>
+    <a href="/#faq" onclick="closeMobileMenu()">FAQ</a>
   </div>
 </div>
 
@@ -398,23 +424,31 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 <footer>
   <div class="wrap">
     <div class="ft">
-      <div>
+      <div class="ft-logo-row">
         <div class="ft-logo">StartTo<span>ETF</span></div>
-        <div class="ft-tag">Slim en passief beleggen.<br>Op maat van de Belg.</div>
+        <div class="ft-tag-row">
+          <div class="ft-tag">Slim en passief beleggen.<br>Op maat van de Belg.</div>
+          <div class="share-bar">
+            <a class="share-btn" href="https://api.whatsapp.com/send?text=Slim%20beleggen%20in%20ETF%27s%20als%20Belg%3A%20https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F" target="_blank" rel="noopener noreferrer" aria-label="Deel via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F" target="_blank" rel="noopener noreferrer" aria-label="Deel via Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F" target="_blank" rel="noopener noreferrer" aria-label="Deel via LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F&text=ETF%20beleggen%20in%20Belgi%C3%AB%3A%20simpel%20stappenplan%20voor%20beginners" target="_blank" rel="noopener noreferrer" aria-label="Deel via X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
       </div>
       <div class="ft-nav">
-        <a href="/#etf">Wat is een ETF?</a>
-        <a href="/#inflatie">Sparen vs inflatie</a>
-        <a href="/#stappenplan">Stappenplan</a>
-        <a href="/#brokers">Brokers vergeleken</a>
-        <a href="/#pensioen">Pensioen</a>
-        <a href="/#vergelijking">De vergelijking</a>
-        <a href="/#etf-startgids">ETF Startgids</a>
-        <a href="/#blog">Kennisbank</a>
-        <a href="/#faq">Veelgestelde vragen</a>
-        <a href="">Contact</a>
-        <a href="">Privacybeleid</a>
-        <a href="">Disclaimer</a>
+        <a href="#etf">Wat is een ETF</a>
+        <a href="#inflatie">Sparen vs inflatie</a>
+        <a href="#stappenplan">Stappenplan</a>
+        <a href="#brokers">Brokers vergeleken</a>
+        <a href="#pensioen">Pensioen</a>
+        <a href="#vergelijking">De vergelijking</a>
+        <a href="#etf-startgids">ETF Startgids</a>
+        <a href="#blog">Kennisbank</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacybeleid</a>
+        <a href="#">Disclaimer</a>
       </div>
     </div>
     <div class="ft-disc">
