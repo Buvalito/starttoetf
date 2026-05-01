@@ -10,8 +10,9 @@
 <title>StartToETF - Beleggen in ETF's voor Belgische beginners</title>
 <meta name="description" content="Zelf starten met ETF beleggen in België? Ontdek ons simpel stappenplan zonder jargon. Vergelijk Belgische brokers, begrijp de belastingen en start vandaag.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://etfbeleggenbelgie.be/">
-<link rel="alternate" hreflang="nl-BE" href="https://etfbeleggenbelgie.be/">
+<link rel="canonical" href="https://www.etfbeleggenbelgie.be/">
+<link rel="alternate" hreflang="nl-BE" href="https://www.etfbeleggenbelgie.be/">
+<link rel="alternate" hreflang="x-default" href="https://www.etfbeleggenbelgie.be/">
 
 <!-- ══════════════════════════════════════════
      OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
@@ -88,18 +89,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Wat is StartToETF en waarom werd deze website gemaakt?",
+          "name": "Wat is een ETF en hoe werkt het?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "StartToETF ontstond uit frustratie als beginnende belegger, een oprechte interesse in financiën en de wil om mensen bewust te maken van de alternatieven naast een spaarrekening. Info over ETF's voor Belgen was overal verspreid: brokers, beurstaksen, ISIN-codes. Terwijl spaargeld elk jaar koopkracht verliest, brengt een brede ETF historisch zo'n 7% per jaar op. StartToETF centraliseert alles op één plek: stappenplan, broker vergelijking (Saxo, MeDirect, Bolero, ING Self Invest, Keytrade, Re=Bel), Belgische fiscaliteit en meer. Duidelijk uitgelegd, praktisch gebundeld en met alle informatie die een beginner nodig heeft om goed geïnformeerd te starten."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ik heb geen financiële voorkennis. Kan ik zelf beleggen in ETF's?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absoluut. ETF's zijn juist ontworpen voor mensen die niet dagelijks met de beurs bezig willen zijn. Je stelt eenmalig een automatische maandelijkse aankoop in, en daarna loopt het vanzelf. Begin met één brede wereldindex en je bent al beter gediversifieerd dan de meeste beleggers."
+            "text": "ETF staat voor Exchange Traded Fund. Het is een beleggingsfonds dat op de beurs verhandeld wordt zoals een gewoon aandeel. Een ETF bundelt tientallen tot duizenden aandelen of obligaties in één product. Koop je een ETF op de MSCI World, dan koop je in één transactie een stukje van meer dan 1.400 grote bedrijven wereldwijd."
           }
         },
         {
@@ -117,30 +110,6 @@
             "@type": "Answer",
             "text": "In België houd je best rekening met drie zaken: De Taks op Beursverrichtingen (TOB) van 0,12% bij elke aan- en verkoop. De roerende voorheffing (30%) op dividenden (te vermijden door voor Accumulating ETF's te kiezen). En vanaf 2026 de meerwaardebelasting van 10% op gerealiseerde winst boven de 10.000 euro per jaar."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Kies ik beter voor pensioensparen bij de bank of zelf beleggen in ETF's?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Beide vullen elkaar mooi aan. Pensioensparen biedt 30% belastingvermindering, wat een zekerheid is. Maar het heeft wel hogere instap- en beheerskosten en een lager historisch rendement (2-3%). ETF's hebben een hoger historisch rendement (~7%), zijn flexibeler (je kan steeds aan je geld) en zijn veel goedkoper in beheer. Vaak is een combinatie de slimste zet."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is mijn geld wel veilig bij een online broker?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ja, zolang je kiest voor een gereguleerde broker onder toezicht van de FSMA (zoals Saxo, Bolero of Keytrade). Jouw ETF-activa zijn bovendien juridisch gescheiden van het vermogen van de broker. Mocht de broker failliet gaan, dan blijven de ETF's gewoon jouw eigendom."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Waarom is de ETF Startgids betalend? Is de gratis info niet voldoende?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "De ETF Startgids is een concreet document waarmee je vandaag nog kan beginnen beleggen. Het bevat de exacte ISIN-codes van de 10 beste ETF's voor Belgen, een vergelijkingstabel met kosten en dividendbeleid, 8 kant-en-klare portfoliostrategieën, een volledige fiscale gids (TOB, roerende voorheffing, meerwaardebelasting 2026) en een starterschecklist. Eenmalige betaling van 14,99 euro, levenslang gratis updates inbegrepen."
-          }
         }
       ]
     }
@@ -153,8 +122,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
-/* CSS is ongewijzigd gebleven ten opzichte van origineel voor stabiliteit */
 :root {
   --ink:        #0F1923;
   --ink-2:      #2C3E50;
@@ -187,6 +156,16 @@ p { color: var(--ink-2); font-size:0.975rem; line-height:1.8; overflow-wrap:brea
 .body-text { min-width:0; overflow:hidden; }
 .etf-layout > div { min-width:0; }
 .callout { overflow-wrap:break-word; word-break:break-word; }
+
+/* ── SOCIAL SHARE ── */
+.ft-logo-row{display:flex;flex-direction:column;gap:6px}
+.ft-tag-row{display:flex;flex-direction:column;gap:12px}
+.share-bar{display:flex;align-items:center;gap:12px}
+.share-btn{
+  font-size:1rem;text-decoration:none;
+  color:var(--ink-4);transition:color .15s;
+}
+.share-btn:hover{color:var(--blue)}
 
 .wrap   {max-width:1100px;margin:0 auto;padding:0 40px}
 
@@ -284,9 +263,72 @@ nav{
 
 /* HERO CARD */
 .hero-card{
-  background:var(--ink);border-radius:10px;
+  background:var(--ink);border-radius:8px;
   padding:28px;color:white;
 }
+
+/* HERO VISUAL */
+.hero-visual{
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-img{
+  width:100%;height:auto;display:block;
+  border-radius:12px;object-fit:cover;
+}
+
+/* ── COST SECTION (full-width) ── */
+.cost-section{background:var(--ink);padding:64px 0}
+.cost-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:64px;align-items:center;
+}
+.cost-h2{
+  font-size:clamp(1.5rem,3vw,2rem);font-weight:700;
+  line-height:1.2;letter-spacing:-0.02em;
+  color:white;margin-bottom:14px;
+}
+.cost-desc{
+  font-size:0.95rem;color:rgba(255,255,255,0.6);
+  line-height:1.75;margin-bottom:28px;
+}
+.cost-cta{display:inline-block;width:auto;padding-left:24px;padding-right:24px}
+.cost-compare{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.cost-col{
+  border-radius:8px;padding:24px 20px;
+}
+.cost-col-bank{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+}
+.cost-col-etf{
+  background:rgba(26,86,219,0.18);
+  border:1px solid rgba(26,86,219,0.35);
+}
+.cost-col-label{
+  font-size:0.7rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.1em;margin-bottom:10px;
+}
+.cost-col-bank .cost-col-label{color:rgba(255,255,255,0.35)}
+.cost-col-etf  .cost-col-label{color:#93C5FD}
+.cost-col-stat{
+  font-size:1.6rem;font-weight:700;line-height:1;margin-bottom:4px;
+}
+.cost-col-stat--bad {color:rgba(255,255,255,0.4)}
+.cost-col-stat--good{color:white}
+.cost-col-sub{
+  font-size:0.72rem;color:rgba(255,255,255,0.35);
+  margin-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.07);
+  padding-bottom:14px;
+}
+.cost-col-item{
+  font-size:0.8rem;color:rgba(255,255,255,0.65);
+  display:flex;align-items:center;gap:8px;
+  margin-bottom:8px;
+}
+.cost-icon-bad {color:#F87171;font-size:0.7rem}
+.cost-icon-good{color:#4ADE80;font-size:0.7rem}
 .hc-title{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,0.35);margin-bottom:10px}
 .hc-bars{display:flex;align-items:flex-end;gap:5px;height:56px;margin-bottom:16px}
 .hcb{flex:1;border-radius:2px 2px 0 0;background:rgba(255,255,255,0.1);animation:barUp .6s ease-out forwards;transform-origin:bottom}
@@ -372,7 +414,7 @@ nav{
 /* ── CALCULATOR ── */
 .calc-wrap{
   background:var(--white);border:1px solid var(--rule);
-  border-radius:10px;overflow:hidden;
+  border-radius:8px;overflow:hidden;
 }
 .calc-top{display:grid;grid-template-columns:300px 1fr;gap:0;min-width:0}
 .calc-inputs{
@@ -466,7 +508,7 @@ input[type=range]::-webkit-slider-thumb{
 .p-ih{font-size:0.875rem;font-weight:600;color:white;margin-bottom:2px}
 .p-is{font-size:0.78rem;color:rgba(255,255,255,0.38);line-height:1.5}
 .price-card{
-  border:1px solid rgba(255,255,255,0.1);border-radius:10px;
+  border:1px solid rgba(255,255,255,0.1);border-radius:8px;
   padding:28px;background:rgba(255,255,255,0.05);
   position:sticky;top:68px;
 }
@@ -495,7 +537,15 @@ input[type=range]::-webkit-slider-thumb{
 
 /* ── FAQ ── */
 .faq-wrap{max-width:100%}
+.faq-group{margin-bottom:48px}
+.faq-group:last-child{margin-bottom:0}
+.faq-cat-title{
+  font-size:1rem;font-weight:700;color:var(--blue);
+  margin-bottom:8px;padding-bottom:8px;
+  display:inline-block; letter-spacing:-0.01em;
+}
 .faq-item{border-bottom:1px solid var(--rule)}
+.faq-item:last-child{border-bottom:none}
 .faq-q{
   padding:18px 0;display:flex;justify-content:space-between;
   align-items:center;gap:20px;cursor:pointer;
@@ -575,8 +625,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 .blog-card-footer span:last-child{font-weight:600;color:var(--blue);font-size:0.75rem}
 @media(max-width:700px){.blog-grid{grid-template-columns:1fr}}
 @media(min-width:701px) and (max-width:940px){.blog-grid{grid-template-columns:1fr 1fr}}
-
-
 
 /* RESPONSIVE TABLES */
 @media(max-width:620px){
@@ -732,13 +780,30 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   .hero-inner,.etf-layout,.stap-layout,.prem-grid{grid-template-columns:1fr}
   .pension-grid-wrap{grid-template-columns:1fr !important}
   .stap-panel{display:none}
-  .hero-card{display:block}
+  .hero-visual{display:none}
+  .cost-inner{grid-template-columns:1fr;gap:36px}
+  .cost-section{padding:48px 0}
+  .cost-compare{grid-template-columns:1fr 1fr}
   .v3{grid-template-columns:1fr}
   .calc-top{grid-template-columns:1fr}
   .calc-inputs{border-right:none;border-bottom:1px solid var(--rule)}
   .calc-results{grid-template-columns:1fr 1fr}
   .ft{grid-template-columns:1fr;gap:22px}
   .ft-nav{grid-template-columns:1fr 1fr}
+  
+  /* Aangepast voor de social icons: wrappen is toegestaan, altijd rechts met margin-left:auto */
+  .ft-tag-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+    gap: 0; /* Zorg dat dit overeenkomt met de column-gap van .ft-nav als je die hebt */
+  }
+  
+  .share-bar {
+    margin-left: 0; /* Margin-left auto is niet meer nodig in een grid */
+    justify-content: flex-start;
+  }
+  
   .nav-links{display:none}
   .nav-mobile-group{display:flex}
 }
@@ -760,14 +825,14 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   <div class="nav-inner">
     <a class="nav-logo" href="/" aria-label="StartToETF – Home"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> StartTo<span>ETF</span></a>
     <div class="nav-links">
-      <a href="/#etf">Wat is een ETF?</a>
+      <a href="/#etf">Wat is een ETF</a>
       <a href="/#stappenplan">Stappenplan</a>
       <a href="/#vergelijking">Vergelijk</a>
-      <a href="/#faq">Veelgestelde vragen</a>
+      <a href="/#faq">FAQ</a>
       <a class="nav-btn" href="/#etf-startgids">Aan de slag <i class="fas fa-chevron-right" style="font-size:0.7em;margin-left:3px"></i></a>
     </div>
     <div class="nav-mobile-group">
-      <a class="nav-cta-mobile" href="#etf-startgids">Aan de slag <i class="fas fa-chevron-right" style="font-size:0.65em;margin-left:3px"></i></a>
+      <a class="nav-cta-mobile" href="#etf-startgids">Start nu <i class="fas fa-chevron-right" style="font-size:0.65em;margin-left:3px"></i></a>
       <button class="nav-hamburger" id="navToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -777,10 +842,10 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
-    <a href="#etf" onclick="closeMobileMenu()">Wat is een ETF?</a>
+    <a href="#etf" onclick="closeMobileMenu()">Wat is een ETF</a>
     <a href="#stappenplan" onclick="closeMobileMenu()">Stappenplan</a>
     <a href="#vergelijking" onclick="closeMobileMenu()">Vergelijk</a>
-    <a href="#faq" onclick="closeMobileMenu()">Veelgestelde vragen</a>
+    <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
   </div>
 </div>
 
@@ -790,10 +855,9 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
   <div class="wrap">
     <div class="hero-inner">
       <div>
-        <div class="kicker">Slim beleggen voor Belgische beginners</div>
-        <!-- H1 is SEO geoptimaliseerd met het hoofdzoekwoord -->
+        <div class="kicker">Slim beleggen voor beginners</div>
         <h1>Beleggen in ETF's: simpel & toegankelijk.</h1>
-        <p class="hero-sub">Laat je spaargeld niet stilstaan. Geld op een spaarrekening verliest elk jaar aan koopkracht omdat de rente lager ligt dan de inflatie. Beleg in ETF's en investeer maandelijks en automatisch in honderden bedrijven wereldwijd. Zo bouw je, stap voor stap, een echt vermogen op.</p>
+        <p class="hero-sub">Geld op een spaarrekening verliest elk jaar aan koopkracht omdat de rente lager ligt dan de inflatie. Laat je spaargeld dus niet stilstaan. Beleggen in ETF’s is simpel en toegankelijk: investeer maandelijks en automatisch in honderden bedrijven wereldwijd. Zo bouw je stap voor stap een echt vermogen op.</p>
         <div class="hero-btns">
           <a href="#stappenplan" class="btn btn-blue">Hoe begin ik eraan?</a>
           <a href="#etf" class="btn btn-outline">Wat is een ETF?</a>
@@ -805,30 +869,47 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         </div>
       </div>
       
-      <div class="hero-card">
-        <div class="hc-title">De verborgen kost van de bank</div>
-        <h3 style="font-size:1.25rem;font-weight:700;line-height:1.3;margin-bottom:12px;color:white;letter-spacing:-0.01em;">Je betaalt meer dan je denkt.</h3>
-        <p style="font-size:0.875rem;color:rgba(255,255,255,0.65);line-height:1.65;margin-bottom:24px;">
-          Bankfondsen rekenen vaak stevige instapkosten en jaarlijkse beheerskosten aan. Die percentages lijken op het eerste gezicht klein, maar snoepen op lange termijn een enorm deel van je eindkapitaal weg. 
-        </p>
-
-        <div style="background:rgba(26,86,219,0.15);border:1px solid rgba(26,86,219,0.3);border-radius:6px;padding:16px;margin-bottom:24px;">
-          <div style="font-size:0.75rem;font-weight:700;color:#93C5FD;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Het ETF-alternatief</div>
-          <div style="font-size:0.875rem;font-weight:600;color:white;margin-bottom:4px;">Zelf beleggen, zonder tussenpersoon.</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.5;">
-            Betaal <strong>0% instapkosten</strong> en gemiddeld amper <strong>0,20%</strong> per jaar. Met een bredere wereldwijde spreiding blijft het rendement én de controle gewoon bij jou.
-          </div>
-        </div>
-
-        <a href="#etf-startgids" class="hc-cta" style="margin-top:0;">Ontdek de ETF Startgids <i class="fas fa-chevron-right"></i></a>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="hero-image.webp" alt="Stijgende grafiek" class="hero-img" width="600" height="500">
       </div>
 
     </div>
   </div>
 </section>
 
-
-
+<!-- ─── VERBORGEN KOST ─── -->
+<section class="cost-section">
+  <div class="wrap">
+    <div class="cost-inner">
+      <div class="cost-left">
+        <div class="hc-title">De verborgen kost van de bank</div>
+        <h2 class="cost-h2">Je betaalt meer dan je beseft.</h2>
+        <p class="cost-desc">Bankfondsen rekenen vaak stevige instapkosten én jaarlijkse beheerskosten aan. Die percentages lijken klein, maar vreten op lange termijn een enorm deel van je eindkapitaal weg, zonder dat je het doorhebt. Kies voor ETF's en beleg zonder tussenpersonen.</p>
+        <a href="#etf-startgids" class="hc-cta cost-cta">Ontdek de ETF Startgids <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="cost-right">
+        <div class="cost-compare">
+          <div class="cost-col cost-col-bank">
+            <div class="cost-col-label">Bankfonds</div>
+            <div class="cost-col-stat cost-col-stat--bad">1,5 – 2%</div>
+            <div class="cost-col-sub">jaarlijkse beheerskost</div>
+            <div class="cost-col-item"><i class="fas fa-times cost-icon-bad"></i> Instapkosten tot 3%</div>
+            <div class="cost-col-item"><i class="fas fa-times cost-icon-bad"></i> Fondsbeheerder beslist</div>
+            <div class="cost-col-item"><i class="fas fa-times cost-icon-bad"></i> Onduidelijke inhoud</div>
+          </div>
+          <div class="cost-col cost-col-etf">
+            <div class="cost-col-label">ETF</div>
+            <div class="cost-col-stat cost-col-stat--good">&lt; 0,25%</div>
+            <div class="cost-col-sub">jaarlijkse beheerskost</div>
+            <div class="cost-col-item"><i class="fas fa-check cost-icon-good"></i> 0% instapkosten</div>
+            <div class="cost-col-item"><i class="fas fa-check cost-icon-good"></i> Jij behoudt controle</div>
+            <div class="cost-col-item"><i class="fas fa-check cost-icon-good"></i> Volledig transparant</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ─── WAT IS EEN ETF ─── -->
 <section class="sec sec-border" id="etf">
@@ -836,14 +917,11 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
     <div class="etf-layout">
       <div>
         <div class="kicker">De basis</div>
-        <h2 class="h2">Wat is een ETF nu precies?</h2>
+        <h2 class="h2">Wat is een ETF?</h2>
         <div class="body-text">
           <p>Stel je voor dat je niet moet gokken op het succes van één enkel bedrijf, maar in één klik investeert in een brede selectie van de sterkste bedrijven wereldwijd. Presteert er eentje wat minder? Dan wordt dat naadloos opgevangen door de rest.</p>
-          <p>Een <strong>ETF (Exchange Traded Fund)</strong>, in Vlaanderen ook wel eens een 'tracker' genoemd, bundelt honderden tot duizenden aandelen in één product. Je koopt het op de beurs via een broker, net zoals een klassiek aandeel. Met één aankoop volg je dus een hele markt (bijvoorbeeld de wereldeconomie).</p>
+          <p>Een <strong>ETF (Exchange Traded Fund)</strong>, in Vlaanderen ook wel eens een 'tracker' genoemd, bundelt honderden tot duizenden aandelen in één product. Je koopt het op de beurs via een broker, net zoals een klassiek aandeel. Met één aankoop beleg je dus in meerdere bedrijven tegelijk.</p>
           <p>Het immense voordeel ten opzichte van wat je grootbank aanbiedt: een ETF volgt de markt automatisch, zonder dure fondsbeheerders en hoge beheerskosten die aan jouw rendement knagen. Minder kosten, minder keuzestress, en historisch gezien betere prestaties.</p>
-          <div class="callout">
-            <strong>Waarom kosten doorslaggevend zijn:</strong> Een klassiek bankfonds kost gemiddeld 1,5 tot 2% per jaar. Een brede ETF kost vaak minder dan 0,25%. Op een inleg van €50.000 over 20 jaar bespaar je al snel €12.500 aan pure kosten. Omdat die bespaarde kosten ook samengestelde intrest genereren, loopt je totale voordeel vaak op tot ruim €20.000 of meer.
-          </div>
         </div>
       </div>
       <div>
@@ -940,7 +1018,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
       </div>
     </div>
     <div class="inflatie-conclusion">
-      <strong>De nuchtere conclusie:</strong> Houd je spaarboekje voor je financiële buffer en doelen op korte termijn (zoals een nieuwe wagen of renovatie). Maar geld dat je de komende 5 tot 10 jaar écht niet nodig hebt, verdampt op de bank. ETF beleggen is momenteel de meest robuuste manier om die inflatie structureel te slim af te zijn.
+      <strong>De nuchtere conclusie:</strong> Houd je spaarboekje voor je financiële buffer en doelen op korte termijn (zoals een nieuwe wagen of renovatie). Maar geld dat je de komende 5 tot 10 jaar écht niet nodig hebt, verdampt op de bank. ETF beleggen is simpel, toegankelijk voor iedereen en momenteel de meest robuuste manier om die inflatie structureel te slim af te zijn.
     </div>
   </div>
 </section>
@@ -1072,12 +1150,11 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 <!-- ─── BROKERS ─── -->
 <section class="sec sec-border sec-bg" id="brokers">
   <div class="wrap">
-    <div class="kicker">Welke broker past bij jou?</div>
+    <div class="kicker">Waar koop je een ETF?</div>
     <h2 class="h2">Belgische brokers vergeleken</h2>
-    <p class="lead">Alle onderstaande brokers zijn ideaal voor Belgische beleggers: ze houden de beurstaks (TOB) en andere belastingen netjes voor jou in. Je hoeft zelf geen buitenlandse rekening aan te geven bij de Nationale Bank. Handig en veilig.</p>
+    <p class="lead">Alle onderstaande brokers zijn ideaal voor Belgische beleggers die willen investeren in ETF's: ze houden de beurstaks (TOB) en andere belastingen netjes voor jou in. Je hoeft zelf geen buitenlandse rekening aan te geven bij de Nationale Bank. Handig en veilig.</p>
 
     <div class="resp-table-wrap">
-      <!-- Desktop header -->
       <div class="resp-table-header cols-5">
         <span>Broker</span>
         <span>Kosten per ETF-aankoop</span>
@@ -1086,10 +1163,9 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <span>Opmerking</span>
       </div>
 
-      <!-- Saxo -->
       <div class="resp-table-row cols-5">
         <div>
-          <div style="font-size:0.9rem;font-weight:700">Saxo Bank</div>
+          <div style="font-size:0.9rem;font-weight:700">Saxo</div>
           <div style="font-size:0.7rem;color:var(--ink-3);margin-top:2px">Belgisch filiaal · FSMA</div>
           <span style="display:inline-block;margin-top:5px;background:var(--green);color:white;border-radius:3px;padding:2px 7px;font-size:0.6rem;font-weight:700">Aanrader</span>
         </div>
@@ -1099,7 +1175,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div style="font-size:0.8rem;color:var(--ink-3)">Biedt als enige écht automatisch ETF-spaarplan aan in België</div>
       </div>
 
-      <!-- MeDirect -->
       <div class="resp-table-row cols-5">
         <div>
           <div style="font-size:0.9rem;font-weight:700">MeDirect</div>
@@ -1112,7 +1187,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div style="font-size:0.8rem;color:var(--ink-3)">Geen transactiekosten op een ruime selectie ETF's</div>
       </div>
 
-      <!-- Bolero -->
       <div class="resp-table-row cols-5">
         <div>
           <div style="font-size:0.9rem;font-weight:700">Bolero</div>
@@ -1124,7 +1198,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div style="font-size:0.8rem;color:var(--ink-3)">Grootste en oudste online broker; je hoeft geen KBC-klant te zijn</div>
       </div>
 
-      <!-- ING Self Invest -->
       <div class="resp-table-row cols-5">
         <div>
           <div style="font-size:0.9rem;font-weight:700">ING Self Invest</div>
@@ -1136,7 +1209,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div style="font-size:0.8rem;color:var(--ink-3)">Zit ingebouwd in je vertrouwde ING-app; aanbod ETF's is wel beperkter</div>
       </div>
 
-      <!-- Keytrade -->
       <div class="resp-table-row cols-5">
         <div>
           <div style="font-size:0.9rem;font-weight:700">Keytrade Bank</div>
@@ -1148,7 +1220,6 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <div style="font-size:0.8rem;color:var(--ink-3)">Onderdeel van de Crelan-groep; zeer uitgebreid productaanbod</div>
       </div>
 
-      <!-- Re=Bel -->
       <div class="resp-table-row cols-5" style="border-bottom:none">
         <div>
           <div style="font-size:0.9rem;font-weight:700">Re=Bel</div>
@@ -1323,41 +1394,41 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
     <h2 class="h2">Leesvoer voor de slimme belegger</h2>
     <p class="lead">Korte, to-the-point artikels op maat van de Belgische belegger. Geen overbodig jargon, gewoon de kennis die je nodig hebt.</p>
     <div class="blog-grid">
-      <a class="blog-card" href="blog-msci-world.html">
+      <a class="blog-card" href="blog-msci-world.html" aria-label="Lees: Wat is de MSCI World Index?">
         <div class="blog-card-tag"><span class="tag-box tb-blue">Index Uitgelegd</span></div>
         <div class="blog-card-title">Wat is de MSCI World Index? Alles uitgelegd voor beginners</div>
         <div class="blog-card-desc">Het is de bekendste wereldindex, maar wat koop je nu exact? We bekijken de landen, de grootste bedrijven en verklaren waarom de VS voor bijna 70% doorweegt.</div>
-        <div class="blog-card-footer"><span>5 min. lezen</span><span>Lees artikel <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
+        <div class="blog-card-footer"><span>5 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
-      <a class="blog-card" href="blog-hangmatbeleggen.html">
+      <a class="blog-card" href="blog-hangmatbeleggen.html" aria-label="Lees: Hangmatbeleggen – passief beleggen in ETF's">
         <div class="blog-card-tag"><span class="tag-box tb-green">Strategie</span></div>
         <div class="blog-card-title">Hangmatbeleggen: passief beleggen in ETF's</div>
         <div class="blog-card-desc">Grappig genoeg zijn de beste beleggers vaak degene die het minst naar hun app kijken. Ontdek hoe 'saai' beleggen via een spaarplan je het meeste oplevert.</div>
-        <div class="blog-card-footer"><span>4 min. lezen</span><span>Lees artikel <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
+        <div class="blog-card-footer"><span>4 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
-      <a class="blog-card" href="blog-meerwaardebelasting.html">
+      <a class="blog-card" href="blog-meerwaardebelasting.html" aria-label="Lees: Meerwaardebelasting 2026 in België">
         <div class="blog-card-tag"><span class="tag-box tb-amber">Fiscaliteit</span></div>
         <div class="blog-card-title">Meerwaardebelasting 2026 in België: 10% op beurswinst uitgelegd</div>
         <div class="blog-card-desc">Vanaf 2026 betalen we 10% taks op beurswinsten. Gelukkig blijft de eerste €10.000 per jaar vrijgesteld. Alles wat dit voor jouw ETF-portfolio betekent.</div>
-        <div class="blog-card-footer"><span>6 min. lezen</span><span>Lees artikel <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
+        <div class="blog-card-footer"><span>6 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
-      <a class="blog-card" href="blog-accumulating-distributing.html">
+      <a class="blog-card" href="blog-accumulating-distributing.html" aria-label="Lees: Accumulating vs Distributing ETF">
         <div class="blog-card-tag"><span class="tag-box tb-blue">Begrippen</span></div>
         <div class="blog-card-title">Accumulating vs Distributing ETF: welke kies je als Belg?</div>
         <div class="blog-card-desc">Een Accumulating ETF herbelegt je dividenden, een Distributing ETF stort ze op je rekening. Voor Belgen is de fiscale keuze snel gemaakt. We leggen uit waarom.</div>
-        <div class="blog-card-footer"><span>4 min. lezen</span><span>Lees artikel <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
+        <div class="blog-card-footer"><span>4 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
-      <a class="blog-card" href="blog-rente-op-rente.html">
+      <a class="blog-card" href="blog-rente-op-rente.html" aria-label="Lees: Rente op rente – compound interest uitgelegd">
         <div class="blog-card-tag"><span class="tag-box tb-green">Strategie</span></div>
         <div class="blog-card-title">Rente op rente: hoe compound interest jouw vermogen laat exploderen</div>
         <div class="blog-card-desc">Albert Einstein noemde het 'het achtste wereldwonder'. We tonen aan de hand van cijfers waarom vroeg beginnen zoveel belangrijker is dan veel inleggen.</div>
-        <div class="blog-card-footer"><span>5 min. lezen</span><span>Lees artikel <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
+        <div class="blog-card-footer"><span>5 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
-      <a class="blog-card" href="blog-account-op-saxo-bank.html">
+      <a class="blog-card" href="blog-account-op-saxo-bank.html" aria-label="Lees: Account openen bij Saxo Bank en AutoInvest instellen">
         <div class="blog-card-tag"><span class="tag-box tb-blue">Praktisch</span></div>
         <div class="blog-card-title">Account openen bij Saxo Bank en AutoInvest instellen: stap voor stap</div>
         <div class="blog-card-desc">Van het aanmaken van je account tot het activeren van je eerste automatische spaarplan. Ideaal voor hangmatbeleggers die eenvoudig en automatisch willen investeren.</div>
-        <div class="blog-card-footer"><span>8 min. lezen</span><span>Lees artikel <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
+        <div class="blog-card-footer"><span>8 min. lezen</span><span>Lees verder <i class="fas fa-chevron-right" style="font-size:0.8em;margin-left:3px"></i></span></div>
       </a>
     </div>
   </div>
@@ -1366,60 +1437,112 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
 <!-- ─── FAQ ─── -->
 <section class="sec sec-border" id="faq">
   <div class="wrap">
-    <div class="kicker">Veelgestelde vragen</div>
-    <h2 class="h2" style="margin-bottom:28px">Zit je nog met twijfels?</h2>
+    <div class="kicker">Voor wie nog twijfelt</div>
+    <h2 class="h2" style="margin-bottom:28px">Veelgestelde vragen</h2>
+    
     <div class="faq-wrap">
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Wat is StartToETF en waarom werd deze website opgericht?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">StartToETF ontstond uit een combinatie van eigen frustratie als beginnende belegger, oprechte interesse in financiën en de wil om mensen bewust te maken van de alternatieven naast een klassieke spaarrekening. Als beginner die wou starten met ETF's, bleek snel hoe versnipperd alle informatie is: uitleg over brokers op de ene website, beurstaksen op een andere, ISIN-codes op een forum. Specifieke info voor Belgen was nauwelijks gebundeld beschikbaar. Intussen verliest spaargeld elk jaar koopkracht, terwijl een brede ETF historisch zo'n 7% per jaar opbrengt. StartToETF centraliseert alles op één plek: wat een ETF is, waarom bankfondskosten schadelijk zijn op lange termijn, hoe je in 5 stappen je eerste ETF aankoopt, welke Belgische brokers beschikbaar zijn en hoe de Belgische fiscaliteit in elkaar zit. Duidelijk uitgelegd, praktisch gebundeld en met alle informatie die een beginner nodig heeft om goed geïnformeerd te starten.</div>
+      
+      <!-- GROEP 1: De Basis -->
+      <div class="faq-group">
+        <h3 class="faq-cat-title">De basis</h3>
+        
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Wat is een ETF en hoe werkt het?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">ETF staat voor Exchange Traded Fund. Het is een beleggingsfonds dat op de beurs verhandeld wordt zoals een gewoon aandeel. Een ETF bundelt tientallen tot duizenden aandelen of obligaties in één product. Koop je een ETF op de MSCI World, dan koop je in één transactie een stukje van meer dan 1.400 grote bedrijven wereldwijd. De prijs schommelt gedurende de dag mee met de markt. ETF's zijn passief beheerd (ze volgen een index) en daardoor veel goedkoper dan klassieke beleggingsfondsen van je bank.</div>
+        </div>
+        
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Wat is het verschil tussen een aandeel en een ETF?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Als je een aandeel koopt, word je deeltijds eigenaar van één specifiek bedrijf (bijv. Apple of KBC). Je rendement hangt af van dat ene bedrijf, wat best risicovol is. Met een ETF koop je in één klap een 'mandje' van soms wel duizenden bedrijven tegelijk. Gaat er ééntje failliet? Dan vangen de duizenden anderen in je ETF dat verlies moeiteloos op. Kortom: aandelen zijn voor wie individuele winnaars wil proberen kiezen, ETF's zijn voor wie veilig wil meesurfen op de hele marktgroei.</div>
+        </div>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Ik heb geen financiële voorkennis. Kan ik zelf beleggen in ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Absoluut. ETF's zijn juist ontworpen voor mensen die niet dagelijks met de beurs bezig willen zijn. Je stelt eenmalig een automatische maandelijkse aankoop in, en daarna loopt het vanzelf. Je moet gewoon één keer de basis snappen (daar dient deze website voor). Daarna doet je broker al het werk.</div>
+        </div>
+        
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Hoeveel startkapitaal heb ik nodig?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Je kan vandaag al starten met amper €50 per maand. Het initiële startbedrag is eigenlijk veel minder belangrijk dan de regelmaat waarmee je belegt. Consequent €100 per maand beleggen over een periode van 20 jaar, levert historisch gezien veel meer op dan één keer €10.000 storten en er nooit meer naar omkijken.</div>
+        </div>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Welke ETF is het best voor beginners?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Voor de meeste beginners volstaat één brede wereldwijde ETF. De populairste keuze voor Belgische beleggers is een MSCI World-tracker zoals de iShares Core MSCI World UCITS ETF (IWDA) of de Vanguard FTSE All-World (VWCE). Beide spreiden je geld over meer dan 1.500 grote bedrijven in meer dan 20 landen. Kies altijd voor een 'Accumulating' (ACC) variant zodat dividenden automatisch herbelegd worden en je geen 30% roerende voorheffing betaalt. Wil je ook opkomende markten meenemen, dan is VWCE de meer volledige keuze.</div>
+        </div>
       </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Ik heb geen financiële voorkennis. Kan ik zelf beleggen in ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">Absoluut. ETF's zijn juist ontworpen voor mensen die niet dagelijks met de beurs bezig willen zijn. Je stelt eenmalig een automatische maandelijkse aankoop in, en daarna loopt het vanzelf. Je moet gewoon één keer de basis snappen (daar dient deze website voor). Daarna doet je broker al het werk.</div>
+
+      <!-- GROEP 2: Risico & Veiligheid -->
+      <div class="faq-group">
+        <h3 class="faq-cat-title">Risico's & veiligheid</h3>
+        
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Wat als de beurs crasht? Ben ik dan alles kwijt?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Nee. Een brede ETF kan wel degelijk in waarde dalen (soms stevig), maar de waarde kan pas tot nul zakken als álle duizenden bedrijven in je ETF tegelijk failliet gaan. Dat is doemdenken. Na elke grote crisis uit de geschiedenis (dotcomcrash van 2000, financiële crisis van 2008, coronapaniek van 2020) herstelde de beurs zich om nadien nieuwe records te breken. Belangrijker nog: als je maandelijks blijft inleggen tijdens een dip, koop je eigenlijk ETF's 'met korting'.</div>
+        </div>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Wat zijn de nadelen van beleggen in ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">ETF's zijn voor de meeste beleggers een uitstekende keuze, maar ze hebben ook reële nadelen. Ten eerste is er het marktrisico: daalt de beurs, dan daalt ook je ETF mee. Er is geen garantie op rendement op korte termijn. Ten tweede bied een brede ETF geen kans om de markt te verslaan — je volgt haar per definitie. Wie snel wil verrijken, zal teleurgesteld zijn. Ten derde vereisen ETF's geduld: je hebt een beleggingshorizon van minimaal 5 à 10 jaar nodig om tijdelijke dalingen te kunnen uitzitten. Ten slotte zijn er belastingen: in België betaal je TOB bij aan- en verkoop en vanaf 2026 ook 10% meerwaardebelasting op winsten boven €10.000 per jaar.</div>
+        </div>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Is mijn vermogen wel veilig bij een online broker?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Ja. Brokers in België staan onder streng toezicht van de FSMA of vergelijkbare Europese waakhonden. Bovendien zijn jouw ETF's en aandelen juridisch gescheiden van het eigen vermogen van de broker. Moest je broker onverhoopt toch failliet gaan, dan vallen jouw beleggingen buiten het faillissement en kan je ze gewoon laten overboeken naar een andere broker.</div>
+        </div>
       </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Wat is het verschil tussen een aandeel en een ETF?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">Als je een aandeel koopt, word je deeltijds eigenaar van één specifiek bedrijf (bijv. Apple of KBC). Je rendement hangt af van dat ene bedrijf, wat best risicovol is. Met een ETF koop je in één klap een 'mandje' van soms wel duizenden bedrijven tegelijk. Gaat er ééntje failliet? Dan vangen de duizenden anderen in je ETF dat verlies moeiteloos op. Kortom: aandelen zijn voor wie individuele winnaars wil proberen kiezen, ETF's zijn voor wie veilig wil meesurfen op de hele marktgroei.</div>
+
+      <!-- GROEP 3: Belastingen & Pensioen -->
+      <div class="faq-group">
+        <h3 class="faq-cat-title">Belastingen & pensioen</h3>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Welke belastingen betaal ik in België op ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">In België houd je best rekening met drie zaken: Ten eerste de Taks op Beursverrichtingen (TOB) van vaak 0,12% bij elke aan- en verkoop. Ten tweede de roerende voorheffing (30%) op uitgekeerde dividenden (deze vermijd je door steevast voor 'Accumulating' ETF's te kiezen). En ten derde is er vanaf 1 januari 2026 de nieuwe meerwaardebelasting van 10%. Belangrijk: de eerste €10.000 winst per jaar is hierbij vrijgesteld. Alle brokers die wij hierboven vermelden (Saxo, Bolero, etc.) regelen deze taksen automatisch voor jou met de fiscus.</div>
+        </div>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Kies ik beter voor pensioensparen of ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">Waarom kiezen als je kan combineren? Fiscaal pensioensparen via de bank levert je direct 30% belastingvermindering op, wat een absolute zekerheid is. Maar het fonds zélf presteert vaak matig (2-3% per jaar) door hoge bankkosten en voorzichtige strategieën. ETF's leveren historisch gezien meer op (~7%), zijn veel goedkoper in beheer en je geld is niet geblokkeerd tot je 60ste. Ons advies: doe aan fiscaal pensioensparen voor de directe return, maar gebruik ETF's als de échte motor voor je latere vermogen.</div>
+        </div>
       </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Hoeveel startkapitaal heb ik nodig?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">Je kan vandaag al starten met amper €50 per maand. Het initiële startbedrag is eigenlijk veel minder belangrijk dan de regelmaat waarmee je belegt. Consequent €100 per maand beleggen over een periode van 20 jaar, levert historisch gezien veel meer op dan één keer €10.000 storten en er nooit meer naar omkijken.</div>
+
+      <!-- GROEP 4: Over StartToETF -->
+      <div class="faq-group">
+        <h3 class="faq-cat-title">Over StartToETF</h3>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Wat is StartToETF en waarom werd deze website opgericht?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">StartToETF ontstond uit een combinatie van eigen frustratie als beginnende belegger, oprechte interesse in financiën en de wil om mensen bewust te maken van de alternatieven naast een klassieke spaarrekening. Als beginner die wou starten met ETF's, bleek snel hoe versnipperd alle informatie is: uitleg over brokers op de ene website, beurstaksen op een andere, ISIN-codes op een forum. Specifieke info voor Belgen was nauwelijks gebundeld beschikbaar. Intussen verliest spaargeld elk jaar koopkracht, terwijl een brede ETF historisch zo'n 7% per jaar opbrengt. StartToETF centraliseert alles op één plek: wat een ETF is, waarom bankfondskosten schadelijk zijn op lange termijn, hoe je in 5 stappen je eerste ETF aankoopt, welke Belgische brokers beschikbaar zijn en hoe de Belgische fiscaliteit in elkaar zit. Duidelijk uitgelegd, praktisch gebundeld en met alle informatie die een beginner nodig heeft om goed geïnformeerd te starten.</div>
+        </div>
+
+        <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <div class="faq-q">Waarom is de ETF Startgids betalend? Is de gratis info niet voldoende?<em class="faq-ico" aria-hidden="true">↓</em></div>
+          <div class="faq-a">De gratis informatie op deze website geeft je de nodige basiskennis, maar de ETF Startgids is een concreet document waarmee je vandaag nog kan beginnen beleggen zonder bijkomend opzoekwerk. Je krijgt de exacte namen en ISIN-codes van de 10 beste ETF's voor Belgische beleggers, een vergelijkingstabel met kosten (TER), spreiding en dividendbeleid, 8 kant-en-klare portfoliostrategieën van simpel tot geavanceerder, een volledige fiscale gids over TOB, roerende voorheffing en de meerwaardebelasting van 10% vanaf 2026, en een starterschecklist zodat je niks over het hoofd ziet. De €14,99 is een eenmalige betaling met levenslang gratis updates inbegrepen. Zo heb je in één keer alles wat je nodig hebt om doordacht te starten.</div>
+        </div>
       </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Wat als de beurs crasht? Ben ik dan alles kwijt?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">Nee. Een brede ETF kan wel degelijk in waarde dalen (soms stevig), maar de waarde kan pas tot nul zakken als álle duizenden bedrijven in je ETF tegelijk failliet gaan. Dat is doemdenken. Na elke grote crisis uit de geschiedenis (dotcomcrash van 2000, financiële crisis van 2008, coronapaniek van 2020) herstelde de beurs zich om nadien nieuwe records te breken. Belangrijker nog: als je maandelijks blijft inleggen tijdens een dip, koop je eigenlijk ETF's 'met korting'.</div>
-      </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Welke belastingen betaal ik in België op ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">In België houd je best rekening met drie zaken: Ten eerste de Taks op Beursverrichtingen (TOB) van vaak 0,12% bij elke aan- en verkoop. Ten tweede de roerende voorheffing (30%) op uitgekeerde dividenden (deze vermijd je door steevast voor 'Accumulating' ETF's te kiezen). En ten derde is er vanaf 1 januari 2026 de nieuwe meerwaardebelasting van 10%. Belangrijk: de eerste €10.000 winst per jaar is hierbij vrijgesteld. Alle brokers die wij hierboven vermelden (Saxo, Bolero, etc.) regelen deze taksen automatisch voor jou met de fiscus.</div>
-      </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Kies ik beter voor pensioensparen of ETF's?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">Waarom kiezen als je kan combineren? Fiscaal pensioensparen via de bank levert je direct 30% belastingvermindering op, wat een absolute zekerheid is. Maar het fonds zélf presteert vaak matig (2-3% per jaar) door hoge bankkosten en voorzichtige strategieën. ETF's leveren historisch gezien meer op (~7%), zijn veel goedkoper in beheer en je geld is niet geblokkeerd tot je 60ste. Ons advies: doe aan fiscaal pensioensparen voor de directe return, maar gebruik ETF's als de échte motor voor je latere vermogen.</div>
-      </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Is mijn vermogen wel veilig bij een online broker?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">Ja. Brokers in België staan onder streng toezicht van de FSMA of vergelijkbare Europese waakhonden. Bovendien zijn jouw ETF's en aandelen juridisch gescheiden van het eigen vermogen van de broker. Moest je broker onverhoopt toch failliet gaan, dan vallen jouw beleggingen buiten het faillissement en kan je ze gewoon laten overboeken naar een andere broker.</div>
-      </div>
-      <div class="faq-item" onclick="tFaq(this)" tabindex="0" role="button" aria-expanded="false">
-        <div class="faq-q">Waarom is de ETF Startgids betalend? Is de gratis info niet voldoende?<em class="faq-ico" aria-hidden="true">↓</em></div>
-        <div class="faq-a">De gratis informatie op deze website geeft je de nodige basiskennis, maar de ETF Startgids is een concreet document waarmee je vandaag nog kan beginnen beleggen zonder bijkomend opzoekwerk. Je krijgt de exacte namen en ISIN-codes van de 10 beste ETF's voor Belgische beleggers, een vergelijkingstabel met kosten (TER), spreiding en dividendbeleid, 8 kant-en-klare portfoliostrategieën van simpel tot geavanceerder, een volledige fiscale gids over TOB, roerende voorheffing en de meerwaardebelasting van 10% vanaf 2026, en een starterschecklist zodat je niks over het hoofd ziet. De €14,99 is een eenmalige betaling met levenslang gratis updates inbegrepen. Zo heb je in één keer alles wat je nodig hebt om doordacht te starten.</div>
-      </div>
+
     </div>
   </div>
 </section>
-
-<!-- ─── FOOTER ─── -->
 </main>
 <footer>
   <div class="wrap">
     <div class="ft">
-      <div>
+      <div class="ft-logo-row">
         <div class="ft-logo">StartTo<span>ETF</span></div>
-        <div class="ft-tag">Slim en passief beleggen.<br>Op maat van de Belg.</div>
+        <div class="ft-tag-row">
+          <div class="ft-tag">Slim en passief beleggen.<br>Op maat van de Belg.</div>
+          <div class="share-bar">
+            <a class="share-btn" href="https://api.whatsapp.com/send?text=Slim%20beleggen%20in%20ETF%27s%20als%20Belg%3A%20https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F" target="_blank" rel="noopener noreferrer" aria-label="Deel via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F" target="_blank" rel="noopener noreferrer" aria-label="Deel via Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F" target="_blank" rel="noopener noreferrer" aria-label="Deel via LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.etfbeleggenbelgie.be%2F&text=ETF%20beleggen%20in%20Belgi%C3%AB%3A%20simpel%20stappenplan%20voor%20beginners" target="_blank" rel="noopener noreferrer" aria-label="Deel via X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
       </div>
       <div class="ft-nav">
-        <a href="#etf">Wat is een ETF?</a>
+        <a href="#etf">Wat is een ETF</a>
         <a href="#inflatie">Sparen vs inflatie</a>
         <a href="#stappenplan">Stappenplan</a>
         <a href="#brokers">Brokers vergeleken</a>
@@ -1427,10 +1550,10 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:48px 0
         <a href="#vergelijking">De vergelijking</a>
         <a href="#etf-startgids">ETF Startgids</a>
         <a href="#blog">Kennisbank</a>
-        <a href="#faq">Veelgestelde vragen</a>
-        <a href="">Contact</a>
-        <a href="">Privacybeleid</a>
-        <a href="">Disclaimer</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacybeleid</a>
+        <a href="#">Disclaimer</a>
       </div>
     </div>
     <div class="ft-disc">
