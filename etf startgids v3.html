@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
 :root {
@@ -31,7 +34,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:15px}
 body{
-  font-family:'Inter',sans-serif;
+  font-family:'Onest',sans-serif;
   color:var(--ink);
   background:var(--white);
   line-height:1.65;
@@ -50,13 +53,13 @@ body{
   position:relative;
   overflow:hidden;
 }
-.cover-brand{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,0.4);margin-bottom:40px}
-.cover-title{font-size:2.8rem;font-weight:700;line-height:1.1;letter-spacing:-0.025em;margin-bottom:16px}
+.cover-brand{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,0.4);margin-bottom:40px}
+.cover-title{font-size:2.8rem;font-weight:600;line-height:1.1;letter-spacing:-0.01em;margin-bottom:16px}
 .cover-title span{color:var(--white)}
-.cover-sub{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;max-width:520px;margin-bottom:48px}
+.cover-sub{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;max-width:650px;margin-bottom:48px}
 .cover-meta{display:flex;gap:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1)}
 .cover-meta-item{}
-.cmi-val{font-size:1.3rem;font-weight:700;line-height:1;margin-bottom:3px}
+.cmi-val{font-size:1.3rem;font-weight:600;line-height:1;margin-bottom:3px}
 .cmi-label{font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:500}
 .cover-warning{
   margin-top:40px;background:rgba(255,255,255,0.05);border-left:3px solid rgba(255,255,255,0.2);
@@ -67,7 +70,7 @@ body{
 .chapter{
   background:var(--ink);color:white;
   padding:20px 32px;
-  font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+  font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;
   display:flex;align-items:center;gap:12px;
   margin:0 -32px 32px;
 }
@@ -75,15 +78,15 @@ body{
   width:28px;height:28px;border-radius:50%;
   background:rgba(255,255,255,0.12);
   display:flex;align-items:center;justify-content:center;
-  font-size:0.72rem;font-weight:700;
+  font-size:0.72rem;font-weight:600;
 }
 
-.sec-title{font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px}
+.sec-title{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px}
 .sec-intro{font-size:0.9rem;color:var(--ink-3);line-height:1.75;max-width:660px;margin-bottom:28px}
 
 /* ── TOC ── */
 .toc{background:var(--surface);border-radius:8px;padding:24px 28px;margin:32px 0}
-.toc-title{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);margin-bottom:16px}
+.toc-title{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);margin-bottom:16px}
 .toc-list{display:flex;flex-direction:column;gap:8px}
 .toc-item{display:flex;justify-content:space-between;align-items:center;font-size:0.875rem}
 .toc-item a{color:var(--ink-2);text-decoration:none;font-weight:500}
@@ -93,7 +96,7 @@ body{
 
 /* ── CALLOUT BOXES ── */
 .callout{border-left:3px solid var(--blue);padding:14px 18px;background:var(--blue-tint);border-radius:0 6px 6px 0;font-size:0.875rem;color:var(--ink-2);line-height:1.7;margin:20px 0}
-.callout strong{font-weight:700;color:var(--ink)}
+.callout strong{font-weight:600;color:var(--ink)}
 .callout-green{border-left-color:var(--green);background:var(--green-tint);color:#065F46}
 .callout-amber{border-left-color:#D97706;background:var(--amber-tint);color:#78350F}
 .callout-red{border-left-color:var(--red);background:var(--red-tint);color:#991B1B}
@@ -116,7 +119,7 @@ body{
 .master-table th{
   background:var(--ink);color:rgba(255,255,255,0.5);
   padding:10px 14px;text-align:left;font-size:0.65rem;
-  font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  font-weight:600;text-transform:uppercase;letter-spacing:.08em;
   white-space:nowrap;
 }
 .master-table td{
@@ -125,14 +128,14 @@ body{
 }
 .master-table tr:hover td{background:var(--surface)}
 .master-table tr:last-child td{border-bottom:none}
-.etf-ticker{font-weight:700;font-size:0.9rem;color:var(--ink);letter-spacing:-0.01em}
+.etf-ticker{font-weight:600;font-size:0.9rem;color:var(--ink);letter-spacing:-0.01em}
 .etf-full-name{font-size:0.72rem;color:var(--ink-3);margin-top:1px}
 .isin-code{font-family:monospace;font-size:0.78rem;color:var(--blue);background:var(--blue-tint);padding:2px 6px;border-radius:3px;letter-spacing:.02em}
-.ter-badge{font-weight:700;font-size:0.82rem}
+.ter-badge{font-weight:600;font-size:0.82rem}
 .ter-low{color:var(--green)}
 .ter-mid{color:var(--amber)}
 .cat-badge{
-  display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:.04em;
+  display:inline-block;font-size:0.65rem;font-weight:600;letter-spacing:.04em;
   padding:2px 8px;border-radius:3px;text-transform:uppercase;
 }
 .cat-world{background:#EEF2FF;color:#3730A3}
@@ -143,7 +146,7 @@ body{
 .stars{color:#F59E0B;font-size:0.8rem}
 .rec-badge{
   display:inline-block;background:var(--green);color:white;
-  border-radius:3px;padding:1px 6px;font-size:0.6rem;font-weight:700;
+  border-radius:3px;padding:1px 6px;font-size:0.6rem;font-weight:600;
   letter-spacing:.03em;vertical-align:top;margin-top:2px;margin-left:4px;
 }
 
@@ -155,10 +158,10 @@ body{
   display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
 }
 .etf-header-left{}
-.etf-ticker-large{font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:2px}
+.etf-ticker-large{font-size:1.6rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:2px}
 .etf-name-sub{font-size:0.78rem;color:rgba(255,255,255,0.5);font-weight:400}
 .etf-header-right{text-align:right;flex-shrink:0}
-.etf-ter-large{font-size:1.4rem;font-weight:700;color:#4ADE80;line-height:1}
+.etf-ter-large{font-size:1.4rem;font-weight:600;color:#4ADE80;line-height:1}
 .etf-ter-label{font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:.06em}
 .etf-body{
   border:1px solid var(--rule);border-top:none;
@@ -176,8 +179,8 @@ body{
   padding:14px 18px;border-right:1px solid var(--rule);
 }
 .etf-stat:last-child{border-right:none}
-.es-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);margin-bottom:4px}
-.es-val{font-size:0.95rem;font-weight:700;color:var(--ink)}
+.es-label{font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);margin-bottom:4px}
+.es-val{font-size:0.95rem;font-weight:600;color:var(--ink)}
 .es-val-sm{font-size:0.8rem;font-weight:600;color:var(--ink-2)}
 .etf-tickers-row{
   padding:14px 18px;border-bottom:1px solid var(--rule);
@@ -185,22 +188,22 @@ body{
   display:flex;gap:32px;align-items:center;flex-wrap:wrap;
 }
 .etr-group{display:flex;flex-direction:column;gap:3px}
-.etr-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4)}
+.etr-label{font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4)}
 .etr-val{font-family:monospace;font-size:0.85rem;font-weight:600;color:var(--ink)}
 .etf-desc{padding:16px 18px;font-size:0.84rem;color:var(--ink-2);line-height:1.75;border-bottom:1px solid var(--rule)}
 .etf-pros-cons{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}
 .etf-pros{padding:14px 18px;border-right:1px solid var(--rule)}
 .etf-cons{padding:14px 18px}
-.pc-title{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+.pc-title{font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
 .pc-title.pos{color:var(--green)}
 .pc-title.neg{color:var(--amber)}
 .pc-list{display:flex;flex-direction:column;gap:5px}
 .pc-item{font-size:0.8rem;color:var(--ink-2);display:flex;gap:7px;line-height:1.5}
-.pc-item.pro::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
-.pc-item.con::before{content:'!';color:var(--amber);font-weight:700;flex-shrink:0}
+.pc-item.pro::before{content:'✓';color:var(--green);font-weight:600;flex-shrink:0}
+.pc-item.con::before{content:'!';color:var(--amber);font-weight:600;flex-shrink:0}
 .etf-footer{padding:12px 18px;background:var(--surface);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .etf-holdings{padding:12px 18px;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.eh-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);flex-shrink:0;min-width:96px}
+.eh-label{font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);flex-shrink:0;min-width:96px}
 .eh-chips{display:flex;flex-wrap:wrap;gap:5px}
 .eh-chip{font-size:0.72rem;font-weight:600;color:var(--ink-2);background:var(--white);border:1px solid var(--rule);border-radius:3px;padding:2px 8px}
 .ef-tag{font-size:0.7rem;font-weight:600;padding:3px 8px;border-radius:3px;border:1px solid var(--rule);color:var(--ink-3)}
@@ -219,14 +222,14 @@ body{
 .portfolio-header.p2{background:#F0FDF4;border-bottom:1px solid #A7F3D0}
 .portfolio-header.p3{background:#FDF4FF;border-bottom:1px solid #E9D5FF}
 .ph-left{}
-.ph-badge{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:3px;margin-bottom:6px;display:inline-block}
+.ph-badge{font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:3px;margin-bottom:6px;display:inline-block}
 .ph-badge.p1{background:#1E40AF;color:white}
 .ph-badge.p2{background:var(--green);color:white}
 .ph-badge.p3{background:#7C3AED;color:white}
-.ph-name{font-size:1rem;font-weight:700;color:var(--ink)}
+.ph-name{font-size:1rem;font-weight:600;color:var(--ink)}
 .ph-sub{font-size:0.78rem;color:var(--ink-3);margin-top:2px}
 .ph-right{text-align:right;flex-shrink:0}
-.ph-ter{font-size:1.1rem;font-weight:700;color:var(--green)}
+.ph-ter{font-size:1.1rem;font-weight:600;color:var(--green)}
 .ph-ter-label{font-size:0.65rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em}
 .portfolio-body{padding:0}
 .port-alloc{
@@ -234,35 +237,35 @@ body{
 }
 .pa-item{flex:1;padding:14px 16px;border-right:1px solid var(--rule);text-align:center}
 .pa-item:last-child{border-right:none}
-.pa-pct{font-size:1.4rem;font-weight:700;color:var(--blue);line-height:1;margin-bottom:3px}
-.pa-ticker{font-size:0.8rem;font-weight:700;color:var(--ink)}
+.pa-pct{font-size:1.4rem;font-weight:600;color:var(--blue);line-height:1;margin-bottom:3px}
+.pa-ticker{font-size:0.8rem;font-weight:600;color:var(--ink)}
 .pa-index{font-size:0.7rem;color:var(--ink-3);margin-top:2px}
 .port-bar{height:6px;display:flex}
 .port-bar div{height:100%}
 .port-details{padding:14px 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;border-bottom:1px solid var(--rule)}
 .pd-item{text-align:center}
-.pd-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-bottom:3px}
-.pd-val{font-size:0.85rem;font-weight:700;color:var(--ink)}
+.pd-label{font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-bottom:3px}
+.pd-val{font-size:0.85rem;font-weight:600;color:var(--ink)}
 .port-desc{padding:14px 16px;font-size:0.82rem;color:var(--ink-2);line-height:1.7;border-bottom:1px solid var(--rule)}
 .port-brokers{padding:10px 16px;display:flex;gap:8px;align-items:center;background:var(--surface);flex-wrap:wrap}
-.pb-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);flex-shrink:0}
+.pb-label{font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);flex-shrink:0}
 .pb-tag{font-size:0.72rem;font-weight:600;padding:2px 8px;border-radius:3px;background:var(--rule);color:var(--ink-2)}
 
 /* ── COMPARISON TABLE ── */
 .comp-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:20px 0}
-.comp-table th{background:var(--ink);color:rgba(255,255,255,0.5);padding:10px 14px;text-align:left;font-size:0.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.comp-table th{background:var(--ink);color:rgba(255,255,255,0.5);padding:10px 14px;text-align:left;font-size:0.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
 .comp-table th:first-child{text-align:left}
 .comp-table td{padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:middle;text-align:center}
 .comp-table td:first-child{text-align:left;font-weight:600}
 .comp-table tr:hover td{background:var(--surface)}
 .comp-table tr:last-child td{border-bottom:none}
-.check-g{color:var(--green);font-weight:700}
-.check-y{color:var(--amber);font-weight:700}
-.check-r{color:var(--red);font-weight:700}
+.check-g{color:var(--green);font-weight:600}
+.check-y{color:var(--amber);font-weight:600}
+.check-r{color:var(--red);font-weight:600}
 .rank-badge{
   display:inline-flex;align-items:center;justify-content:center;
   width:20px;height:20px;border-radius:50%;
-  font-size:0.65rem;font-weight:700;
+  font-size:0.65rem;font-weight:600;
 }
 .rank-1{background:var(--green);color:white}
 .rank-2{background:#64748B;color:white}
@@ -272,25 +275,25 @@ body{
 .tax-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:20px 0}
 .tax-card{background:white;padding:20px}
 .tc-icon{font-size:1.2rem;margin-bottom:10px}
-.tc-title{font-size:0.85rem;font-weight:700;margin-bottom:6px}
-.tc-rate{font-size:1.4rem;font-weight:700;color:var(--blue);margin-bottom:6px;line-height:1}
+.tc-title{font-size:0.85rem;font-weight:600;margin-bottom:6px}
+.tc-rate{font-size:1.4rem;font-weight:600;color:var(--blue);margin-bottom:6px;line-height:1}
 .tc-body{font-size:0.78rem;color:var(--ink-3);line-height:1.65}
 .tc-highlight{font-size:0.75rem;font-weight:600;color:var(--green);margin-top:6px}
 
 /* ── PLATFORM TICKERS ── */
 .platform-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:16px 0}
-.platform-table th{background:var(--ink);color:rgba(255,255,255,0.4);padding:9px 14px;text-align:left;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.platform-table th{background:var(--ink);color:rgba(255,255,255,0.4);padding:9px 14px;text-align:left;font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
 .platform-table td{padding:10px 14px;border-bottom:1px solid var(--rule);font-family:monospace;font-size:0.82rem;vertical-align:middle}
 .platform-table tr:hover td{background:var(--surface)}
 .platform-table tr:last-child td{border-bottom:none}
-.platform-table td:first-child{font-family:'Inter',sans-serif;font-weight:700;font-size:0.84rem;color:var(--ink)}
+.platform-table td:first-child{font-family:'Inter',sans-serif;font-weight:600;font-size:0.84rem;color:var(--ink)}
 .ticker-cell{background:var(--surface);border-radius:3px;padding:2px 6px;font-weight:600;color:var(--ink-2);display:inline-block}
 .ticker-note{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--ink-4);margin-top:2px}
 
 /* ── GLOSSARY ── */
 .glossary-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:16px 0}
 .gl-item{background:white;padding:14px 16px}
-.gl-term{font-size:0.82rem;font-weight:700;color:var(--blue);margin-bottom:4px}
+.gl-term{font-size:0.82rem;font-weight:600;color:var(--blue);margin-bottom:4px}
 .gl-def{font-size:0.78rem;color:var(--ink-3);line-height:1.6}
 
 /* ── CHECKLIST ── */
@@ -300,7 +303,7 @@ body{
 .cl-item:last-child{border-bottom:none}
 .cl-checkbox{width:18px;height:18px;flex-shrink:0;margin-top:2px;cursor:pointer;accent-color:var(--blue)}
 .cl-text{font-size:0.84rem;color:var(--ink-2);line-height:1.5}
-.cl-text strong{font-weight:700;color:var(--ink)}
+.cl-text strong{font-weight:600;color:var(--ink)}
 
 /* ── FOOTER BAR ── */
 .doc-footer{
@@ -318,7 +321,7 @@ p{font-size:0.875rem;color:var(--ink-2);line-height:1.75;margin-bottom:12px}
 p:last-child{margin-bottom:0}
 ul{padding-left:20px;display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
 ul li{font-size:0.875rem;color:var(--ink-2);line-height:1.65}
-strong{font-weight:700;color:var(--ink)}
+strong{font-weight:600;color:var(--ink)}
 
 /* ── RESPONSIVE ── */
 @media(max-width:700px){
@@ -478,20 +481,20 @@ strong{font-weight:700;color:var(--ink)}
     <p class="sec-intro">Hieronder vind je een overzicht van alle 10 ETF's in dit document. Gesorteerd op categorie en aanbevelingen van experts. Gebruik de ISIN-code om het fonds te vinden op jouw broker.</p>
 
     <div style="background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:24px; margin-bottom: 32px; page-break-inside: avoid;">
-      <h3 style="font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:12px">Waarom precies deze selectie?</h3>
+      <h3 style="font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:12px">Waarom precies deze selectie?</h3>
       <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.6">Deze selectie is niet zomaar tot stand gekomen. Elk van deze ETF’s is streng gefilterd op basis van <strong>7 objectieve selectiecriteria</strong>: lage totale kosten, grote fondsomvang, fysieke replicatie, voldoende liquiditeit, brede geografische spreiding, hoge interne spreiding en fiscale efficiëntie voor Belgische beleggers. Deze criteria zijn steeds gericht op 3 absolute kernwaarden voor de startende belegger:</p>
       
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
         <div style="background:white;padding:16px;border-radius:6px;border:1px solid var(--rule)">
-          <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:4px">1. Lange termijn</div>
+          <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:4px">1. Lange termijn</div>
           <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.5">Zodat je portefeuille één keer op staat en dan jarenlang passief mee kan zonder kopzorgen.</div>
         </div>
         <div style="background:white;padding:16px;border-radius:6px;border:1px solid var(--rule)">
-          <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:4px">2. Kostenoptimalisatie</div>
+          <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:4px">2. Kostenoptimalisatie</div>
           <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.5">Want elke euro die je níét aan beheerkosten of beurstaks betaalt, werkt verder voor jou.</div>
         </div>
         <div style="background:white;padding:16px;border-radius:6px;border:1px solid var(--rule)">
-          <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:4px">3. Maximale spreiding</div>
+          <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:4px">3. Maximale spreiding</div>
           <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.5">Omdat een zo breed mogelijke spreiding (duizenden bedrijven tegelijk) het risico aanzienlijk verlaagt.</div>
         </div>
       </div>
@@ -1269,7 +1272,7 @@ strong{font-weight:700;color:var(--ink)}
       <strong>Hoe kies je?</strong> Begin met je beleggingsdoel en tijdshorizon. Lang beleggen (10+ jaar) voor pensioen of vermogen? Dan kan je meer risico nemen. Een 1-ETF portfolio is voor 95% van de beginners de beste en veiligste start, omdat dit wiskundig perfect is om maandelijks automatisch aan te kopen (Euro-Cost Averaging).
     </div>
 
-    <h3 class="portfolio-group-title first" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:36px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 1 ETF &nbsp;·&nbsp; Het kan echt zo simpel</h3>
+    <h3 class="portfolio-group-title first" style="font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:36px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 1 ETF &nbsp;·&nbsp; Het kan echt zo simpel</h3>
 
     <!-- P1-A -->
     <div class="portfolio-card">
@@ -1349,7 +1352,7 @@ strong{font-weight:700;color:var(--ink)}
       <div class="port-desc">Wil je niet investeren in controversiële wapens, tabak of thermische steenkool? Dan is XMAW het makkelijkste alles-in-één antwoord. Je behoudt wereldwijde dekking maar op een schonere manier. Het is wel fractie duurder dan IMIE.</div>
     </div>
 
-    <h3 class="portfolio-group-title" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:44px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 2 ETF's &nbsp;·&nbsp; Werelddekking met maatwerk</h3>
+    <h3 class="portfolio-group-title" style="font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:44px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 2 ETF's &nbsp;·&nbsp; Werelddekking met maatwerk</h3>
 
     <!-- P2-A -->
     <div class="portfolio-card">
@@ -1459,7 +1462,7 @@ strong{font-weight:700;color:var(--ink)}
       <div class="port-desc">Geschikt voor wie minder volatiliteit (schommelingen) wil in zijn portfolio - bijvoorbeeld wanneer je dichter bij je financiële doel komt. De obligaties (SYSC) temperen zware klappen. We raden hier SYSC aan omdat dit een Ierse domicilie (0,12% TOB) heeft, wat voor Belgen véél voordeliger is dan bijvoorbeeld het Luxemburgse XGOV-fonds (1,32% TOB).</div>
     </div>
 
-    <h3 class="portfolio-group-title" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:44px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 3 ETF's &nbsp;·&nbsp; Geavanceerd</h3>
+    <h3 class="portfolio-group-title" style="font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-4);margin:44px 0 20px;padding-top:20px;border-top:1px solid var(--rule)">Portfolio met 3 ETF's &nbsp;·&nbsp; Geavanceerd</h3>
 
     <!-- P3-A -->
     <div class="portfolio-card">
@@ -1614,7 +1617,7 @@ strong{font-weight:700;color:var(--ink)}
     <h2 class="sec-title">Waarom automatisatie je rijk maakt</h2>
     <p class="sec-intro">Een succesvolle belegger is geen beursexpert die dagelijks grafieken analyseert. Het is iemand die een waterdicht systeem opzet en de tijd het zware werk laat doen. In dit hoofdstuk ontdek je het 'Pay Yourself First' systeem en de wiskundige zekerheid van Euro-Cost Averaging.</p>
 
-    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:24px 0 12px">1. Het geheim: Euro-Cost Averaging (ECA)</h3>
+    <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin:24px 0 12px">1. Het geheim: Euro-Cost Averaging (ECA)</h3>
     <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:16px;line-height:1.7">
       Beginnende beleggers stellen steevast dezelfde vraag: <em>"Staat de beurs nu niet te hoog om in te stappen?"</em>. Het eerlijke antwoord: niemand die het weet. Exact de bodem of de top van de beurs voorspellen ("timing the market") is zelfs voor professionele analisten onmogelijk gebleken.
     </p>
@@ -1624,39 +1627,39 @@ strong{font-weight:700;color:var(--ink)}
     
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px">
       <div style="background:var(--surface);border-left:3px solid var(--red);padding:16px;border-radius:0 6px 6px 0;">
-        <div style="font-weight:700;color:var(--ink);margin-bottom:6px;font-size:0.85rem">De beurs crasht</div>
+        <div style="font-weight:600;color:var(--ink);margin-bottom:6px;font-size:0.85rem">De beurs crasht</div>
         <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.5">Jouw vaste €200 koopt deze maand plots véél meer aandelen (stuks) van je ETF. Je slaat massaal in met een korting. Zodra de beurs later herstelt, schiet de waarde van al deze extra aangekochte stuks de hoogte in.</p>
       </div>
       <div style="background:var(--surface);border-left:3px solid var(--green);padding:16px;border-radius:0 6px 6px 0;">
-        <div style="font-weight:700;color:var(--ink);margin-bottom:6px;font-size:0.85rem">De beurs piekt</div>
+        <div style="font-weight:600;color:var(--ink);margin-bottom:6px;font-size:0.85rem">De beurs piekt</div>
         <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.5">Jouw vaste €200 koopt deze maand iets minder aandelen (stuks), waardoor je op de top automatisch wat afremt qua volume. Ondertussen vieren de stuks die je vorige maanden al bezat natuurlijk wel mooi deze winst mee.</p>
       </div>
     </div>
 
-    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:32px 0 12px;border-top:1px solid var(--rule);padding-top:24px">2. Het 'Pay Yourself First' Systeem</h3>
+    <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin:32px 0 12px;border-top:1px solid var(--rule);padding-top:24px">2. Het 'Pay Yourself First' Systeem</h3>
     <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">
       De theorie is nutteloos zonder uitvoering. Als je wacht met beleggen tot het einde van de maand "met het geld dat overblijft", blijft er gegarandeerd niets over. De succesvolle passieve belegger draait dit om: je betaalt eerst jezelf.
     </p>
 
     <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px;">
       <div style="display:flex;gap:16px;background:white;padding:16px;border-radius:8px;border:1px solid var(--rule);align-items:center;">
-        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">1</div>
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">1</div>
         <div>
-          <div style="font-weight:700;font-size:0.85rem;color:var(--ink)">Loonstorting</div>
+          <div style="font-weight:600;font-size:0.85rem;color:var(--ink)">Loonstorting</div>
           <p style="font-size:0.8rem;margin:0;color:var(--ink-3);line-height:1.5">Je salaris komt op de 28ste of 1ste van de maand binnen op je zichtrekening.</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;background:white;padding:16px;border-radius:8px;border:1px solid var(--rule);align-items:center;">
-        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">2</div>
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">2</div>
         <div>
-          <div style="font-weight:700;font-size:0.85rem;color:var(--ink)">Automatische overschrijving</div>
+          <div style="font-weight:600;font-size:0.85rem;color:var(--ink)">Automatische overschrijving</div>
           <p style="font-size:0.8rem;margin:0;color:var(--ink-3);line-height:1.5">Eén dag na je loonstorting wordt je vaste beleggingsbedrag automatisch overgeschreven van je bank naar het unieke IBAN-nummer van je brokeraccount (Bolero, Saxo, Keytrade, ...).</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;background:white;padding:16px;border-radius:8px;border:1px solid var(--rule);align-items:center;">
-        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">3</div>
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-tint);color:var(--blue);font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem">3</div>
         <div>
-          <div style="font-weight:700;font-size:0.85rem;color:var(--ink)">Automatisch of Routine Order</div>
+          <div style="font-weight:600;font-size:0.85rem;color:var(--ink)">Automatisch of Routine Order</div>
           <p style="font-size:0.8rem;margin:0;color:var(--ink-3);line-height:1.5">Biedt je broker automatische spaarplannen aan (zoals Saxo AutoInvest)? Dan wordt het geld automatisch geïnvesteerd. Zo niet, log je elke maand op dag 4 manueel exact 2 minuutjes in om je order door te voeren. Emotieloos en routineus.</p>
         </div>
       </div>
@@ -1666,27 +1669,27 @@ strong{font-weight:700;color:var(--ink)}
       <strong>Let op: geen fractieaandelen bij Belgische brokers.</strong> Bij de meeste Belgische brokers koop je ETF's in hele stuks. Als SWRD noteert op €87 en je wilt €200 inleggen, kun je slechts 2 stuks kopen (€174). De resterende €26 blijft als cash staan op je rekening en wordt de volgende maand automatisch meegenomen als je opnieuw koopt. Bij Saxo AutoInvest zorgt de optie "alle beschikbare cash beleggen" ervoor dat deze resterende cash maand na maand wordt meegeteld.
     </div>
 
-    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:32px 0 12px;border-top:1px solid var(--rule);padding-top:24px">3. De 3 gouden gedragsregels</h3>
+    <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin:32px 0 12px;border-top:1px solid var(--rule);padding-top:24px">3. De 3 gouden gedragsregels</h3>
     <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.7">
       Zodra je systeem loopt, is je grootste vijand niet de beurs, maar je eigen psychologie. Als hangmatbelegger beloof je plechtig aan jezelf om de volgende drie regels nooit te breken:
     </p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;">
       <div style="background:var(--surface);border-radius:8px;padding:20px;border:1px solid var(--rule)">
-        <div style="font-weight:700;color:var(--ink);margin-bottom:8px;font-size:0.9rem">I. Negeer het financiële nieuws</div>
+        <div style="font-weight:600;color:var(--ink);margin-bottom:8px;font-size:0.9rem">I. Negeer het financiële nieuws</div>
         <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.6">Media verkopen drama, geen rendement. Een krantenkop zoals "Beurs verdampt miljarden" trekt kliks, maar betekent voor een langetermijnbelegger die maandelijks koopt enkel dat de aandelen goedkoper in de solden staan. Laat je niet afschrikken.</p>
       </div>
       <div style="background:var(--surface);border-radius:8px;padding:20px;border:1px solid var(--rule)">
-        <div style="font-weight:700;color:var(--ink);margin-bottom:8px;font-size:0.9rem">II. Rood is geen verlies</div>
+        <div style="font-weight:600;color:var(--ink);margin-bottom:8px;font-size:0.9rem">II. Rood is geen verlies</div>
         <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.6">Als je portfolio op -20% staat, heb je geen euro verloren. Je bezit nog steeds exact evenveel stukjes van bedrijven. Het verlies wordt pas definitief ('gerealiseerd') als je op dat moment in paniek verkoopt. Blijf gewoon maandelijks bijkopen.</p>
       </div>
       <div style="background:var(--surface);border-radius:8px;padding:20px;border:1px solid var(--rule)">
-        <div style="font-weight:700;color:var(--ink);margin-bottom:8px;font-size:0.9rem">III. Minimaliseer het inloggen</div>
+        <div style="font-weight:600;color:var(--ink);margin-bottom:8px;font-size:0.9rem">III. Minimaliseer het inloggen</div>
         <p style="font-size:0.8rem;color:var(--ink-3);margin:0;line-height:1.6">Hoe vaker je naar je portefeuille kijkt, hoe groter de verleiding om actie te ondernemen, iets aan te passen of te "timen". Haal de beleggingsapp van je startscherm. Eén à twee keer per kwartaal je stand van zaken bekijken is méér dan voldoende.</p>
       </div>
     </div>
 
-    <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin:40px 0 12px;border-top:1px solid var(--rule);padding-top:24px">4. Wat levert dit eigenlijk op? Rendement in perspectief</h3>
+    <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin:40px 0 12px;border-top:1px solid var(--rule);padding-top:24px">4. Wat levert dit eigenlijk op? Rendement in perspectief</h3>
     <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:20px;line-height:1.7">
       De menselijke hersenen kunnen exponentiële groei (het rente-op-rente effect of <em>compound interest</em>) moeilijk inschatten. Wat gebeurt er als je trouw <strong>€ 250 per maand</strong> belegt in een wereldwijd gespreide ETF, uitgaande van een realistisch historisch gemiddeld rendement van 7% per jaar?
     </p>
@@ -1696,38 +1699,38 @@ strong{font-weight:700;color:var(--ink)}
         
         <!-- 10 Jaar -->
         <div style="background:white; border:1px solid var(--rule); border-radius:6px; padding:16px; text-align:center;">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 10 jaar</div>
-          <div style="font-size:1.4rem; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">€ 43.496</div>
+          <div style="font-size:0.75rem; font-weight:600; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 10 jaar</div>
+          <div style="font-size:1.4rem; font-weight:600; color:var(--ink); line-height:1; margin-bottom:4px;">€ 43.496</div>
           <div style="font-size:0.75rem; color:var(--ink-3);">Eigen inleg: € 30.000</div>
           <div style="margin-top:12px; height:8px; background:var(--rule); border-radius:4px; display:flex; overflow:hidden;">
             <div style="width:69%; background:var(--ink-4);" title="Eigen inleg"></div>
             <div style="width:31%; background:var(--green);" title="Winst"></div>
           </div>
-          <div style="font-size:0.65rem; color:var(--green); font-weight:700; margin-top:6px; text-align:right;">+ € 13.496 winst</div>
+          <div style="font-size:0.65rem; color:var(--green); font-weight:600; margin-top:6px; text-align:right;">+ € 13.496 winst</div>
         </div>
 
         <!-- 20 Jaar -->
         <div style="background:white; border:1px solid var(--rule); border-radius:6px; padding:16px; text-align:center;">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 20 jaar</div>
-          <div style="font-size:1.4rem; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">€ 130.229</div>
+          <div style="font-size:0.75rem; font-weight:600; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 20 jaar</div>
+          <div style="font-size:1.4rem; font-weight:600; color:var(--ink); line-height:1; margin-bottom:4px;">€ 130.229</div>
           <div style="font-size:0.75rem; color:var(--ink-3);">Eigen inleg: € 60.000</div>
           <div style="margin-top:12px; height:8px; background:var(--rule); border-radius:4px; display:flex; overflow:hidden;">
             <div style="width:46%; background:var(--ink-4);" title="Eigen inleg"></div>
             <div style="width:54%; background:var(--green);" title="Winst"></div>
           </div>
-          <div style="font-size:0.65rem; color:var(--green); font-weight:700; margin-top:6px; text-align:right;">+ € 70.229 winst</div>
+          <div style="font-size:0.65rem; color:var(--green); font-weight:600; margin-top:6px; text-align:right;">+ € 70.229 winst</div>
         </div>
 
         <!-- 30 Jaar -->
         <div style="background:white; border:1px solid var(--rule); border-radius:6px; padding:16px; text-align:center;">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 30 jaar</div>
-          <div style="font-size:1.4rem; font-weight:700; color:var(--blue); line-height:1; margin-bottom:4px;">€ 302.873</div>
+          <div style="font-size:0.75rem; font-weight:600; color:var(--ink-4); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;">Na 30 jaar</div>
+          <div style="font-size:1.4rem; font-weight:600; color:var(--blue); line-height:1; margin-bottom:4px;">€ 302.873</div>
           <div style="font-size:0.75rem; color:var(--ink-3);">Eigen inleg: € 90.000</div>
           <div style="margin-top:12px; height:8px; background:var(--rule); border-radius:4px; display:flex; overflow:hidden;">
             <div style="width:30%; background:var(--ink-4);" title="Eigen inleg"></div>
             <div style="width:70%; background:var(--green);" title="Winst"></div>
           </div>
-          <div style="font-size:0.65rem; color:var(--green); font-weight:700; margin-top:6px; text-align:right;">+ € 212.873 winst</div>
+          <div style="font-size:0.65rem; color:var(--green); font-weight:600; margin-top:6px; text-align:right;">+ € 212.873 winst</div>
         </div>
 
       </div>
@@ -1743,7 +1746,7 @@ strong{font-weight:700;color:var(--ink)}
     <h2 class="sec-title">Welke belastingen betaal je?</h2>
     <p class="sec-intro">Beleggen in ETF's brengt in België drie belastingen met zich mee. Gelukkig nemen Belgische brokers (zoals Saxo, Bolero, of Keytrade) veruit het meeste werk voor jou uit handen. Hieronder vind je een helder en compleet overzicht.</p>
 
-    <h3 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:14px">Kort overzicht: de drie taksen</h3>
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--ink);margin-bottom:14px">Kort overzicht: de drie taksen</h3>
     <div class="tax-grid">
       <div class="tax-card">
         <div class="tc-title">Taks op Beursverrichtingen (TOB)</div>
@@ -1767,7 +1770,7 @@ strong{font-weight:700;color:var(--ink)}
 
     <!-- START FISCAAL OVERZICHT VOOR BEGINNERS -->
     <div style="margin-top:48px;">
-      <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:8px">Wat betekent dit voor jou als beginner?</h3>
+      <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:8px">Wat betekent dit voor jou als beginner?</h3>
       <p style="font-size:0.875rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">Goed nieuws: als je de ETF's uit deze gids koopt via een Belgische broker, is vrijwel alles geautomatiseerd. Hieronder de 4 regels die je écht moet kennen.</p>
 
       <!-- RIJEN: compacte fiscale regels -->
@@ -1777,11 +1780,11 @@ strong{font-weight:700;color:var(--ink)}
         <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
           <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
           <div>
-            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Beurstaks (TOB) bij elke aankoop</div>
+            <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Beurstaks (TOB) bij elke aankoop</div>
             <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Elke keer dat je een Ierse ETF (IE...) koopt of verkoopt, houdt je broker automatisch <strong>0,12%</strong> in. Bij €200 inleg is dat €0,24. Jij hoeft niets aan te geven.</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1rem;font-weight:700;color:var(--green)">0,12%</div>
+            <div style="font-size:1rem;font-weight:600;color:var(--green)">0,12%</div>
             <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Automatisch</div>
           </div>
         </div>
@@ -1790,11 +1793,11 @@ strong{font-weight:700;color:var(--ink)}
         <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
           <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
           <div>
-            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Dividendbelasting (30%) — je vermijdt dit automatisch</div>
+            <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Dividendbelasting (30%) — je vermijdt dit automatisch</div>
             <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Bedrijven keren winsten uit als dividend. België belast dat met 30%. Maar alle ETF's in deze gids zijn <strong>Accumulating</strong>: het dividend wordt intern herbelegd. Geen uitkering op je rekening = geen 30%.</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1rem;font-weight:700;color:var(--green)">0%</div>
+            <div style="font-size:1rem;font-weight:600;color:var(--green)">0%</div>
             <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Via Acc ETF's</div>
           </div>
         </div>
@@ -1803,11 +1806,11 @@ strong{font-weight:700;color:var(--ink)}
         <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
           <div style="width:10px;height:10px;border-radius:50%;background:#D97706;flex-shrink:0"></div>
           <div>
-            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Meerwaardebelasting bij verkoop (nieuw in 2026)</div>
+            <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Meerwaardebelasting bij verkoop (nieuw in 2026)</div>
             <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Verkoop je een ETF met winst? Dan betaal je <strong>10%</strong> op de winst. De eerste <strong>€10.000 per jaar is vrij</strong>. Winst opgebouwd vóór 2026 telt niet mee. Zolang je niet verkoopt, betaal je niets. Je verwerkt dit zelf jaarlijks in je belastingaangifte — je broker levert de documenten aan.</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1rem;font-weight:700;color:var(--amber)">10%</div>
+            <div style="font-size:1rem;font-weight:600;color:var(--amber)">10%</div>
             <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Op winst bij verkoop</div>
           </div>
         </div>
@@ -1816,11 +1819,11 @@ strong{font-weight:700;color:var(--ink)}
         <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;">
           <div style="width:10px;height:10px;border-radius:50%;background:var(--ink-4);flex-shrink:0"></div>
           <div>
-            <div style="font-weight:700;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Reynderstaks — enkel bij obligatie-ETF's</div>
+            <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:3px">Reynderstaks — enkel bij obligatie-ETF's</div>
             <div style="font-size:0.8rem;color:var(--ink-3);line-height:1.55">Gebruik je <strong>SYSC</strong> als obligatie-buffer in je portfolio? Dan betaal je bij verkoop met winst ook 30% op die winst. Geldt <em>niet</em> voor aandelen-ETF's. Je broker houdt dit automatisch in.</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1rem;font-weight:700;color:var(--ink-3)">30%</div>
+            <div style="font-size:1rem;font-weight:600;color:var(--ink-3)">30%</div>
             <div style="font-size:0.62rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em">Enkel SYSC/obligaties</div>
           </div>
         </div>
